@@ -1,0 +1,159 @@
+nohup: ignoring input
+Found existing installation: torchaudio 2.4.1+cu124
+Uninstalling torchaudio-2.4.1+cu124:
+  Successfully uninstalled torchaudio-2.4.1+cu124
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+VERS 5.18.0 2.6.0+cu124 0.21.2 True
+{"event": "start", "t": "2026-10-03T19:29:16", "model": "Qwen/Qwen3.5-4B", "train_wall_s": 2400}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:09<00:09,  9.91s/it]Fetching 2 files: 100%|██████████| 2/2 [00:10<00:00,  4.15s/it]Fetching 2 files: 100%|██████████| 2/2 [00:10<00:00,  5.02s/it]
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:16,  9.39it/s]Loading weights:   6%|▌         | 40/723 [00:00<00:03, 222.43it/s]Loading weights:  13%|█▎        | 95/723 [00:00<00:01, 361.14it/s]Loading weights:  21%|██        | 152/723 [00:00<00:01, 434.36it/s]Loading weights:  29%|██▉       | 209/723 [00:00<00:01, 480.69it/s]Loading weights:  37%|███▋      | 265/723 [00:00<00:00, 501.95it/s]Loading weights:  45%|████▌     | 326/723 [00:00<00:00, 534.38it/s]Loading weights:  53%|█████▎    | 383/723 [00:00<00:00, 540.32it/s]Loading weights:  66%|██████▌   | 478/723 [00:00<00:00, 664.62it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 707.20it/s]
+{"event": "model_class", "t": "2026-10-03T19:29:28", "name": "AutoModelForImageTextToText"}
+{"event": "loaded", "t": "2026-10-03T19:29:28", "seconds": 12.0, "vram_gb": 3.29}
+{"event": "lora_targets", "t": "2026-10-03T19:29:28", "targets": ["q_proj", "k_proj", "v_proj", "o_proj"]}
+trainable params: 1,572,864 || all params: 4,540,838,400 || trainable%: 0.0346
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+{"event": "smoke", "t": "2026-10-03T19:29:30", "seconds": 1.95, "new_tokens": 32, "prompt_tokens": 204, "head": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE glossentry PUBLIC \"-//OASIS//DTD DITA Glossary//"}
+{"event": "baseline_begin", "t": "2026-10-03T19:29:30"}
+baseline glossary/canonicalize.dita lat=10.43s tok=214/290 wf=True sk=True dtd=True err=0 r=1.00
+baseline topics/cf-change-admin-password.dita lat=20.60s tok=425/467 wf=True sk=True dtd=True err=0 r=1.00
+baseline topics/xslt-hierarchy-view.dita lat=28.86s tok=596/640 wf=True sk=True dtd=True err=0 r=1.00
+baseline topics/dcpp_how_to_remove_the_figure_nn_label.dita lat=20.94s tok=433/462 wf=True sk=True dtd=True err=0 r=1.00
+baseline topics/content-fusion-addon.dita lat=25.48s tok=525/605 wf=True sk=True dtd=True err=0 r=1.00
+baseline topics/download-database-drivers.dita lat=31.46s tok=640/640 wf=False sk=False dtd=False err=None r=-1.00
+baseline topics/author-editing-tables-xhtml.dita lat=24.88s tok=503/578 wf=True sk=False dtd=True err=0 r=-0.65
+baseline topics/dcpp_archiving.dita lat=16.45s tok=339/400 wf=True sk=True dtd=True err=0 r=1.00
+baseline topics/how_to_postgresql.dita lat=22.23s tok=459/531 wf=True sk=True dtd=True err=0 r=1.00
+baseline topics/ch_graphics_images.dita lat=28.18s tok=580/604 wf=True sk=True dtd=True err=0 r=1.00
+{"event": "baseline_done", "t": "2026-10-03T19:33:20", "n": 10, "schema_invalid_topics": 1, "schema_error_total": 0, "skeleton_mismatch_topics": 2, "valid_and_skeleton_ok": 8, "mean_reward": 0.635, "latency_p50_s": 23.553, "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy", "decoding": "greedy"}
+sample 0 topics/ant-component-dependencies.dita k=0 r=1.00 dtd=True sk=True 25.7s
+sample 0 topics/ant-component-dependencies.dita k=1 r=1.00 dtd=True sk=True 27.0s
+sample 1 topics/dcpp_console_logging.dita k=0 r=1.00 dtd=True sk=True 26.5s
+sample 1 topics/dcpp_console_logging.dita k=1 r=-0.67 dtd=True sk=False 27.1s
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+{"event": "rl_step", "t": "2026-10-03T19:35:10", "step": 1, "path": "topics/dcpp_console_logging.dita", "rewards": [1.0, -0.67], "updates": 1, "vram_gb": 4.64}
+sample 2 topics/contribute-new-languages-extension.dita k=0 r=-1.00 dtd=False sk=False 31.5s
+sample 2 topics/contribute-new-languages-extension.dita k=1 r=-1.00 dtd=False sk=False 31.6s
+sample 3 topics/dcpp_how_to_omit_the_front_page__table_of_contents__etc_for_a_plain_dita_map.dita k=0 r=1.00 dtd=True sk=True 17.0s
+sample 3 topics/dcpp_how_to_omit_the_front_page__table_of_contents__etc_for_a_plain_dita_map.dita k=1 r=1.00 dtd=True sk=True 16.5s
+sample 4 topics/wa-entity-not-resolved-1001.dita k=0 r=1.00 dtd=True sk=True 25.9s
+sample 4 topics/wa-entity-not-resolved-1001.dita k=1 r=1.00 dtd=True sk=True 25.8s
+sample 5 topics/nvdl-component-dependencies.dita k=0 r=1.00 dtd=True sk=True 29.9s
+sample 5 topics/nvdl-component-dependencies.dita k=1 r=1.00 dtd=True sk=True 29.8s
+sample 6 topics/preferences-editor-schema-properties.dita k=0 r=-1.00 dtd=False sk=False 31.4s
+sample 6 topics/preferences-editor-schema-properties.dita k=1 r=-1.00 dtd=False sk=False 31.4s
+sample 7 topics/whr-converting-templates.dita k=0 r=1.00 dtd=True sk=True 23.7s
+sample 7 topics/whr-converting-templates.dita k=1 r=-1.00 dtd=False sk=False 17.5s
+{"event": "rl_step", "t": "2026-10-03T19:40:25", "step": 7, "path": "topics/whr-converting-templates.dita", "rewards": [1.0, -1.0], "updates": 2, "vram_gb": 4.64}
+sample 8 topics/dcpp_how_to_style_the_table_of_contents_for_chapters.dita k=0 r=1.00 dtd=True sk=True 29.0s
+sample 8 topics/dcpp_how_to_style_the_table_of_contents_for_chapters.dita k=1 r=1.00 dtd=True sk=True 28.8s
+sample 9 topics/dcpp_how_to_enforce_a_number_of_lines_from_the_split_paragraphs_in_the_next_page.dita k=0 r=1.00 dtd=True sk=True 29.1s
+sample 9 topics/dcpp_how_to_enforce_a_number_of_lines_from_the_split_paragraphs_in_the_next_page.dita k=1 r=-1.00 dtd=False sk=False 29.3s
+{"event": "rl_step", "t": "2026-10-03T19:42:25", "step": 9, "path": "topics/dcpp_how_to_enforce_a_number_of_lines_from_the_split_paragraphs_in_the_next_page.dita", "rewards": [1.0, -1.0], "updates": 3, "vram_gb": 4.64}
+sample 10 topics/cf-set-web-author-system-property.dita k=0 r=1.00 dtd=True sk=True 24.5s
+sample 10 topics/cf-set-web-author-system-property.dita k=1 r=1.00 dtd=True sk=True 24.4s
+sample 11 topics/resource-locking-custom-protocol-plugin.dita k=0 r=-1.00 dtd=False sk=False 31.6s
+sample 11 topics/resource-locking-custom-protocol-plugin.dita k=1 r=-1.00 dtd=False sk=False 31.6s
+sample 12 topics/cf-task-search.dita k=0 r=1.00 dtd=True sk=True 31.3s
+sample 12 topics/cf-task-search.dita k=1 r=1.00 dtd=True sk=True 31.0s
+sample 13 topics/less-syntax-highlight.dita k=0 r=1.00 dtd=True sk=True 27.7s
+sample 13 topics/less-syntax-highlight.dita k=1 r=1.00 dtd=True sk=True 27.2s
+sample 14 topics/configure-mathflow-editor.dita k=0 r=-0.67 dtd=True sk=False 29.6s
+sample 14 topics/configure-mathflow-editor.dita k=1 r=-0.67 dtd=True sk=False 29.9s
+sample 15 topics/dcpp_how_to_display_subtopics_in_toc.dita k=0 r=-1.00 dtd=False sk=False 24.5s
+sample 15 topics/dcpp_how_to_display_subtopics_in_toc.dita k=1 r=1.00 dtd=True sk=True 24.6s
+{"event": "rl_step", "t": "2026-10-03T19:48:07", "step": 15, "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita", "rewards": [-1.0, 1.0], "updates": 4, "vram_gb": 4.64}
+sample 16 topics/wa-custom-plugin-problems.dita k=0 r=1.00 dtd=True sk=True 31.3s
+sample 16 topics/wa-custom-plugin-problems.dita k=1 r=1.00 dtd=True sk=True 31.0s
+sample 17 topics/webapp-repository.dita k=0 r=-1.00 dtd=False sk=False 20.1s
+sample 17 topics/webapp-repository.dita k=1 r=-1.00 dtd=False sk=False 21.0s
+sample 18 topics/crash-on-macosx.dita k=0 r=1.00 dtd=True sk=True 24.2s
+sample 18 topics/crash-on-macosx.dita k=1 r=1.00 dtd=True sk=True 25.3s
+sample 19 topics/cf-organizations-management.dita k=0 r=1.00 dtd=True sk=True 16.4s
+sample 19 topics/cf-organizations-management.dita k=1 r=1.00 dtd=True sk=True 16.8s
+sample 20 topics/whr_publishing_templates.dita k=0 r=1.00 dtd=True sk=True 23.2s
+sample 20 topics/whr_publishing_templates.dita k=1 r=1.00 dtd=True sk=True 21.6s
+sample 21 topics/xpath-catalogs.dita k=0 r=1.00 dtd=True sk=True 26.9s
+sample 21 topics/xpath-catalogs.dita k=1 r=1.00 dtd=True sk=True 26.6s
+sample 22 topics/dcpp_how_to_display_chapters_title_on_a_separate_page.dita k=0 r=-1.00 dtd=False sk=False 31.5s
+sample 22 topics/dcpp_how_to_display_chapters_title_on_a_separate_page.dita k=1 r=-1.00 dtd=False sk=False 31.4s
+sample 23 topics/dcpp_how_to_deal_with_unwanted_returns_in_code_blocks.dita k=0 r=1.00 dtd=True sk=True 28.6s
+sample 23 topics/dcpp_how_to_deal_with_unwanted_returns_in_code_blocks.dita k=1 r=1.00 dtd=True sk=True 28.7s
+{"event": "rl_done", "t": "2026-10-03T19:54:52", "updates": 4, "skipped_flat": 20, "train_s": 1292.0}
+{"event": "after_begin", "t": "2026-10-03T19:54:53"}
+after glossary/canonicalize.dita lat=10.42s tok=214/290 wf=True sk=True dtd=True err=0 r=1.00
+after topics/cf-change-admin-password.dita lat=20.57s tok=425/467 wf=True sk=True dtd=True err=0 r=1.00
+after topics/xslt-hierarchy-view.dita lat=28.88s tok=596/640 wf=True sk=True dtd=True err=0 r=1.00
+after topics/dcpp_how_to_remove_the_figure_nn_label.dita lat=20.90s tok=432/462 wf=True sk=True dtd=True err=0 r=1.00
+after topics/content-fusion-addon.dita lat=27.16s tok=560/605 wf=True sk=True dtd=True err=0 r=1.00
+after topics/download-database-drivers.dita lat=31.05s tok=640/640 wf=False sk=False dtd=False err=None r=-1.00
+after topics/author-editing-tables-xhtml.dita lat=24.48s tok=504/578 wf=True sk=False dtd=True err=0 r=-0.65
+after topics/dcpp_archiving.dita lat=16.48s tok=339/400 wf=True sk=True dtd=True err=0 r=1.00
+after topics/how_to_postgresql.dita lat=22.42s tok=462/531 wf=True sk=True dtd=True err=0 r=1.00
+after topics/ch_graphics_images.dita lat=28.20s tok=580/604 wf=True sk=True dtd=True err=0 r=1.00
+val_after topics/saving-documents.dita lat=31.13s tok=640/640 wf=False sk=False dtd=False err=None r=-1.00
+val_after topics/api_faq_introduction.dita lat=22.87s tok=472/533 wf=True sk=True dtd=True err=0 r=1.00
+val_after topics/dcpp_controlling_the_publication_content.dita lat=11.35s tok=235/310 wf=True sk=True dtd=True err=0 r=1.00
+val_after topics/cf-admin-page-license.dita lat=29.88s tok=617/617 wf=False sk=False dtd=False err=None r=-1.00
+val_after ai/wa-ai-positron-overview-addon.dita lat=11.48s tok=236/296 wf=True sk=False dtd=True err=0 r=-0.67
+val_after topics/cf-organization-security.dita lat=31.00s tok=640/640 wf=False sk=False dtd=False err=None r=-1.00
+val_after topics/update-xml-documents-using-xquery.dita lat=27.18s tok=557/611 wf=True sk=True dtd=True err=0 r=1.00
+val_after topics/wa-UrlChooser-troubleshooting.dita lat=31.05s tok=640/640 wf=False sk=False dtd=False err=None r=-1.00
+val_after topics/schematron-search-refactor-operations-scope.dita lat=16.42s tok=337/351 wf=True sk=True dtd=True err=0 r=1.00
+val_after topics/cf-ai-positron-overview.dita lat=31.24s tok=640/640 wf=False sk=False dtd=False err=None r=-1.00
+{"event": "finished", "t": "2026-10-03T20:02:47", "baseline": {"n": 10, "schema_invalid_topics": 1, "schema_error_total": 0, "skeleton_mismatch_topics": 2, "valid_and_skeleton_ok": 8, "mean_reward": 0.635, "latency_p50_s": 23.553, "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy", "decoding": "greedy"}, "after": {"n": 10, "schema_invalid_topics": 1, "schema_error_total": 0, "skeleton_mismatch_topics": 2, "valid_and_skeleton_ok": 8, "mean_reward": 0.635, "latency_p50
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "quant": "bitsandbytes NF4 QLoRA (4-bit base)",
+  "method": "GRPO-style group size 2, advantage = (r - mean) / std, one QLoRA step per topic",
+  "lr": 5e-06,
+  "lora_r": 8,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "updates": 4,
+  "skipped_flat_reward": 20,
+  "train_wall_s_budget": 2400,
+  "baseline": {
+    "n": 10,
+    "schema_invalid_topics": 1,
+    "schema_error_total": 0,
+    "skeleton_mismatch_topics": 2,
+    "valid_and_skeleton_ok": 8,
+    "mean_reward": 0.635,
+    "latency_p50_s": 23.553,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy"
+  },
+  "after": {
+    "n": 10,
+    "schema_invalid_topics": 1,
+    "schema_error_total": 0,
+    "skeleton_mismatch_topics": 2,
+    "valid_and_skeleton_ok": 8,
+    "mean_reward": 0.635,
+    "latency_p50_s": 23.448,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy"
+  },
+  "val_after": {
+    "n": 10,
+    "schema_invalid_topics": 5,
+    "schema_error_total": 0,
+    "skeleton_mismatch_topics": 6,
+    "valid_and_skeleton_ok": 4,
+    "mean_reward": -0.167,
+    "latency_p50_s": 28.528,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy"
+  },
+  "surprises": [],
+  "language_pair": "en-ro"
+}

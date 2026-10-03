@@ -1,0 +1,214 @@
+[
+  {
+    "path": "topics/ant-component-dependencies.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_console_logging.dita",
+    "rewards": [
+      1.0,
+      -0.67
+    ],
+    "advs": [
+      0.9999988023966438,
+      -0.9999988023966438
+    ],
+    "updated": true,
+    "loss": -2.562652587890625
+  },
+  {
+    "path": "topics/contribute-new-languages-extension.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_omit_the_front_page__table_of_contents__etc_for_a_plain_dita_map.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/wa-entity-not-resolved-1001.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/nvdl-component-dependencies.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/preferences-editor-schema-properties.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/whr-converting-templates.dita",
+    "rewards": [
+      1.0,
+      -1.0
+    ],
+    "advs": [
+      0.9999990000010001,
+      -0.9999990000010001
+    ],
+    "updated": true,
+    "loss": 4.6300048828125
+  },
+  {
+    "path": "topics/dcpp_how_to_style_the_table_of_contents_for_chapters.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_enforce_a_number_of_lines_from_the_split_paragraphs_in_the_next_page.dita",
+    "rewards": [
+      1.0,
+      -1.0
+    ],
+    "advs": [
+      0.9999990000010001,
+      -0.9999990000010001
+    ],
+    "updated": true,
+    "loss": -8.418098449707031
+  },
+  {
+    "path": "topics/cf-set-web-author-system-property.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/resource-locking-custom-protocol-plugin.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-task-search.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/less-syntax-highlight.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/configure-mathflow-editor.dita",
+    "rewards": [
+      -0.67,
+      -0.67
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita",
+    "rewards": [
+      -1.0,
+      1.0
+    ],
+    "advs": [
+      -0.9999990000010001,
+      0.9999990000010001
+    ],
+    "updated": true,
+    "loss": -2.1823577880859375
+  },
+  {
+    "path": "topics/wa-custom-plugin-problems.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/webapp-repository.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/crash-on-macosx.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-organizations-management.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/whr_publishing_templates.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/xpath-catalogs.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_display_chapters_title_on_a_separate_page.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_deal_with_unwanted_returns_in_code_blocks.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "updated": false
+  }
+]

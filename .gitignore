@@ -1,0 +1,9 @@
+data/
+schemas/dita13-doctypes/
+__pycache__/
+*.pyc
+.cache/
+results/hf/
+
+results/adapter/tokenizer.json
+results/adapter/tokenizer_config.json

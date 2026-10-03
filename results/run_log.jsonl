@@ -1,0 +1,15 @@
+{"event": "start", "t": "2026-10-03T19:18:06", "model": "Qwen/Qwen3.5-4B", "train_wall_s": 2400}
+{"event": "start", "t": "2026-10-03T19:29:16", "model": "Qwen/Qwen3.5-4B", "train_wall_s": 2400}
+{"event": "model_class", "t": "2026-10-03T19:29:28", "name": "AutoModelForImageTextToText"}
+{"event": "loaded", "t": "2026-10-03T19:29:28", "seconds": 12.0, "vram_gb": 3.29}
+{"event": "lora_targets", "t": "2026-10-03T19:29:28", "targets": ["q_proj", "k_proj", "v_proj", "o_proj"]}
+{"event": "smoke", "t": "2026-10-03T19:29:30", "seconds": 1.95, "new_tokens": 32, "prompt_tokens": 204, "head": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE glossentry PUBLIC \"-//OASIS//DTD DITA Glossary//"}
+{"event": "baseline_begin", "t": "2026-10-03T19:29:30"}
+{"event": "baseline_done", "t": "2026-10-03T19:33:20", "n": 10, "schema_invalid_topics": 1, "schema_error_total": 0, "skeleton_mismatch_topics": 2, "valid_and_skeleton_ok": 8, "mean_reward": 0.635, "latency_p50_s": 23.553, "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy", "decoding": "greedy"}
+{"event": "rl_step", "t": "2026-10-03T19:35:10", "step": 1, "path": "topics/dcpp_console_logging.dita", "rewards": [1.0, -0.67], "updates": 1, "vram_gb": 4.64}
+{"event": "rl_step", "t": "2026-10-03T19:40:25", "step": 7, "path": "topics/whr-converting-templates.dita", "rewards": [1.0, -1.0], "updates": 2, "vram_gb": 4.64}
+{"event": "rl_step", "t": "2026-10-03T19:42:25", "step": 9, "path": "topics/dcpp_how_to_enforce_a_number_of_lines_from_the_split_paragraphs_in_the_next_page.dita", "rewards": [1.0, -1.0], "updates": 3, "vram_gb": 4.64}
+{"event": "rl_step", "t": "2026-10-03T19:48:07", "step": 15, "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita", "rewards": [-1.0, 1.0], "updates": 4, "vram_gb": 4.64}
+{"event": "rl_done", "t": "2026-10-03T19:54:52", "updates": 4, "skipped_flat": 20, "train_s": 1292.0}
+{"event": "after_begin", "t": "2026-10-03T19:54:53"}
+{"event": "finished", "t": "2026-10-03T20:02:47", "baseline": {"n": 10, "schema_invalid_topics": 1, "schema_error_total": 0, "skeleton_mismatch_topics": 2, "valid_and_skeleton_ok": 8, "mean_reward": 0.635, "latency_p50_s": 23.553, "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy", "decoding": "greedy"}, "after": {"n": 10, "schema_invalid_topics": 1, "schema_error_total": 0, "skeleton_mismatch_topics": 2, "valid_and_skeleton_ok": 8, "mean_reward": 0.635, "latency_p50_s": 23.448, "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy", "decoding": "greedy"}}

@@ -1,0 +1,11 @@
+# Qwen3.5-4B needs a recent transformers; 5.18 requires torch>=2.5.
+# On the RunPod image we used torch 2.6.0+cu124 and torchvision 0.21.0+cu124.
+torch>=2.5.0
+torchvision>=0.20.0
+transformers==5.18.0
+peft>=0.17.1
+bitsandbytes>=0.45.0
+accelerate>=1.2.0
+sentencepiece
+protobuf
+safetensors

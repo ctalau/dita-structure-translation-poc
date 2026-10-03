@@ -1,0 +1,51 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "quant": "bitsandbytes NF4 QLoRA (4-bit base)",
+  "method": "GRPO-style group size 2, advantage = (r - mean) / std, one QLoRA step per topic",
+  "lr": 5e-06,
+  "lora_r": 8,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "updates": 4,
+  "skipped_flat_reward": 20,
+  "train_wall_s_budget": 2400,
+  "baseline": {
+    "n": 10,
+    "schema_invalid_topics": 1,
+    "schema_error_total": 0,
+    "skeleton_mismatch_topics": 2,
+    "valid_and_skeleton_ok": 8,
+    "mean_reward": 0.635,
+    "latency_p50_s": 23.553,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy"
+  },
+  "after": {
+    "n": 10,
+    "schema_invalid_topics": 1,
+    "schema_error_total": 0,
+    "skeleton_mismatch_topics": 2,
+    "valid_and_skeleton_ok": 8,
+    "mean_reward": 0.635,
+    "latency_p50_s": 23.448,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy"
+  },
+  "val_after": {
+    "n": 10,
+    "schema_invalid_topics": 5,
+    "schema_error_total": 0,
+    "skeleton_mismatch_topics": 6,
+    "valid_and_skeleton_ok": 4,
+    "mean_reward": -0.167,
+    "latency_p50_s": 28.528,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy"
+  },
+  "surprises": [],
+  "language_pair": "en-ro"
+}

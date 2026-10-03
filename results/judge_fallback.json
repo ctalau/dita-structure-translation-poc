@@ -1,0 +1,180 @@
+{
+  "baseline_test.json": {
+    "judge": "fallback-lexical-not-grok",
+    "why": "No XAI_API_KEY in box secrets or environment. OpenRouter key for x-ai/grok-4.7 returned HTTP 401 API key expired. Faithfulness was not scored: a word-overlap heuristic would punish a real translation.",
+    "fluency_formula": "Romanian function-word hits / (Romanian + English function-word hits), mapped >=0.85->5, >=0.7->4, >=0.5->3, >=0.3->2, else 1. Ambiguous short words (de, o, in, la) are excluded.",
+    "mean_fluency_heuristic": 5.0,
+    "mean_faithfulness": null,
+    "rows": [
+      {
+        "path": "glossary/canonicalize.dita",
+        "ro_function_hits": 13,
+        "en_function_hits": 0,
+        "tokens": 79,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/cf-change-admin-password.dita",
+        "ro_function_hits": 4,
+        "en_function_hits": 0,
+        "tokens": 80,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/xslt-hierarchy-view.dita",
+        "ro_function_hits": 8,
+        "en_function_hits": 0,
+        "tokens": 60,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/dcpp_how_to_remove_the_figure_nn_label.dita",
+        "ro_function_hits": 3,
+        "en_function_hits": 0,
+        "tokens": 104,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/content-fusion-addon.dita",
+        "ro_function_hits": 31,
+        "en_function_hits": 0,
+        "tokens": 181,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/download-database-drivers.dita",
+        "ro_function_hits": 12,
+        "en_function_hits": 0,
+        "tokens": 125,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/author-editing-tables-xhtml.dita",
+        "ro_function_hits": 18,
+        "en_function_hits": 0,
+        "tokens": 124,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/dcpp_archiving.dita",
+        "ro_function_hits": 5,
+        "en_function_hits": 0,
+        "tokens": 36,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/how_to_postgresql.dita",
+        "ro_function_hits": 7,
+        "en_function_hits": 0,
+        "tokens": 58,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/ch_graphics_images.dita",
+        "ro_function_hits": 16,
+        "en_function_hits": 0,
+        "tokens": 131,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      }
+    ]
+  },
+  "after_test.json": {
+    "judge": "fallback-lexical-not-grok",
+    "why": "No XAI_API_KEY in box secrets or environment. OpenRouter key for x-ai/grok-4.7 returned HTTP 401 API key expired. Faithfulness was not scored: a word-overlap heuristic would punish a real translation.",
+    "fluency_formula": "Romanian function-word hits / (Romanian + English function-word hits), mapped >=0.85->5, >=0.7->4, >=0.5->3, >=0.3->2, else 1. Ambiguous short words (de, o, in, la) are excluded.",
+    "mean_fluency_heuristic": 5.0,
+    "mean_faithfulness": null,
+    "rows": [
+      {
+        "path": "glossary/canonicalize.dita",
+        "ro_function_hits": 13,
+        "en_function_hits": 0,
+        "tokens": 79,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/cf-change-admin-password.dita",
+        "ro_function_hits": 4,
+        "en_function_hits": 0,
+        "tokens": 80,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/xslt-hierarchy-view.dita",
+        "ro_function_hits": 8,
+        "en_function_hits": 0,
+        "tokens": 60,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/dcpp_how_to_remove_the_figure_nn_label.dita",
+        "ro_function_hits": 3,
+        "en_function_hits": 0,
+        "tokens": 103,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/content-fusion-addon.dita",
+        "ro_function_hits": 31,
+        "en_function_hits": 0,
+        "tokens": 181,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/download-database-drivers.dita",
+        "ro_function_hits": 12,
+        "en_function_hits": 0,
+        "tokens": 125,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/author-editing-tables-xhtml.dita",
+        "ro_function_hits": 18,
+        "en_function_hits": 0,
+        "tokens": 123,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/dcpp_archiving.dita",
+        "ro_function_hits": 5,
+        "en_function_hits": 0,
+        "tokens": 36,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/how_to_postgresql.dita",
+        "ro_function_hits": 7,
+        "en_function_hits": 0,
+        "tokens": 60,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      },
+      {
+        "path": "topics/ch_graphics_images.dita",
+        "ro_function_hits": 16,
+        "en_function_hits": 0,
+        "tokens": 131,
+        "fluency_heuristic_1_to_5": 5,
+        "faithfulness": null
+      }
+    ]
+  }
+}
