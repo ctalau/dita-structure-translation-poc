@@ -1,0 +1,15 @@
+{
+  "path": "ai/actions_preferences.dita",
+  "new_tokens": 896,
+  "seconds": 42.051,
+  "tok_s": 21.31,
+  "violations": 3,
+  "schema": 2,
+  "punct": 1,
+  "kernels": {
+    "causal_conv1d": true,
+    "flash_linear_attention": true,
+    "fla": true
+  },
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

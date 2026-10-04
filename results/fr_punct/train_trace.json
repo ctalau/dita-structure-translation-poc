@@ -1,0 +1,2807 @@
+[
+  {
+    "path": "topics/ch_css_media_rules.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_add_a_draft_watermark_above_the_text.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_add_a_cover_in_single_topic.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-file-protocol.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_change_the_videos_cover.dita",
+    "rewards": [
+      -4.0,
+      -1.0
+    ],
+    "advs": [
+      -0.9999993333337779,
+      0.9999993333337779
+    ],
+    "updated": true,
+    "loss": -0.005222205072641373,
+    "violations": [
+      4,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/ch_fonts_basic_fonts.dita",
+    "rewards": [
+      -6.0,
+      -4.0
+    ],
+    "advs": [
+      -0.9999990000010001,
+      0.9999990000010001
+    ],
+    "updated": true,
+    "loss": 0.0011752359569072723,
+    "violations": [
+      6,
+      4
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 2
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/cf-increase-memory.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "glossary/keystore.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_advanced_styling_using_xpath_in_css.dita",
+    "rewards": [
+      -4.0,
+      -4.0
+    ],
+    "violations": [
+      4,
+      4
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_annotations.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/author-docbook5-transformation-scenarios.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ant-refactoring-actions.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_change_styling_of_the_cover_page_title.dita",
+    "rewards": [
+      -5.0,
+      -4.0
+    ],
+    "advs": [
+      -0.999998000004,
+      0.999998000004
+    ],
+    "updated": true,
+    "loss": -0.024845153093338013,
+    "violations": [
+      5,
+      4
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 3,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 2,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/cf-admin-page-git.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/configure-mathtype-editor.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/api_faq_enable_change_tracking_at_startup.dita",
+    "rewards": [
+      -6.0,
+      -6.0
+    ],
+    "violations": [
+      6,
+      6
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 5,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 5,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_definel_hyphenation_for_a_word.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 2
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 2
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-set-web-author-system-property.dita",
+    "rewards": [
+      -4.0,
+      -4.0
+    ],
+    "violations": [
+      4,
+      4
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 2
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 2
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_fix_missing_images.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/chm-network-drive.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "ai/preferences.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-admin-page-mail.dita",
+    "rewards": [
+      0.0,
+      -2.0
+    ],
+    "advs": [
+      0.9999990000010001,
+      -0.9999990000010001
+    ],
+    "updated": true,
+    "loss": 0.0011956728994846344,
+    "violations": [
+      0,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/css-syntax-highlight.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_advanced_styling_hyphenation_how_to_hide_hyphens.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_header_footer_text_on_multiple_lines.dita",
+    "rewards": [
+      -3.0,
+      -1.0
+    ],
+    "advs": [
+      -0.9999990000010001,
+      0.9999990000010001
+    ],
+    "updated": true,
+    "loss": -0.0018471330404281616,
+    "violations": [
+      3,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 2,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/cannot-unistall.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "glossary/moderator.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_how_to_add_a_separator_above_the_footnotes.dita",
+    "rewards": [
+      -2.0,
+      -6.0
+    ],
+    "advs": [
+      0.99999950000025,
+      -0.99999950000025
+    ],
+    "updated": true,
+    "loss": 0.0029784999787807465,
+    "violations": [
+      2,
+      6
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 4
+      }
+    ]
+  },
+  {
+    "path": "topics/ant-syntax-highlight.dita",
+    "rewards": [
+      -1.0,
+      -2.0
+    ],
+    "advs": [
+      0.999998000004,
+      -0.999998000004
+    ],
+    "updated": true,
+    "loss": 0.0008896943181753159,
+    "violations": [
+      1,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/dcpp_accessibility.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "glossary/anchor.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_fonts_using_web_fonts.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "glossary/foldable-element.dita",
+    "rewards": [
+      -1.0,
+      -4.0
+    ],
+    "advs": [
+      0.9999993333337779,
+      -0.9999993333337779
+    ],
+    "updated": true,
+    "loss": 0.0003535076975822449,
+    "violations": [
+      1,
+      4
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 4,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/dcpp-dita-ot-extensions.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_fonts_supported_fonts.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_change_the_styling_of_the_page_numbering.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "glossary/global-options.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_display_topic_before_toc.dita",
+    "rewards": [
+      -5.0,
+      -5.0
+    ],
+    "violations": [
+      5,
+      5
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_enable_line_wrap_in_code_phrases.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_css_units.dita",
+    "rewards": [
+      -4.0,
+      -2.0
+    ],
+    "advs": [
+      -0.9999990000010001,
+      0.9999990000010001
+    ],
+    "updated": true,
+    "loss": 0.0037033800035715103,
+    "violations": [
+      4,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 1,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 1,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_cover_page.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_draft_watermark.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_fix_text_bleeding_from_table_cells.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-organizations-management.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_configuration_file.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_headers_footers_built_in_css.dita",
+    "rewards": [
+      -1.0,
+      0.0
+    ],
+    "advs": [
+      -0.999998000004,
+      0.999998000004
+    ],
+    "updated": true,
+    "loss": -0.0010127611458301544,
+    "violations": [
+      1,
+      0
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/ch_fonts_font_variant_ligatures.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_disable_line_wrap_in_code_blocks.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_archiving.dita",
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "violations": [
+      3,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/configure-xqj-connection.dita",
+    "rewards": [
+      -1.0,
+      -2.0
+    ],
+    "advs": [
+      0.999998000004,
+      -0.999998000004
+    ],
+    "updated": true,
+    "loss": -0.008748773485422134,
+    "violations": [
+      1,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/api_faq_print_document_in_applet.dita",
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "violations": [
+      3,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_graphics_foreground_images.dita",
+    "rewards": [
+      -3.0,
+      -2.0
+    ],
+    "advs": [
+      -0.999998000004,
+      0.999998000004
+    ],
+    "updated": true,
+    "loss": -0.0055986978113651276,
+    "violations": [
+      3,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "glossary/canonicalize.dita",
+    "rewards": [
+      -1.0,
+      0.0
+    ],
+    "advs": [
+      -0.999998000004,
+      0.999998000004
+    ],
+    "updated": true,
+    "loss": 0.00961514562368393,
+    "violations": [
+      1,
+      0
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/dcpp_how_to_change_video_size.dita",
+    "rewards": [
+      -1.0,
+      -2.0
+    ],
+    "advs": [
+      0.999998000004,
+      -0.999998000004
+    ],
+    "updated": true,
+    "loss": -0.006021847948431969,
+    "violations": [
+      1,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/dcpp_how_to_center_tables.dita",
+    "rewards": [
+      -2.0,
+      -3.0
+    ],
+    "advs": [
+      0.999998000004,
+      -0.999998000004
+    ],
+    "updated": true,
+    "loss": 0.005880409851670265,
+    "violations": [
+      2,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 1,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 2,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/dcpp_how_to_change_note_colors.dita",
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "violations": [
+      3,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_forcing_page_breaks.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_comments_and_change_tracking___built_in_css.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "rules/styleguide/documentationRules.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_page_margins.dita",
+    "rewards": [
+      -21.0,
+      -3.0
+    ],
+    "advs": [
+      -0.9999998888889013,
+      0.9999998888889013
+    ],
+    "updated": true,
+    "loss": -0.007325734943151474,
+    "violations": [
+      21,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 1,
+        "bad_high_punct": 19,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/compare-images.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/api-faq-transform.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_control_page_break_within_appendices.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_change_the_page_orientation.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-proxy-setup.dita",
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "violations": [
+      3,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_layout.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 0,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_fonts_font_variant_alternates.dita",
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "violations": [
+      3,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_enable_hyphenation_for_entire_document.dita",
+    "rewards": [
+      -4.0,
+      -4.0
+    ],
+    "violations": [
+      4,
+      4
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 4,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_change_notes_icons.dita",
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "violations": [
+      3,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 3,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_how_to_insert_date.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_fonts_using_installed_fonts.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/cf-change-admin-password.dita",
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "violations": [
+      3,
+      3
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 1,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_display_borders_on_a_split_cell.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_align_lists_with_page_margins.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_add_a_draft_watermark_on_all_pages.dita",
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "violations": [
+      2,
+      2
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 2,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_graphics_supported_colors.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_customize_hazard_statements.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_footnotes.dita",
+    "rewards": [
+      -1.0,
+      -8.0
+    ],
+    "advs": [
+      0.9999997142857959,
+      -0.9999997142857959
+    ],
+    "updated": true,
+    "loss": -0.013549722731113434,
+    "violations": [
+      1,
+      8
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 1,
+        "truncation": 0,
+        "bad_high_punct": 7,
+        "english_quotes": 0
+      }
+    ]
+  },
+  {
+    "path": "topics/dcpp_how_to_change_link_styles.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "violations": [
+      1,
+      1
+    ],
+    "parts": [
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      },
+      {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0,
+        "bad_high_punct": 1,
+        "english_quotes": 0
+      }
+    ],
+    "updated": false
+  }
+]

@@ -284,7 +284,7 @@ def score_pair(src_xml: str, hyp_text: str, hit_token_cap: bool = False) -> dict
         "attr_recall": 0.0,
     }
     try:
-        src_root = ET.fromstring(expand_nbsp(src_xml))
+        src_root = ET.fromstring(_for_et(src_xml))
     except ET.ParseError as e:
         info["error_tail"] = f"source not well-formed: {e}"
         info["reasons"] = ["not_well_formed"]
@@ -292,7 +292,7 @@ def score_pair(src_xml: str, hyp_text: str, hit_token_cap: bool = False) -> dict
         return info
     src_sigs = _sigs(src_root)
     try:
-        hyp_root = ET.fromstring(expand_nbsp(hyp_xml))
+        hyp_root = ET.fromstring(_for_et(hyp_xml))
         info["well_formed"] = True
     except ET.ParseError as e:
         info["error_tail"] = f"hypothesis not well-formed: {e}"
@@ -346,6 +346,224 @@ def score_pair(src_xml: str, hyp_text: str, hit_token_cap: bool = False) -> dict
         reward = 1.0
     info["reward"] = round(max(-1.0, min(1.0, reward)), 4)
     return info
+
+
+
+VERBATIM_TAGS = {
+    "codeblock", "codeph", "filepath", "cmdname", "userinput", "systemoutput",
+    "apiname", "option", "parmname", "synph", "kwd", "var",
+}
+HIGH_PUNCT = set("?!:;")
+ENG_QUOTES = set('"\u201c\u201d')
+SRC_QUOTES = set('"\u201c\u201d\u00ab\u00bb')
+
+
+def _levenshtein(a, b) -> int:
+    n, m = len(a), len(b)
+    if n == 0:
+        return m
+    if m == 0:
+        return n
+    prev = list(range(m + 1))
+    for i, x in enumerate(a, 1):
+        cur = [i]
+        for j, y in enumerate(b, 1):
+            ins = cur[j - 1] + 1
+            delete = prev[j] + 1
+            sub = prev[j - 1] + (x != y)
+            cur.append(ins if ins <= delete and ins <= sub else delete if delete <= sub else sub)
+        prev = cur
+    return prev[m]
+
+
+def _lcs_index_pairs(a, b):
+    n, m = len(a), len(b)
+    dp = [[0] * (m + 1) for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        ai = a[i - 1]
+        row = dp[i]
+        prow = dp[i - 1]
+        for j in range(1, m + 1):
+            if ai == b[j - 1]:
+                row[j] = prow[j - 1] + 1
+            else:
+                row[j] = prow[j] if prow[j] >= row[j - 1] else row[j - 1]
+    pairs = []
+    i, j = n, m
+    while i and j:
+        if a[i - 1] == b[j - 1] and dp[i][j] == dp[i - 1][j - 1] + 1:
+            pairs.append((i - 1, j - 1))
+            i -= 1
+            j -= 1
+        elif dp[i - 1][j] >= dp[i][j - 1]:
+            i -= 1
+        else:
+            j -= 1
+    pairs.reverse()
+    return pairs
+
+
+def _text_nodes(root, skip_verbatim=True):
+    chunks = []
+
+    def walk(el, verbatim):
+        here = verbatim or (skip_verbatim and el.tag in VERBATIM_TAGS)
+        if el.text and not here:
+            chunks.append(el.text)
+        for child in list(el):
+            walk(child, here)
+            if child.tail and not here:
+                chunks.append(child.tail)
+    walk(root, False)
+    return "\n".join(chunks)
+
+
+def _strip_doctype(xml_text: str) -> str:
+    start = xml_text.find("<!DOCTYPE")
+    if start < 0:
+        return xml_text
+    i = start
+    depth = 0
+    while i < len(xml_text):
+        ch = xml_text[i]
+        if ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth = max(0, depth - 1)
+        elif ch == ">" and depth == 0:
+            return xml_text[:start] + xml_text[i + 1 :]
+        i += 1
+    return xml_text
+
+
+def _for_et(xml_text: str) -> str:
+    return _strip_doctype(expand_nbsp(xml_text))
+
+
+def _strip_tags(xml_text: str) -> str:
+    no_decl = _strip_doctype(xml_text)
+    no_decl = re.sub(r"<\?xml[^>]*\?>", " ", no_decl)
+    return re.sub(r"<[^>]+>", " ", no_decl)
+
+
+def _punct_on_text(src_text: str, hyp_text: str):
+    bad = 0
+    quotes = 0
+    spans = []
+    for i, ch in enumerate(hyp_text):
+        if ch not in HIGH_PUNCT:
+            continue
+        prev = hyp_text[i - 1] if i else ""
+        if prev == "\u00A0":
+            continue
+        bad += 1
+        spans.append(hyp_text[max(0, i - 16): i + 1].replace("\u00A0", "\\u00a0"))
+    source_has_quote = any(ch in SRC_QUOTES for ch in src_text)
+    if source_has_quote:
+        for i, ch in enumerate(hyp_text):
+            if ch in ENG_QUOTES:
+                quotes += 1
+                spans.append(hyp_text[max(0, i - 16): i + 1])
+    return {
+        "bad_high_punct": bad,
+        "english_quotes": quotes,
+        "punct": bad + quotes,
+        "spans": spans[:12],
+        "source_has_quotation": source_has_quote,
+        "guillemet_open": hyp_text.count("\u00ab"),
+        "guillemet_close": hyp_text.count("\u00bb"),
+    }
+
+
+def _struct_counts(src, hyp, acc):
+    if src.tag != hyp.tag:
+        acc["tag_mismatch"] += 1
+        return
+    keys = set(src.attrib) | set(hyp.attrib)
+    for k in keys:
+        if src.attrib.get(k) != hyp.attrib.get(k):
+            acc["attr_value"] += 1
+    sc, hc = list(src), list(hyp)
+    st = [c.tag for c in sc]
+    ht = [c.tag for c in hc]
+    pairs = _lcs_index_pairs(st, ht)
+    # Insertions and deletions. A pure reorder of different tags is both.
+    acc["child_order"] += (len(st) - len(pairs)) + (len(ht) - len(pairs))
+    for i, j in pairs:
+        _struct_counts(sc[i], hc[j], acc)
+
+
+def count_violations(src_xml: str, hyp_text: str, hit_token_cap: bool = False) -> dict:
+    """One shared violation total for reward, candidate selection, and eval.
+
+    schema counts each occurrence of: not-well-formed (1), truncation (1),
+    DTD error lines, attribute value changes, and child insertions/deletions
+    (a reorder of unlike siblings counts as a deletion plus an insertion).
+    punct counts each ? ! : ; in prose text that is not preceded by U+00A0,
+    plus each English double quote when the source text contains a quotation.
+    Verbatim elements (codeblock, codeph, filepath, and similar) are skipped
+    so a URL colon is not a French-typography miss. Reward is minus the total.
+    """
+    hyp_xml = extract_xml(hyp_text)
+    acc = {"tag_mismatch": 0, "attr_value": 0, "child_order": 0, "dtd_errors": 0,
+           "not_well_formed": 0, "truncation": 0}
+    well = False
+    dtd_valid = False
+    err_tail = ""
+    try:
+        src_root = ET.fromstring(_for_et(src_xml))
+    except ET.ParseError as e:
+        return {
+            "violations": 1, "schema": 1, "punct": 0, "reward": -1.0,
+            "well_formed": False, "dtd_valid": False, "dtd_errors": None,
+            "truncated": False, "hyp_xml": hyp_xml, "error_tail": f"source not well-formed: {e}",
+            "parts": {**acc, "bad_high_punct": 0, "english_quotes": 0},
+            "punct_detail": {}, "skeleton_match": False,
+        }
+    try:
+        hyp_root = ET.fromstring(_for_et(hyp_xml))
+        well = True
+    except ET.ParseError as e:
+        acc["not_well_formed"] = 1
+        if hit_token_cap:
+            acc["truncation"] = 1
+        err_tail = f"hypothesis not well-formed: {e}"
+        src_text = _text_nodes(src_root)
+        punct = _punct_on_text(src_text, _strip_tags(_for_et(hyp_xml)))
+    else:
+        _struct_counts(src_root, hyp_root, acc)
+        structural = acc["tag_mismatch"] == 0 and acc["attr_value"] == 0 and acc["child_order"] == 0
+        if hit_token_cap and not structural:
+            acc["truncation"] = 1
+        valid, nerr, err = dtd_validate(hyp_xml)
+        dtd_valid = valid
+        err_tail = err[-500:]
+        if not valid:
+            acc["dtd_errors"] = nerr if nerr else 1
+        src_text = _text_nodes(src_root)
+        punct = _punct_on_text(src_text, _text_nodes(hyp_root))
+    if not well:
+        structural = False
+    schema = sum(acc.values())
+    total = schema + punct["punct"]
+    skeleton_match = bool(well and structural)
+    parts = {**acc, "bad_high_punct": punct["bad_high_punct"], "english_quotes": punct["english_quotes"]}
+    return {
+        "violations": total,
+        "schema": schema,
+        "punct": punct["punct"],
+        "reward": float(-total),
+        "well_formed": well,
+        "dtd_valid": dtd_valid,
+        "dtd_errors": acc["dtd_errors"] if well else None,
+        "truncated": bool(acc["truncation"]),
+        "hyp_xml": hyp_xml,
+        "error_tail": err_tail,
+        "parts": parts,
+        "punct_detail": punct,
+        "skeleton_match": skeleton_match,
+        "format_broken": total > 0,
+    }
 
 
 def punct_stats(xml_text: str) -> dict:

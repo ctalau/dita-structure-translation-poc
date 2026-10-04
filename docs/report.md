@@ -1,6 +1,8 @@
 # Report: English to French, keep the DITA skeleton
 
 The Oxygen user guide is English. This run translates topics to French and checks that the XML skeleton and the DITA DTD still accept the file. The previous Romanian run is kept in [report_ro.md](report_ro.md).
+The violation-count rerun (batch 8, non-breaking spaces in the reward) is [report_punct.md](report_punct.md).
+
 
 ## Data
 

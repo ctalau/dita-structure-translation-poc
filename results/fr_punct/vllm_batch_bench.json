@@ -1,0 +1,72 @@
+{
+  "topic": "ai/ai-positron-additional-connectors.dita",
+  "max_new": 128,
+  "rows": {
+    "1": {
+      "batch": 1,
+      "seconds": 1.602,
+      "new_tokens": 128,
+      "tok_s": 79.92,
+      "per_seq_tok_s": 79.92,
+      "smi": {
+        "n": 5,
+        "util_median": 100,
+        "util_mean": 100.0,
+        "util_max": 100,
+        "mem_mib_max": 19385
+      },
+      "util_samples": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "4": {
+      "batch": 4,
+      "seconds": 1.795,
+      "new_tokens": 512,
+      "tok_s": 285.21,
+      "per_seq_tok_s": 71.3,
+      "smi": {
+        "n": 6,
+        "util_median": 100.0,
+        "util_mean": 100.0,
+        "util_max": 100,
+        "mem_mib_max": 19385
+      },
+      "util_samples": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "8": {
+      "batch": 8,
+      "seconds": 2.0,
+      "new_tokens": 1024,
+      "tok_s": 512.01,
+      "per_seq_tok_s": 64.0,
+      "smi": {
+        "n": 7,
+        "util_median": 100,
+        "util_mean": 100.0,
+        "util_max": 100,
+        "mem_mib_max": 19441
+      },
+      "util_samples": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "causal_conv1d": "MISSING ImportError: /usr/local/lib/python3.11/dist-packages/causal_conv1d_cuda.cpython-311-x86_64-linux-gnu.so: undefined symbol: _ZN3c106detail14torchCheckFailEPKcS2_jRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+  "fla": "0.5.2 @ /usr/local/lib/python3.11/dist-packages/fla/__init__.py",
+  "torch": "2.6.0+cu124 @ /usr/local/lib/python3.11/dist-packages/torch/__init__.py"
+}

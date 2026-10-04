@@ -1,0 +1,89 @@
+{
+  "judge": "same agent that ran the job, no Grok/xAI/OpenRouter call",
+  "scale": "1-5, or n/a when the source has no quotation or no ? ! : ; in prose",
+  "note": "Eight of the ten greedy strings are byte-identical before and after. Scores below are for that shared French, with the two edits called out.",
+  "topics": [
+    {
+      "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+      "faithfulness": 4,
+      "french": 3,
+      "guillemets": "n/a",
+      "nbsp": 1,
+      "quote": "Title is right: « Comment modifier la taille de la page ». The index terms are broken XML (« Page taille<indexterm>Modification »). Prose colon is a normal space: « utilisez : ». Most of the 16 punctuation hits are colons inside the CSS sample, counted because the file is not well-formed so the codeblock exclusion never ran."
+    },
+    {
+      "path": "topics/author-editing-tables-xhtml.dita",
+      "faithfulness": 3,
+      "french": 2,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quote": "« un type HTML de tableau », « width attribut », « Auteur mode ». Colon: « problèmes de mise en page de tableau XHTML incluent : »."
+    },
+    {
+      "path": "topics/ant-preferences.dita",
+      "faithfulness_before": 4,
+      "faithfulness_after": 3,
+      "french": 3,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quote": "Before, the two options were « Intégré » and « Personnalisé ». After, the same spots went back to English: « Built-in » and « Custom ». The index term is escaped into the text: « Préférences<indexterm>Ant</indexterm> ». « l'appelée Ant Home »."
+    },
+    {
+      "path": "rules/styleguide/uicontrol.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quote": "« Règle : » has a normal space. The element name uicontrol is correctly left untranslated."
+    },
+    {
+      "path": "topics/dcpp_how_to_control_titles_layout.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quote": "The body is fine (« le texte passe à la ligne suivante sans indentation »). The index term is missing a bracket: « Titres<Mise en page</indexterm> ». Colon: « texte indenté) : »."
+    },
+    {
+      "path": "topics/ch_xml_support.dita",
+      "faithfulness": 3,
+      "french": 3,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quote": "« Soutien XML » should be « prise en charge ». « xi:included » became « xi:inclus ». Colon: « langages de schéma pris en charge sont : ». Two of the three punctuation hits are the letters « xi: »."
+    },
+    {
+      "path": "glossary/project-options.dita",
+      "faithfulness": 4,
+      "french_before": 3,
+      "french_after": 4,
+      "guillemets": "n/a",
+      "nbsp": "n/a",
+      "quote": "The only string edit that helps: « au niveau de projet » became « au niveau du projet ». No ? ! : ; in the prose. The violation is a child-order mismatch, not punctuation."
+    },
+    {
+      "path": "topics/ch_avoiding_page_breaks.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quote": "« Éviter les sauts de page » and the CSS are kept. Colons are normal spaces: « contenu subséquent : » and « tableaux et des listes : »."
+    },
+    {
+      "path": "topics/ch_external-links.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": 4,
+      "nbsp": 2,
+      "quote": "Guillemets are right: « après le texte « W3C » ». Colons are not: « lors de leur stylisation : », « Par exemple : », « est un lien : »."
+    },
+    {
+      "path": "topics/dcpp_how_to_center_videos.dita",
+      "faithfulness": 5,
+      "french": 5,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quote": "« Il est possible de centrer les vidéos en centrant leurs conteneurs comme ceci : ». The CSS is unchanged. The colon is a normal space."
+    }
+  ]
+}
