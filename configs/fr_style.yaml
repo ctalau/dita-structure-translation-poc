@@ -1,0 +1,78 @@
+# French DITA typography SFT + conditional GRPO.
+# CPU preparation only. Do not start this config on a GPU from the prep PR.
+# The reward is the gated scalar in docs/plans/fr-punct-sft-grpo.md.
+
+model_id: Qwen/Qwen3.5-4B
+model_revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+new_adapter: true
+continue_from_old_lora: false
+
+thinking: off
+quantization: nf4
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.0
+
+sft:
+  learning_rate: 1.0e-4
+  optimizer: adamw
+  scheduler: cosine
+  warmup_ratio: 0.05
+  effective_batch_size: 16
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 16
+  max_seq_length: 1536
+  max_epochs: 1
+  loss: completion_tokens_only
+
+grpo:
+  trainer: trl.GRPOTrainer
+  trl_pin: "1.14.1"
+  loss_type: dr_grpo
+  scale_rewards: false
+  epsilon: 0.2
+  beta: 0.02
+  num_generations: 4
+  learning_rate: 5.0e-6
+  max_seq_length: 1536
+  max_prompt_length: 640
+  max_completion_length: 896
+  kl_reference: frozen_sft_adapter
+  kl_reference_is_base_model: false
+  # TRL 1.14.1 uses the PEFT adapter named "ref" when it is loaded.
+  # Disabling adapters with no "ref" adapter would score the KL against the base model.
+  ref_adapter_name: ref
+  condition: "Run only if the SFT dev mean gated reward is below 0.95 and at least $1.30 remains."
+
+budget:
+  gpu: "one community RTX 3090"
+  total_usd: 5.00
+  hourly_usd: 0.22
+  hourly_usd_source: "docs/experiments/03-en-fr-violations.md recorded rate, not a new quote"
+  allocations_usd:
+    pilot: 0.50
+    sft: 1.80
+    grpo: 1.30
+    eval: 0.70
+    contingency: 0.40
+    storage: 0.30
+  watchdog_can_terminate_pod: true
+  do_not_call_runpod_from_cpu_prep: true
+
+data:
+  train_jsonl: split/fr_style/train.jsonl
+  sealed_jsonl: split/fr_style/sealed_test.jsonl
+  manifest: split/fr_style/manifest.json
+  historical_regression: split/fr_style/historical_regression_10.json
+  do_not_train_on_sealed_test: true
+  historical_10_are_regressions_not_the_fresh_test: true
+
+system_prompt: >
+  You translate DITA XML from English to French. Output one XML document and
+  nothing else. Keep every element, attribute, attribute value, and child order
+  identical. Translate only human-readable text. Do not translate tag names,
+  attribute values, ids, or hrefs. Use French guillemets (« ») with U+00A0
+  inside them. Insert U+00A0 before linguistic ? ! : and ;. Do not insert a
+  space into namespace names (xs:override, oxy:, xi:, xsl:), times, ratios,
+  URLs, filenames, or code. Keep the DOCTYPE. Do not add markdown fences or
+  explanations.

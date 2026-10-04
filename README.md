@@ -11,6 +11,8 @@ Four finished runs. Each one has its own writeup. The first lines of each writeu
 
 Index: [docs/experiments/README.md](docs/experiments/README.md).
 
+The French typography CPU preparation is a plan, not a finished run: [docs/plans/fr-punct-sft-grpo.md](docs/plans/fr-punct-sft-grpo.md). It does not replace an experiment note. After a real training run, AGENTS.md still requires a separate document under `docs/experiments/`.
+
 Source for all three: [oxygenxml/userguide](https://github.com/oxygenxml/userguide) commit `db722d7`. Base weights are not in this repo. Adapters: `results/adapter/` (Romanian), `results/fr/adapter/`, `results/fr_punct/adapter/`.
 
 ```bash
