@@ -1,0 +1,296 @@
+[
+  {
+    "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+    "schema": 1,
+    "punct": 16,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 1,
+      "truncation": 0,
+      "bad_high_punct": 16,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": "</xref>, utilisez :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "\">@page {     size:",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "ze: A4;     margin:",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "e côté de la page :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "\">@page {     size:",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "ze: A4;     margin:",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 1,
+    "saved_punct": 16
+  },
+  {
+    "path": "topics/author-editing-tables-xhtml.dita",
+    "schema": 1,
+    "punct": 1,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 1,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 0,
+      "truncation": 0,
+      "bad_high_punct": 1,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": "au XHTML incluent :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 1,
+    "saved_punct": 1
+  },
+  {
+    "path": "topics/ant-preferences.dita",
+    "schema": 1,
+    "punct": 6,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 1,
+      "truncation": 0,
+      "bad_high_punct": 6,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": "ptions disponibles:",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 1,
+    "saved_punct": 6
+  },
+  {
+    "path": "rules/styleguide/uicontrol.dita",
+    "schema": 0,
+    "punct": 1,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 0,
+      "truncation": 0,
+      "bad_high_punct": 1,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": "            Règle :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 0,
+    "saved_punct": 1
+  },
+  {
+    "path": "topics/dcpp_how_to_control_titles_layout.dita",
+    "schema": 1,
+    "punct": 1,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 1,
+      "truncation": 0,
+      "bad_high_punct": 1,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": "un texte indenté) :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 1,
+    "saved_punct": 1
+  },
+  {
+    "path": "topics/ch_xml_support.dita",
+    "schema": 0,
+    "punct": 3,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 0,
+      "truncation": 0,
+      "bad_high_punct": 3,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": "is en charge sont :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "                xi:",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": " les fragments  xi:",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 0,
+    "saved_punct": 3
+  },
+  {
+    "path": "glossary/project-options.dita",
+    "schema": 1,
+    "punct": 0,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 1,
+      "dtd_errors": 0,
+      "not_well_formed": 0,
+      "truncation": 0,
+      "bad_high_punct": 0,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [],
+    "saved_schema": 1,
+    "saved_punct": {}
+  },
+  {
+    "path": "topics/ch_avoiding_page_breaks.dita",
+    "schema": 0,
+    "punct": 2,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 0,
+      "truncation": 0,
+      "bad_high_punct": 2,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": "ontenu subséquent :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "aux et des listes :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 0,
+    "saved_punct": 2
+  },
+  {
+    "path": "topics/ch_external-links.dita",
+    "schema": 0,
+    "punct": 3,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 0,
+      "truncation": 0,
+      "bad_high_punct": 3,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": " leur stylisation :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "      Par exemple :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      },
+      {
+        "frag": "énéré est un lien :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 0,
+    "saved_punct": 3
+  },
+  {
+    "path": "topics/dcpp_how_to_center_videos.dita",
+    "schema": 0,
+    "punct": 1,
+    "parts": {
+      "tag_mismatch": 0,
+      "attr_value": 0,
+      "child_order": 0,
+      "dtd_errors": 0,
+      "not_well_formed": 0,
+      "truncation": 0,
+      "bad_high_punct": 1,
+      "english_quotes": 0
+    },
+    "has_nbsp": false,
+    "colon_spans": [
+      {
+        "frag": " comme       ceci :",
+        "prev_is_nbsp": false,
+        "mark": ":"
+      }
+    ],
+    "saved_schema": 0,
+    "saved_punct": 1
+  }
+]

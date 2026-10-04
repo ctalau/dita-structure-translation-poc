@@ -1,0 +1,361 @@
+{
+  "experiment": "fr_nbsp_sft",
+  "method": "supervised causal next-token loss on code-rewritten base greedy French; not GRPO",
+  "model": "Qwen/Qwen3.5-4B",
+  "quant": "bitsandbytes NF4 QLoRA",
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "lr": 2e-05,
+  "epochs_completed": 1,
+  "max_epochs": 3,
+  "optimizer_steps": 71,
+  "stop_reason": "train_nbsp_count_dropped",
+  "train_topics_in_split": 80,
+  "train_topics_used": 71,
+  "train_skipped_no_prose_edit": 9,
+  "train_skipped_long": 0,
+  "train_targets_still_bad_high_punct": 1,
+  "train_insertions": 42,
+  "train_space_replacements": 83,
+  "system_prompt": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations.",
+  "thinking": "off",
+  "decoding": "greedy",
+  "test_paths": [
+    "topics/dcpp_how_to_change_the_page_dimension.dita",
+    "topics/author-editing-tables-xhtml.dita",
+    "topics/ant-preferences.dita",
+    "rules/styleguide/uicontrol.dita",
+    "topics/dcpp_how_to_control_titles_layout.dita",
+    "topics/ch_xml_support.dita",
+    "glossary/project-options.dita",
+    "topics/ch_avoiding_page_breaks.dita",
+    "topics/ch_external-links.dita",
+    "topics/dcpp_how_to_center_videos.dita"
+  ],
+  "before_saved_metrics": {
+    "n": 10,
+    "topics_with_violations": 10,
+    "schema_topics": 5,
+    "punct_topics": 9,
+    "schema_only_topics": 1,
+    "punct_only_topics": 5,
+    "both_schema_and_punct_topics": 4,
+    "schema_violation_occurrences": 5,
+    "punct_violation_occurrences": 34,
+    "violation_occurrences": 39,
+    "mean_violations": 3.9,
+    "mean_reward": -3.9,
+    "skeleton_mismatch_topics": 5,
+    "truncated_topics": 0,
+    "zero_violation_topics": 0,
+    "latency_p50_s": 26.988,
+    "latency_mean_s": 26.692,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit, greedy, violation-count reward",
+    "decoding": "greedy",
+    "part_occurrence_histogram": {
+      "not_well_formed": 3,
+      "bad_high_punct": 34,
+      "attr_value": 1,
+      "child_order": 1
+    }
+  },
+  "before_recomputed_on_saved_baseline_strings": {
+    "n": 10,
+    "topics_with_violations": 10,
+    "schema_violation_occurrences": 5,
+    "punct_violation_occurrences": 34,
+    "bad_high_punct_occurrences": 34,
+    "topics_with_any_nbsp": 0
+  },
+  "after": {
+    "n": 10,
+    "topics_with_violations": 6,
+    "schema_violation_occurrences": 5,
+    "punct_violation_occurrences": 23,
+    "bad_high_punct_occurrences": 23,
+    "topics_with_any_nbsp": 9
+  },
+  "test_topics_gained_at_least_one_nbsp": 9,
+  "spot_checks": [
+    {
+      "bad_high_punct": 0,
+      "topics_with_nbsp": 4,
+      "n": 4,
+      "rows": [
+        {
+          "path": "topics/dcpp_headers_footers_built_in_css.dita",
+          "bad_high_punct": 0,
+          "has_nbsp": true,
+          "new_tokens": 151
+        },
+        {
+          "path": "topics/dcpp_comments_and_change_tracking___built_in_css.dita",
+          "bad_high_punct": 0,
+          "has_nbsp": true,
+          "new_tokens": 141
+        },
+        {
+          "path": "topics/ch_advanced_styling_hyphenation_how_to_hide_hyphens.dita",
+          "bad_high_punct": 0,
+          "has_nbsp": true,
+          "new_tokens": 218
+        },
+        {
+          "path": "topics/configure-mathtype-editor.dita",
+          "bad_high_punct": 0,
+          "has_nbsp": true,
+          "new_tokens": 219
+        }
+      ],
+      "epoch": 1,
+      "base_orig_punct_sum_same4": 4
+    }
+  ],
+  "mean_loss_first10": 0.048,
+  "mean_loss_last10": 0.0276,
+  "elapsed_train_eval_s": 315.4,
+  "script_elapsed_s": 507.2,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "surprises": [
+    {
+      "t": "2026-10-04T10:18:45",
+      "msg": "target still has bad_high_punct=10 on topics/dcpp_how_to_display_subtopics_in_toc.dita spans=['\\n      map\\\\u00a0: &lt;', ': &lt;map>\\n  &lt;', '&lt;title>Map&lt;', 'lt;/title>\\n  &lt;', 'c.dita\">\\n    &lt;', 'ted1\">\\n      &lt;', 'ted11\"/>\\n    &lt;', 'opicref>\\n    &lt;', 'nested2\"/>\\n  &lt;', 't;/topicref>\\n&lt;']"
+    }
+  ],
+  "colon_examples": [
+    {
+      "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+      "before": [
+        {
+          "frag": "</xref>, utilisez :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "\">@page {     size:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "ze: A4;     margin:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": "</xref>, utilisez :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "\">@page {     size:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "ze: A4;     margin:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "topics/author-editing-tables-xhtml.dita",
+      "before": [
+        {
+          "frag": "au XHTML incluent :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": "au XHTML incluent<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "topics/ant-preferences.dita",
+      "before": [
+        {
+          "frag": "ptions disponibles:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": "tions disponibles<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "rules/styleguide/uicontrol.dita",
+      "before": [
+        {
+          "frag": "            Règle :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": "            Règle<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "topics/dcpp_how_to_control_titles_layout.dita",
+      "before": [
+        {
+          "frag": "un texte indenté) :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": "un texte indenté)<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "topics/ch_xml_support.dita",
+      "before": [
+        {
+          "frag": "is en charge sont :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "                xi:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": " les fragments  xi:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": "is en charge sont<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        },
+        {
+          "frag": "                xi:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": " les fragments  xi:",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "glossary/project-options.dita",
+      "before": [],
+      "after": []
+    },
+    {
+      "path": "topics/ch_avoiding_page_breaks.dita",
+      "before": [
+        {
+          "frag": "ontenu subséquent :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "aux et des listes :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": "ontenu subséquent<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        },
+        {
+          "frag": "aux et des listes<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "topics/ch_external-links.dita",
+      "before": [
+        {
+          "frag": " leur stylisation :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "      Par exemple :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        },
+        {
+          "frag": "énéré est un lien :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": " leur stylisation<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        },
+        {
+          "frag": "      Par exemple<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        },
+        {
+          "frag": "énéré est un lien<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        }
+      ]
+    },
+    {
+      "path": "topics/dcpp_how_to_center_videos.dita",
+      "before": [
+        {
+          "frag": " comme       ceci :",
+          "prev_is_nbsp": false,
+          "mark": ":"
+        }
+      ],
+      "after": [
+        {
+          "frag": " comme       ceci<NBSP>:",
+          "prev_is_nbsp": true,
+          "mark": ":"
+        }
+      ]
+    }
+  ]
+}
