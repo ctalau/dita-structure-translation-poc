@@ -8,6 +8,7 @@ Each run has its own document. The first lines of each one say whether the held-
 | English to French, train on format breaks | Scan stopped at 45 breaks on a time cap. Format-broken went from 10/10 to 9/10. Nine strings are unchanged. | [02-en-fr-format.md](02-en-fr-format.md) | `69c81a3` |
 | English to French, violation-count reward | Did not move. Violations stayed 10/10. Schema occurrences stayed 5. Punctuation occurrences stayed 34. | [03-en-fr-violations.md](03-en-fr-violations.md) | `f9a3524` |
 | English to French, continued NBSP LoRA on new topics | Punctuation moved down and did not reach zero: 39, then 33, then 28. Schema went 2, then 0, then 2. Topics still violated went 10, then 9, then 9. | [05-en-fr-nbsp-sft2.md](05-en-fr-nbsp-sft2.md) | `0a9367e` |
+| English to French, new typography LoRA | Not a before/after. This adapter's greedy historical mean reward is 0.465, gate passed 7/10. Sealed synthetic mean reward is 1.0 on 40/40. GRPO did not train. | [06-en-fr-style-sft.md](06-en-fr-style-sft.md) | pending |
 
 The continued NBSP run is document 05. It started from the experiment-04 French NBSP LoRA. That earlier writeup is not in this branch.
 
