@@ -1,0 +1,74 @@
+[
+  {
+    "path": "topics/oxy-is-required-element.dita",
+    "loss": 0.049,
+    "n_repl": 0,
+    "n_ins": 3,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 758,
+    "source_prose_punct": 4
+  },
+  {
+    "path": "topics/ch_graphics_images.dita",
+    "loss": 0.0438,
+    "n_repl": 0,
+    "n_ins": 1,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 1233,
+    "source_prose_punct": 4
+  },
+  {
+    "path": "topics/sdk-open-custom-protocal.dita",
+    "loss": 0.0522,
+    "n_repl": 0,
+    "n_ins": 1,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 1181,
+    "source_prose_punct": 4
+  },
+  {
+    "path": "topics/XSLT-packages.dita",
+    "loss": 0.0582,
+    "n_repl": 0,
+    "n_ins": 4,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 1230,
+    "source_prose_punct": 4
+  },
+  {
+    "path": "topics/saxon-issues.dita",
+    "loss": 0.0484,
+    "n_repl": 0,
+    "n_ins": 1,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 1453,
+    "source_prose_punct": 4
+  },
+  {
+    "path": "topics/dg-subject-selector.dita",
+    "loss": 0.0405,
+    "n_repl": 0,
+    "n_ins": 2,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 1418,
+    "source_prose_punct": 4
+  },
+  {
+    "path": "topics/user-entry-sqf-operation.dita",
+    "loss": 0.0351,
+    "n_repl": 0,
+    "n_ins": 2,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 1457,
+    "source_prose_punct": 4
+  },
+  {
+    "path": "topics/dg-base-uri-function.dita",
+    "loss": 0.0251,
+    "n_repl": 0,
+    "n_ins": 1,
+    "rewrite_mode": "element_scan_wellformed",
+    "tokens": 977,
+    "source_prose_punct": 3
+  }
+]

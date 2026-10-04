@@ -1,0 +1,614 @@
+{
+  "experiment": "fr_nbsp_sft2",
+  "gpu": "NVIDIA GeForce RTX 3090 Ti",
+  "model": "Qwen/Qwen3.5-4B",
+  "quant": "bitsandbytes NF4 QLoRA",
+  "lora_r": 8,
+  "continued_from": "/workspace/fr_nbsp_sft2/start_adapter",
+  "trainable_params": 1572864,
+  "lr_sft": 2e-05,
+  "system_prompt": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations.",
+  "thinking": "off",
+  "skip_tags": [
+    "codeblock",
+    "codeph"
+  ],
+  "attributes_skipped": true,
+  "codeblock_codeph_colons_excluded": true,
+  "reward": "minus (schema occurrences + missing U+00A0 before ?!:; in prose). English quotes are counted but not added to the reward.",
+  "n_candidates_with_prose_punct": 1324,
+  "n_fresh_pool": 431,
+  "search_scanned": 48,
+  "search_clean": 30,
+  "search_train_queue": 8,
+  "old10_all_initial_punct_errors": false,
+  "old10_all_source_candidates": false,
+  "used_old10_as_heldout": false,
+  "held_out_paths": [
+    "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+    "topics/oxy-platform.dita",
+    "topics/oxy-is-editable-element.dita",
+    "topics/editing-JSON.dita",
+    "topics/xml-schema-diagram-override-properties.dita",
+    "topics/xml-schema-diagram-include-properties.dita",
+    "topics/xml-schema-diagram-redefine-properties.dita",
+    "topics/dita-pdf-output.dita",
+    "topics/oxy-selected-elements.dita",
+    "topics/oxy-current-selected-element.dita"
+  ],
+  "sft_steps": 8,
+  "sft_skipped_no_edit": 0,
+  "sft_skipped_rewrite_still_bad": 0,
+  "sft_skipped_long": 0,
+  "sft_oom": 0,
+  "sft_insertions": 15,
+  "sft_space_replacements": 0,
+  "sft_elapsed_s": 1048.6,
+  "sft_eval_missing": false,
+  "grpo_groups": 8,
+  "grpo_updates": 2,
+  "grpo_ties": 6,
+  "grpo_ties_both_missing_nbsp": 5,
+  "grpo_ties_identical_missing_spans": 4,
+  "grpo_ties_both_zero": 1,
+  "grpo_oom": 0,
+  "grpo_elapsed_s": 676.1,
+  "grpo_eval_missing": false,
+  "start": {
+    "n": 10,
+    "schema_violation_occurrences": 2,
+    "prose_punct_occurrences": 39,
+    "missing_nbsp_hits": 39,
+    "topics_still_violated": 10,
+    "topics_with_any_nbsp": 7,
+    "topics_best_effort_punct": 0,
+    "english_quotes_not_in_reward": 0
+  },
+  "after_sft": {
+    "n": 10,
+    "schema_violation_occurrences": 0,
+    "prose_punct_occurrences": 33,
+    "missing_nbsp_hits": 33,
+    "topics_still_violated": 9,
+    "topics_with_any_nbsp": 7,
+    "topics_best_effort_punct": 0,
+    "english_quotes_not_in_reward": 0
+  },
+  "after_grpo": {
+    "n": 10,
+    "schema_violation_occurrences": 2,
+    "prose_punct_occurrences": 28,
+    "missing_nbsp_hits": 28,
+    "topics_still_violated": 9,
+    "topics_with_any_nbsp": 8,
+    "topics_best_effort_punct": 0,
+    "english_quotes_not_in_reward": 0
+  },
+  "colon_examples_start_vs_last_eval": [
+    {
+      "path": "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+      "before_colons": [
+        {
+          "frag": "ments pseudo- CSS :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "CSS :before(n) et :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": " éléments pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "seudo- :before ou :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "ments pseudo- CSS :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "CSS :before(n) et :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 6,
+      "after_missing": 4,
+      "before_schema": 2,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/oxy-platform.dita",
+      "before_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 3,
+      "after_missing": 3,
+      "before_schema": 0,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/oxy-is-editable-element.dita",
+      "before_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "ns une section  xi:",
+          "mark": ":",
+          "prev": "i",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "ns une section  xi:",
+          "mark": ":",
+          "prev": "i",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 4,
+      "after_missing": 4,
+      "before_schema": 0,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/editing-JSON.dita",
+      "before_colons": [
+        {
+          "frag": "            Vidéo :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "            Vidéo :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "        Webinaire :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "        Webinaire :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [],
+      "before_missing": 4,
+      "after_missing": 0,
+      "before_schema": 0,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/xml-schema-diagram-override-properties.dita",
+      "before_colons": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": " Propriétés du  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [],
+      "before_missing": 5,
+      "after_missing": 0,
+      "before_schema": 0,
+      "after_schema": 2
+    },
+    {
+      "path": "topics/xml-schema-diagram-include-properties.dita",
+      "before_colons": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Propriétés  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Propriétés  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 5,
+      "after_missing": 5,
+      "before_schema": 0,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/xml-schema-diagram-redefine-properties.dita",
+      "before_colons": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": " Propriétés de  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": " Propriétés de  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 5,
+      "after_missing": 5,
+      "before_schema": 0,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/dita-pdf-output.dita",
+      "before_colons": [
+        {
+          "frag": "un processeur  xsl:",
+          "mark": ":",
+          "prev": "l",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "un processeur  xsl:",
+          "mark": ":",
+          "prev": "l",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 1,
+      "after_missing": 1,
+      "before_schema": 0,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/oxy-selected-elements.dita",
+      "before_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 3,
+      "after_missing": 3,
+      "before_schema": 0,
+      "after_schema": 0
+    },
+    {
+      "path": "topics/oxy-current-selected-element.dita",
+      "before_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "after_colons": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "before_missing": 3,
+      "after_missing": 3,
+      "before_schema": 0,
+      "after_schema": 0
+    }
+  ],
+  "pod_elapsed_s": 3753.2,
+  "surprises": [
+    {
+      "t": "2026-10-04T11:30:58",
+      "msg": "old 10 not used as held-out: all_initial_punct_errors=False all_source_prose_punct=False n_scored=10"
+    },
+    {
+      "t": "2026-10-04T11:30:58",
+      "msg": "search is fittable files only (source bytes/2.8+48<=820), highest source prose-punct first. An earlier size-ascending pass was clean, and files over the token cap truncated."
+    },
+    {
+      "t": "2026-10-04T11:59:00",
+      "msg": "search hit 28 min"
+    }
+  ]
+}

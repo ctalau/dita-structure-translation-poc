@@ -1,0 +1,146 @@
+[
+  {
+    "path": "topics/oxy-is-required-element.dita",
+    "updated": false,
+    "rewards": [
+      -3.0,
+      -3.0
+    ],
+    "missing_nbsp": [
+      3,
+      3
+    ],
+    "schema": [
+      0,
+      0
+    ],
+    "identical_spans": true
+  },
+  {
+    "path": "topics/ch_graphics_images.dita",
+    "updated": true,
+    "rewards": [
+      -3.0,
+      -1.0
+    ],
+    "advs": [
+      -0.9999990000010001,
+      0.9999990000010001
+    ],
+    "missing_nbsp": [
+      1,
+      1
+    ],
+    "schema": [
+      2,
+      0
+    ],
+    "identical_spans": false
+  },
+  {
+    "path": "topics/sdk-open-custom-protocal.dita",
+    "updated": false,
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "missing_nbsp": [
+      1,
+      1
+    ],
+    "schema": [
+      0,
+      0
+    ],
+    "identical_spans": true
+  },
+  {
+    "path": "topics/XSLT-packages.dita",
+    "updated": false,
+    "rewards": [
+      -4.0,
+      -4.0
+    ],
+    "missing_nbsp": [
+      4,
+      4
+    ],
+    "schema": [
+      0,
+      0
+    ],
+    "identical_spans": false
+  },
+  {
+    "path": "topics/saxon-issues.dita",
+    "updated": false,
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "missing_nbsp": [
+      1,
+      1
+    ],
+    "schema": [
+      0,
+      0
+    ],
+    "identical_spans": true
+  },
+  {
+    "path": "topics/dg-subject-selector.dita",
+    "updated": true,
+    "rewards": [
+      -1.0,
+      -2.0
+    ],
+    "advs": [
+      0.999998000004,
+      -0.999998000004
+    ],
+    "missing_nbsp": [
+      1,
+      2
+    ],
+    "schema": [
+      0,
+      0
+    ],
+    "identical_spans": false
+  },
+  {
+    "path": "topics/user-entry-sqf-operation.dita",
+    "updated": false,
+    "rewards": [
+      -2.0,
+      -2.0
+    ],
+    "missing_nbsp": [
+      2,
+      2
+    ],
+    "schema": [
+      0,
+      0
+    ],
+    "identical_spans": true
+  },
+  {
+    "path": "topics/dg-base-uri-function.dita",
+    "updated": false,
+    "rewards": [
+      0.0,
+      0.0
+    ],
+    "missing_nbsp": [
+      0,
+      0
+    ],
+    "schema": [
+      0,
+      0
+    ],
+    "identical_spans": true
+  }
+]
