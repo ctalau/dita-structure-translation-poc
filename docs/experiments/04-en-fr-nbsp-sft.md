@@ -142,4 +142,4 @@ The times that are in `metrics.json` are the process spans above, 315.4 s and 50
 
 Result files: `results/fr_nbsp_sft/metrics.json`, `results/fr_nbsp_sft/after_test.json`, `results/fr_nbsp_sft/before_recomputed.json`, `results/fr_nbsp_sft/train_loss.json`, `results/fr_nbsp_sft/surprises.json`, `results/fr_nbsp_sft/adapter/adapter_config.json`, `results/fr_nbsp_sft/adapter/adapter_model.safetensors`.
 
-Commit that added them: see the index. This document was written from those files.
+Commit that added them: `a60788493aa8cd462ef872309549b44e5da03409` (`Add the supervised French non-breaking-space run.`).
