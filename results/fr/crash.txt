@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/workspace/dita-structure-translation-poc/scripts/run_fr_poc.py", line 641, in <module>
+    main()
+  File "/workspace/dita-structure-translation-poc/scripts/run_fr_poc.py", line 533, in main
+    sc = score_pair(src, text, hit_token_cap=hit)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/dita-structure-translation-poc/scripts/dita_reward.py", line 318, in score_pair
+    valid, nerr, err = dtd_validate(hyp_xml)
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/dita-structure-translation-poc/scripts/dita_reward.py", line 235, in dtd_validate
+    proc = subprocess.run(
+           ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2157, in _communicate
+    stderr = self._translate_newlines(stderr,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 1086, in _translate_newlines
+    data = data.decode(encoding, errors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa8 in position 621: invalid start byte

@@ -1,0 +1,365 @@
+{
+  "summary": {
+    "n": 10,
+    "format_broken": 9,
+    "schema_invalid_topics": 4,
+    "schema_error_total": 1,
+    "skeleton_mismatch_topics": 9,
+    "sibling_reorder_topics": 0,
+    "truncated_topics": 0,
+    "valid_and_skeleton_ok": 1,
+    "mean_reward": 0.3305,
+    "latency_p50_s": 23.654,
+    "latency_mean_s": 20.521,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy",
+    "reason_histogram_multilabel": {
+      "not_well_formed": 3,
+      "attr_changed": 4,
+      "dtd_invalid": 1,
+      "child_mismatch": 2
+    },
+    "primary_reason_histogram": {
+      "not_well_formed": 3,
+      "attr_changed": 4,
+      "child_mismatch": 2
+    }
+  },
+  "rows": [
+    {
+      "path": "topics/dcpp_how_to_control_titles_layout.dita",
+      "tag": "after",
+      "bytes": 1546,
+      "latency_s": 23.863,
+      "new_tokens": 472,
+      "max_new": 600,
+      "hit_token_cap": false,
+      "well_formed": false,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": false,
+      "dtd_errors": null,
+      "reward": -1.0,
+      "lcs": 0.0,
+      "attr_recall": 0.0,
+      "reasons": [
+        "not_well_formed"
+      ],
+      "primary_reason": "not_well_formed",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "hypothesis not well-formed: not well-formed (invalid token): line 10, column 36",
+      "punct": {
+        "text_available": false
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"dcpp_how_to_control_titles_layout\">\n  <title>Comment contrôler la mise en page des titres</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm product=\"author developer editor authorEclipse developerEclipse editorEclipse\"\n            ><ph keyref=\"pdf-html5-transformation\"/>\n          <indexterm>Titres<Mise en page</indexterm></indexterm>\n        <indexterm product=\"pdf-css ope\">Titres<Mise en page</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_xf5_cgk_54b\">Par défaut, les titres sont affichés sur une seule ligne (avec le numéro de chapitre/section et le texte du titre). Si le titre est trop long, le texte passe à la ligne suivante sans indentation.</p>\n    <p id=\"p_yf5_cgk_54b\">\n      <codeblock outputclass=\"language-xml\" id=\"codeblock_zf5_cgk_54b\">4.5.5 Ceci est un long titre\ntexte qui passe à la ligne.</codeblock>\n    </p>\n    <p id=\"p_ag5_cgk_54b\">Si vous souhaitez que chaque ligne du titre commence au même endroit (et soit indentée), vous devez définir la valeur du paramètre de transformation <codeph>args.css.param.title.layout</codeph> sur <b>table</b>. Cela signifie que le numéro de chapitre/section est placé dans une cellule et le texte du titre dans une autre cellule (ce qui donne un texte indenté) :</p>\n    <codeblock outputclass=\"language-xml\" id=\"codeblock_bg5_cgk_54b\">4.5.5 Ceci est un long titre\n      texte qui passe à la ligne.</codeblock>\n  </body>\n</topic>"
+    },
+    {
+      "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+      "tag": "after",
+      "bytes": 1491,
+      "latency_s": 26.227,
+      "new_tokens": 521,
+      "max_new": 580,
+      "hit_token_cap": false,
+      "well_formed": false,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": false,
+      "dtd_errors": null,
+      "reward": -1.0,
+      "lcs": 0.0,
+      "attr_recall": 0.0,
+      "reasons": [
+        "not_well_formed"
+      ],
+      "primary_reason": "not_well_formed",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "hypothesis not well-formed: mismatched tag: line 12, column 8",
+      "punct": {
+        "text_available": false
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"dcpp_how_to_change_the_page_dimension\">\n    <title>Comment modifier la taille de la page</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm product=\"author developer editor authorEclipse developerEclipse editorEclipse\"\n          ><ph keyref=\"pdf-html5-transformation\"/> <indexterm>Page\n              taille<indexterm>Modification<indexterm></indexterm></indexterm></indexterm>\n        <indexterm product=\"pdf-css ope\">Page taille<indexterm>Modification<indexterm></indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n    <body>\n        <p id=\"p_u4q_cgk_54b\">Supposons que vous souhaitez publier en utilisant la taille de page standard A4, avec une marge de 2 cm.</p>\n        <p id=\"p_v4q_cgk_54b\">Dans votre <xref href=\"dcpp_the_customization_css.dita\">fichier CSS de personnalisation</xref>, utilisez :</p>\n        <codeblock outputclass=\"language-css\" id=\"codeblock_w4q_cgk_54b\">@page {\n    size: A4;\n    margin: 2cm;\n}</codeblock>\n        <p id=\"p_x4q_cgk_54b\">Si vous avez besoin de marges différentes selon le côté de la page :</p>\n        <codeblock outputclass=\"language-css\" id=\"codeblock_y4q_cgk_54b\">@page {\n    size: A4;\n    margin: 2cm;\n}\n@page :left{\n    margin-right:4cm;\n}\n@page :right{\n    margin-left:4cm;\n}</codeblock>\n        <p id=\"p_z4q_cgk_54b\">Cela augmentera uniquement les marges de garde ou les marges intérieures nécessaires à la reliure du livre final. Les autres marges resteront à 2 cm.</p>\n    </body>\n</topic>"
+    },
+    {
+      "path": "topics/ofb-technical-support-page.dita",
+      "tag": "after",
+      "bytes": 1090,
+      "latency_s": 18.392,
+      "new_tokens": 362,
+      "max_new": 437,
+      "hit_token_cap": false,
+      "well_formed": true,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": false,
+      "dtd_errors": 1,
+      "reward": 0.7936,
+      "lcs": 0.9444,
+      "attr_recall": 0.8571,
+      "reasons": [
+        "attr_changed",
+        "dtd_invalid"
+      ],
+      "primary_reason": "attr_changed",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "/tmp/tmpu3ggykuy.dita:3: element topic: validity error : Syntax of value for attribute id of topic is not valid\n<topic id=\"ofb-page-d'aide-technique\">\n                                     ^",
+      "punct": {
+        "text_available": true,
+        "guillemet_open": 0,
+        "guillemet_close": 0,
+        "ascii_double_quote": 0,
+        "curly_double_quote": 0,
+        "nbsp_ok_marks": 0,
+        "bad_high_punct": 0,
+        "bad_spans": []
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"ofb-page-d'aide-technique\">\n  <title>Page d'aide technique</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Page d'aide technique</indexterm>\n      </keywords>\n      <keywords>\n        <keyword outputclass=\"label\">Interface d'administration</keyword>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_phx_dgk_54b\">Les utilisateurs ayant le rôle d'organisation/site <i>Propriétaire</i> ou <i>Administrateur</i> ont\n      accès à la page <uicontrol>Aide technique</uicontrol>. Elle peut être utilisée pour contacter\n      l'équipe d'assistance en utilisant le formulaire disponible dans cette page. Cette page contient également des liens vers des ressources utiles, telles qu'une démonstration vidéo sur l'installation de <b>Oxygen Feedback</b> et des sujets de documentation pertinents.</p>\n    <p id=\"p_shx_dgk_54b\">\n      <fig id=\"fig_lqv_2tr_glb\">\n        <title>Page d'aide technique</title>\n        <image href=\"../img/ofb-Tech-Support-Page.png\" id=\"image_mqv_2tr_glb\"/>\n      </fig>\n    </p>\n  </body>\n</topic>"
+    },
+    {
+      "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita",
+      "tag": "after",
+      "bytes": 1452,
+      "latency_s": 25.167,
+      "new_tokens": 491,
+      "max_new": 566,
+      "hit_token_cap": false,
+      "well_formed": true,
+      "skeleton_match": true,
+      "order_sensitive": true,
+      "dtd_valid": true,
+      "dtd_errors": 0,
+      "reward": 1.0,
+      "lcs": 1.0,
+      "attr_recall": 1.0,
+      "reasons": [],
+      "primary_reason": null,
+      "truncated": false,
+      "format_broken": false,
+      "error_tail": "",
+      "punct": {
+        "text_available": true,
+        "guillemet_open": 0,
+        "guillemet_close": 0,
+        "ascii_double_quote": 8,
+        "curly_double_quote": 0,
+        "nbsp_ok_marks": 0,
+        "bad_high_punct": 1,
+        "bad_spans": [
+          "TA\n      map:"
+        ]
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"dcpp_how_to_display_subtopics_in_toc\">\n    <title>Afficher les sous-sujets dans la Table des matières</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm product=\"author developer editor authorEclipse developerEclipse editorEclipse\"\n            ><ph keyref=\"pdf-html5-transformation\"/>\n          <indexterm>Table des matières<indexterm>Afficher\n          les sous-sujets</indexterm></indexterm></indexterm>\n        <indexterm product=\"pdf-css ope\">Table des matières<indexterm>Afficher\n          les sous-sujets</indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n    <body>\n        <p>Par défaut, les sous-sujets (éléments <xmlelement>topic</xmlelement> imbriqués) ne sont pas affichés\n      dans la Table des matières. Pour être affichés, ils doivent être référencés dans la DITA\n      map:<codeblock id=\"codeblock_sm5_mr1_kbc\" outputclass=\"language-xml\">&lt;map>\n  &lt;title>Map&lt;/title>\n  &lt;topicref href=\"topic.dita\">\n    &lt;topicref href=\"topic.dita#nested1\">\n      &lt;topicref href=\"topic.dita#nested11\"/>\n    &lt;/topicref>\n    &lt;topicref href=\"topic.dita#nested2\"/>\n  &lt;/topicref>\n&lt;/map></codeblock>où <codeph>nestedX</codeph> est la valeur de l'attribut <xmlatt>id</xmlatt>\n        du sous-sujet.<note id=\"note_nf4_wr1_kbc\">En ajoutant les sous-sujets dans la DITA map, ils apparaîtront également\n        dans les PDF bookmarks.</note></p>\n    </body>\n</topic>"
+    },
+    {
+      "path": "topics/cf-change-admin-password.dita",
+      "tag": "after",
+      "bytes": 1259,
+      "latency_s": 21.552,
+      "new_tokens": 416,
+      "max_new": 497,
+      "hit_token_cap": false,
+      "well_formed": true,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": true,
+      "dtd_errors": 0,
+      "reward": 0.9722,
+      "lcs": 0.9444,
+      "attr_recall": 1.0,
+      "reasons": [
+        "child_mismatch"
+      ],
+      "primary_reason": "child_mismatch",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "",
+      "punct": {
+        "text_available": true,
+        "guillemet_open": 1,
+        "guillemet_close": 1,
+        "ascii_double_quote": 0,
+        "curly_double_quote": 0,
+        "nbsp_ok_marks": 0,
+        "bad_high_punct": 2,
+        "bad_spans": [
+          " ces étapes :",
+          "ot de passe :"
+        ]
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"cf-change-admin-password\">\n  <title>Comment modifier le mot de passe de la page d'administration</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Modifier le mot de passe d'administration</indexterm>\n        <indexterm>Modifier le mot de passe fusion</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_dn5_dgk_54b\">Pour modifier le mot de passe de l'utilisateur d'administration (« fusion »), suivez ces étapes :<ol\n        id=\"ol_wmt_wtv_k4b\">\n        <li id=\"li_en5_dgk_54b\">Exécutez la commande suivante pour obtenir la forme hachée du nouveau mot de passe :<codeblock id=\"codeblock_adr_15v_k4b\" outputclass=\"language-ini\">cd /fusion\nsudo docker-compose exec config-server nodejs /config-server/hashpwd.js mon-nouveau-mot-de-passe</codeblock></li>\n        <li id=\"li_fn5_dgk_54b\">Copiez le résultat obtenu dans le fichier<filepath>/fusion/default-data/config/config-server/users.json</filepath>.\n          Remplacez le champ <codeph>password</codeph> par le mot de passe haché obtenu à l'étape précédente.</li>\n        <li id=\"li_gn5_dgk_54b\"><xref href=\"cf-restart.dita\">Redémarrer Content Fusion</xref>.</li>\n      </ol></p>\n  </body>\n</topic>"
+    },
+    {
+      "path": "glossary/canonicalize.dita",
+      "tag": "after",
+      "bytes": 727,
+      "latency_s": 9.584,
+      "new_tokens": 184,
+      "max_new": 307,
+      "hit_token_cap": false,
+      "well_formed": true,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": true,
+      "dtd_errors": 0,
+      "reward": 0.8,
+      "lcs": 0.6,
+      "attr_recall": 1.0,
+      "reasons": [
+        "child_mismatch"
+      ],
+      "primary_reason": "child_mismatch",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "",
+      "punct": {
+        "text_available": true,
+        "guillemet_open": 0,
+        "guillemet_close": 0,
+        "ascii_double_quote": 0,
+        "curly_double_quote": 0,
+        "nbsp_ok_marks": 0,
+        "bad_high_punct": 0,
+        "bad_spans": []
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE glossentry PUBLIC \"-//OASIS//DTD DITA Glossary//EN\" \"glossary.dtd\">\n<glossentry id=\"canonicalize\">\n  <glossterm>Canonicaliser</glossterm>\n  <glossdef>Canonicaliser quelque chose consiste à le convertir en un format standard que tout le monde utilise généralement. Lorsqu'on utilise ce terme en ce qui concerne le XML, il fait référence au processus de conversion de données qui ont plus d'une représentation possible en une standardisation qui respecte la spécification d'un document XML ou d'un sous-ensemble de document. Cela est utile pour les applications qui nécessitent la capacité de tester si le contenu d'un document XML ou d'un sous-ensemble a été modifié.</glossdef>\n</glossentry>"
+    },
+    {
+      "path": "topics/preferences-database-filters.dita",
+      "tag": "after",
+      "bytes": 1396,
+      "latency_s": 24.903,
+      "new_tokens": 492,
+      "max_new": 546,
+      "hit_token_cap": false,
+      "well_formed": true,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": true,
+      "dtd_errors": 0,
+      "reward": 0.9661,
+      "lcs": 0.963,
+      "attr_recall": 0.9231,
+      "reasons": [
+        "attr_changed"
+      ],
+      "primary_reason": "attr_changed",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "",
+      "punct": {
+        "text_available": true,
+        "guillemet_open": 0,
+        "guillemet_close": 0,
+        "ascii_double_quote": 0,
+        "curly_double_quote": 0,
+        "nbsp_ok_marks": 1,
+        "bad_high_punct": 0,
+        "bad_spans": []
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"preferences-filtres-tables\">\n  <title>Préférences des filtres de tableau</title>\n  <body>\n    <p id=\"p_yvq_bgk_54b\">La page de préférences <uicontrol>Filtres de tableau</uicontrol> vous permet de choisir les types de\n      tableaux à afficher dans la vue <xref\n        href=\"../topics/relational-database-explorer.dita#relational-database-explorer\"\n          ><uicontrol>Explorateur de source de données</uicontrol></xref>. Pour ouvrir cette page de préférences,\n        <ph conkeyref=\"reusables-preferences-pages/open-the-preferences-page\"/> et aller à <menucascade>\n        <uicontrol>Sources de données</uicontrol>\n        <uicontrol>Filtres de tableau</uicontrol>\n      </menucascade>.</p>\n    <p id=\"p_zvq_bgk_54b\">Vous pouvez choisir d'afficher les types de tableaux suivants :<ul id=\"ul_awq_bgk_54b\">\n        <li id=\"li_bwq_bgk_54b\"><uicontrol>Alias</uicontrol></li>\n        <li id=\"li_cwq_bgk_54b\"><uicontrol>Temporaire global</uicontrol></li>\n        <li id=\"li_dwq_bgk_54b\"><uicontrol>Temporaire local</uicontrol></li>\n        <li id=\"li_ewq_bgk_54b\"><uicontrol>Synonyme</uicontrol></li>\n        <li id=\"li_fwq_bgk_54b\"><uicontrol>Tableau système</uicontrol></li>\n        <li id=\"li_gwq_bgk_54b\"><uicontrol>Tableau</uicontrol></li>\n        <li id=\"li_hwq_bgk_54b\"><uicontrol>Vue</uicontrol></li>\n      </ul></p>\n  </body>\n</topic>"
+    },
+    {
+      "path": "glossary/moderator.dita",
+      "tag": "after",
+      "bytes": 417,
+      "latency_s": 7.258,
+      "new_tokens": 142,
+      "max_new": 196,
+      "hit_token_cap": false,
+      "well_formed": true,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": true,
+      "dtd_errors": 0,
+      "reward": 0.8167,
+      "lcs": 0.8333,
+      "attr_recall": 0.5,
+      "reasons": [
+        "attr_changed"
+      ],
+      "primary_reason": "attr_changed",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "",
+      "punct": {
+        "text_available": true,
+        "guillemet_open": 0,
+        "guillemet_close": 0,
+        "ascii_double_quote": 0,
+        "curly_double_quote": 0,
+        "nbsp_ok_marks": 0,
+        "bad_high_punct": 0,
+        "bad_spans": []
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE glossentry PUBLIC \"-//OASIS//DTD DITA Glossary//EN\" \"glossary.dtd\">\n<glossentry id=\"modérateur\">\n    <glossterm>Moderator</glossterm>\n    <glossdef>Tout utilisateur ayant le rôle <b><term>Moderator</term></b> dans <ph keyref=\"product\"/> dispose\n    des droits pour modérer les publications de commentaires (modifier, approuver, rejeter ou supprimer) pour la\n    configuration du site particulière.</glossdef>\n</glossentry>"
+    },
+    {
+      "path": "topics/author-editing-tables-xhtml.dita",
+      "tag": "after",
+      "bytes": 1591,
+      "latency_s": 24.823,
+      "new_tokens": 491,
+      "max_new": 616,
+      "hit_token_cap": false,
+      "well_formed": true,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": true,
+      "dtd_errors": 0,
+      "reward": 0.9568,
+      "lcs": 0.95,
+      "attr_recall": 0.9091,
+      "reasons": [
+        "attr_changed"
+      ],
+      "primary_reason": "attr_changed",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "",
+      "punct": {
+        "text_available": true,
+        "guillemet_open": 0,
+        "guillemet_close": 0,
+        "ascii_double_quote": 0,
+        "curly_double_quote": 0,
+        "nbsp_ok_marks": 0,
+        "bad_high_punct": 1,
+        "bad_spans": [
+          "ML incluent :"
+        ]
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"author-edit-tables-xhtml\">\n  <title>Mise en page des tableaux XHTML</title>\n  <body>\n    <p id=\"p_ffy_bgk_54b\">Lorsque vous insérez un tableau dans un document XHTML, un type HTML de tableau est ajouté. La mise en page d'un <i>XHTML</i> tableau comprend une section <uicontrol>colspecs</uicontrol> qui vous permet de configurer facilement certaines propriétés. Par exemple, vous pouvez modifier la valeur de la largeur des colonnes (<xmlatt>width</xmlatt> attribut) ou l'alignement du texte (<xmlatt>align</xmlatt> attribut). Bien qu'ils apparaissent comme faisant partie du <xref href=\"author-editor.dita#author-editor\"><uicontrol>Auteur</uicontrol> mode</xref>, le lien <codeph>colspecs</codeph> et ses contrôles ne seront pas affichés dans votre sortie. Ils sont simplement là pour faciliter l'ajustement de la façon dont les colonnes de votre tableau sont formatées.</p>\n    <p id=\"p_gfy_bgk_54b\">\n      <fig id=\"fig_hfy_bgk_54b\">\n        <title>Mise en page des tableaux dans les documents XHTML</title>\n        <image href=\"../img/sa_author_table_html.png\"/>\n      </fig>\n    </p>\n    <section id=\"table_validation_in_xhtml\">\n      <title>Validation des tableaux XHTML</title>\n      <p id=\"p_ify_bgk_54b\"><ph keyref=\"product\"/> signale des problèmes de mise en page de tableau détectés lors de validations manuelles ou automatiques. Les types d'erreurs qui peuvent être signalés pour les problèmes de mise en page de tableau XHTML incluent :</p>\n      <p conkeyref=\"reusables-editing-documents/html-table-validation-p\" id=\"p_jfy_bgk_54b\"/>\n    </section>\n  </body>\n</topic>"
+    },
+    {
+      "path": "topics/verifying-signature.dita",
+      "tag": "after",
+      "bytes": 1532,
+      "latency_s": 23.445,
+      "new_tokens": 465,
+      "max_new": 595,
+      "hit_token_cap": false,
+      "well_formed": false,
+      "skeleton_match": false,
+      "order_sensitive": true,
+      "dtd_valid": false,
+      "dtd_errors": null,
+      "reward": -1.0,
+      "lcs": 0.0,
+      "attr_recall": 0.0,
+      "reasons": [
+        "not_well_formed"
+      ],
+      "primary_reason": "not_well_formed",
+      "truncated": false,
+      "format_broken": true,
+      "error_tail": "hypothesis not well-formed: not well-formed (invalid token): line 18, column 52",
+      "punct": {
+        "text_available": false
+      },
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"verifying-signature\">\n  <title>Vérifier la signature</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Signature numérique<indexterm>Vérifier la signature</indexterm></indexterm>\n        <indexterm>Outil Vérifier la signature</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_t41_cgk_54b\">Vous pouvez vérifier la signature d'un fichier en sélectionnant l'action <uicontrol>Vérifier\n        la signature</uicontrol> dans le sous-menu <uicontrol>Source</uicontrol> lors de l'appel\n      du menu contextuel dans le mode <uicontrol>Texte</uicontrol><ph product=\"author developer editor\">\n        ou dans le menu <uicontrol>Outils</uicontrol</ph><ph\n        product=\"developerEclipse editorEclipse\"> ou dans le menu <uicontrol>Outils XML</uicontrol>\n        </ph>. La boîte de dialogue <uicontrol>Vérifier la signature</uicontrol> vous permet ensuite de\n      spécifier l'emplacement du fichier dont la signature est vérifiée.</p>\n    <p id=\"p_u41_cgk_54b\">Si la signature est valide, une boîte de dialogue affiche le nom du signataire. Sinon, une erreur\n      indique les détails du problème.</p>\n  </body>\n  <related-links>\n    <linklist>\n      <title>Informations connexes :</title>\n      <link href=\"digital-signature-overview.dita#digital-signature-overview\"/>\n      <link href=\"signing-files.dita#signing-files\"/>\n      <link href=\"example-signing-files.dita#example-signing-files\"/>\n    </linklist>\n  </related-links>\n</topic>"
+    }
+  ]
+}

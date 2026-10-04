@@ -1,0 +1,51 @@
+{"event": "start", "t": "2026-10-03T21:15:40", "model": "Qwen/Qwen3.5-4B", "scan_wall_s": 10800, "train_wall_s": 3000, "target_broken": 100, "system": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations.", "kernels": {"causal_conv1d": "ModuleNotFoundError: No module named 'causal_conv1d'", "flash_linear_attention": "ModuleNotFoundError: No module named 'fla'", "fla": "ModuleNotFoundError: No module named 'fla'"}, "source_commit": "db722d7af0c705cc3d6969f52bd1299a20ba1770", "n_candidates": 1730}
+{"event": "model_class", "t": "2026-10-03T21:22:00", "name": "AutoModelForImageTextToText"}
+{"event": "loaded", "t": "2026-10-03T21:22:00", "seconds": 376.5, "vram_gb": 3.29, "gpu": "NVIDIA GeForce RTX 3090"}
+{"event": "lora_targets", "t": "2026-10-03T21:22:00", "targets": ["q_proj", "k_proj", "v_proj", "o_proj"]}
+{"event": "start", "t": "2026-10-03T21:32:34", "model": "Qwen/Qwen3.5-4B", "scan_wall_s": 10800, "train_wall_s": 3000, "target_broken": 100, "system": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations.", "kernels": {"causal_conv1d": "ModuleNotFoundError: No module named 'causal_conv1d'", "flash_linear_attention": "ModuleNotFoundError: No module named 'fla'", "fla": "ModuleNotFoundError: No module named 'fla'"}, "source_commit": "db722d7af0c705cc3d6969f52bd1299a20ba1770", "n_candidates": 1730}
+{"event": "model_class", "t": "2026-10-03T21:32:37", "name": "AutoModelForImageTextToText"}
+{"event": "loaded", "t": "2026-10-03T21:32:37", "seconds": 1.8, "vram_gb": 3.3, "gpu": "NVIDIA GeForce RTX 3090"}
+{"event": "lora_targets", "t": "2026-10-03T21:32:37", "targets": ["q_proj", "k_proj", "v_proj", "o_proj"]}
+{"event": "smoke", "t": "2026-10-03T21:32:40", "seconds": 2.84, "new_tokens": 48, "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"actions_preferences\">\n<title"}
+{"event": "scan_phase", "t": "2026-10-03T21:32:40", "cap": 640, "broken": 0, "scanned": 0}
+{"event": "scan_phase", "t": "2026-10-04T00:16:12", "cap": 896, "broken": 41, "scanned": 536}
+{"event": "scan_done", "t": "2026-10-04T00:33:06", "stop_reason": "scan_wall", "scanned": 569, "passed": 524, "broken": 45, "skipped_over_cap": 0, "not_reached": 398, "too_big_for_896": 763, "elapsed_s": 10825.9}
+{"event": "baseline_from_scan", "t": "2026-10-04T00:33:06", "n": 10, "format_broken": 10, "schema_invalid_topics": 5, "schema_error_total": 1, "skeleton_mismatch_topics": 10, "sibling_reorder_topics": 0, "truncated_topics": 0, "valid_and_skeleton_ok": 0, "mean_reward": 0.1305, "latency_p50_s": 23.932, "latency_mean_s": 20.824, "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy", "decoding": "greedy"}
+{"event": "rl_step", "t": "2026-10-04T00:34:04", "step": 0, "path": "topics/preferences-diff-appearance-EC.dita", "rewards": [1.0, 0.9839], "updates": 1, "vram_gb": 4.65}
+{"event": "rl_flat", "t": "2026-10-04T00:34:55", "step": 1, "path": "topics/grid-mode-cc.dita", "rewards": [1.0, 1.0]}
+{"event": "rl_flat", "t": "2026-10-04T00:35:14", "step": 2, "path": "topics/ch_layout.dita", "rewards": [1.0, 1.0]}
+{"event": "rl_step", "t": "2026-10-04T00:36:02", "step": 3, "path": "topics/webdav-over-https.dita", "rewards": [0.9643, 1.0], "updates": 2, "vram_gb": 4.65}
+{"event": "rl_step", "t": "2026-10-04T00:36:44", "step": 4, "path": "topics/dcpp_metadata.dita", "rewards": [0.9465, 1.0], "updates": 3, "vram_gb": 4.64}
+{"event": "rl_step", "t": "2026-10-04T00:37:14", "step": 5, "path": "topics/dcpp_how_to_change_the_videos_cover.dita", "rewards": [1.0, -1.0], "updates": 4, "vram_gb": 4.64}
+{"event": "rl_step", "t": "2026-10-04T00:37:45", "step": 6, "path": "glossary/foldable-element.dita", "rewards": [0.8572, 0.8786], "updates": 5, "vram_gb": 4.64}
+{"event": "rl_flat", "t": "2026-10-04T00:38:08", "step": 7, "path": "topics/dcpp_cover_page.dita", "rewards": [0.9146, 0.9146]}
+{"event": "resume_train", "t": "2026-10-04T00:39:58", "n_train": 25, "n_test": 10, "note": "scan not repeated; LoRA restarted from zero because the crash left no adapter"}
+{"event": "model_class", "t": "2026-10-04T00:40:02", "name": "AutoModelForImageTextToText"}
+{"event": "lora_targets", "t": "2026-10-04T00:40:03", "targets": ["q_proj", "k_proj", "v_proj", "o_proj"]}
+{"event": "rl_flat", "t": "2026-10-04T00:40:58", "step": 0, "path": "topics/preferences-diff-appearance-EC.dita", "rewards": [-1.0, -1.0]}
+{"event": "rl_flat", "t": "2026-10-04T00:41:49", "step": 1, "path": "topics/grid-mode-cc.dita", "rewards": [1.0, 1.0]}
+{"event": "rl_step", "t": "2026-10-04T00:42:09", "step": 2, "path": "topics/ch_layout.dita", "rewards": [1.0, -1.0], "updates": 1, "vram_gb": 4.64}
+{"event": "rl_flat", "t": "2026-10-04T00:42:54", "step": 3, "path": "topics/webdav-over-https.dita", "rewards": [0.9643, 0.9643]}
+{"event": "rl_flat", "t": "2026-10-04T00:43:33", "step": 4, "path": "topics/dcpp_metadata.dita", "rewards": [1.0, 1.0]}
+{"event": "rl_flat", "t": "2026-10-04T00:44:00", "step": 5, "path": "topics/dcpp_how_to_change_the_videos_cover.dita", "rewards": [-1.0, -1.0]}
+{"event": "rl_flat", "t": "2026-10-04T00:44:25", "step": 6, "path": "glossary/foldable-element.dita", "rewards": [-1.0, -1.0]}
+{"event": "rl_flat", "t": "2026-10-04T00:44:48", "step": 7, "path": "topics/dcpp_cover_page.dita", "rewards": [0.9146, 0.9146]}
+{"event": "rl_step", "t": "2026-10-04T00:45:23", "step": 8, "path": "topics/dcpp_how_to_remove_entries_from_the_toc.dita", "rewards": [0.7618, -1.0], "updates": 2, "vram_gb": 4.64}
+{"event": "rl_flat", "t": "2026-10-04T00:45:54", "step": 9, "path": "topics/drag-and-drop-selected-text.dita", "rewards": [-1.0, -1.0]}
+{"event": "rl_flat", "t": "2026-10-04T00:46:35", "step": 10, "path": "topics/preferences-xml-refactoring.dita", "rewards": [0.9476, 0.9476]}
+{"event": "rl_step", "t": "2026-10-04T00:47:27", "step": 11, "path": "topics/ant-preferences.dita", "rewards": [0.98, -0.7], "updates": 3, "vram_gb": 4.65}
+{"event": "rl_flat", "t": "2026-10-04T00:48:34", "step": 12, "path": "reusables/topics/reusable-website-links.dita", "rewards": [0.9778, 0.9778]}
+{"event": "rl_flat", "t": "2026-10-04T00:49:03", "step": 13, "path": "topics/dcpp_draft_watermark.dita", "rewards": [1.0, 1.0]}
+{"event": "rl_step", "t": "2026-10-04T00:49:58", "step": 14, "path": "topics/document-type-author-tab.dita", "rewards": [1.0, 0.9194], "updates": 4, "vram_gb": 4.65}
+{"event": "rl_step", "t": "2026-10-04T00:50:44", "step": 15, "path": "topics/dcpp_how_to_refer_a_video_using_a_key.dita", "rewards": [-1.0, 1.0], "updates": 5, "vram_gb": 4.65}
+{"event": "rl_step", "t": "2026-10-04T00:52:01", "step": 16, "path": "topics/address-family-not-supported.dita", "rewards": [0.9849, 1.0], "updates": 6, "vram_gb": 4.66}
+{"event": "rl_step", "t": "2026-10-04T00:52:48", "step": 17, "path": "topics/dita-map-run-Ant-transform.dita", "rewards": [1.0, 0.9722], "updates": 7, "vram_gb": 4.65}
+{"event": "rl_flat", "t": "2026-10-04T00:53:31", "step": 18, "path": "topics/dcpp_how_to_style_the_indexterms.dita", "rewards": [0.9552, 0.9552]}
+{"event": "rl_step", "t": "2026-10-04T00:54:23", "step": 19, "path": "topics/ch_header_footer_text_on_multiple_lines.dita", "rewards": [1.0, 0.9412], "updates": 8, "vram_gb": 4.65}
+{"event": "rl_flat", "t": "2026-10-04T00:55:04", "step": 20, "path": "topics/webapp-repository.dita", "rewards": [1.0, 1.0]}
+{"event": "rl_flat", "t": "2026-10-04T00:55:54", "step": 21, "path": "topics/wa-csrf.dita", "rewards": [-1.0, -1.0]}
+{"event": "rl_step", "t": "2026-10-04T00:56:30", "step": 22, "path": "topics/dcpp_videos.dita", "rewards": [0.9465, -1.0], "updates": 9, "vram_gb": 4.64}
+{"event": "rl_flat", "t": "2026-10-04T00:57:20", "step": 23, "path": "topics/schematron-quick-assist-support.dita", "rewards": [0.9361, 0.9361]}
+{"event": "rl_step", "t": "2026-10-04T00:58:12", "step": 24, "path": "topics/xml-editor-specific-actions.dita", "rewards": [1.0, 0.9773], "updates": 10, "vram_gb": 4.65}
+{"event": "rl_done", "t": "2026-10-04T00:58:12", "updates": 10, "skipped_flat": 15, "topics_attempted": 25, "train_s": 1089.5}
+{"event": "finished", "t": "2026-10-04T01:01:40", "updates": 10, "skipped_flat": 15, "after_broken": 9}

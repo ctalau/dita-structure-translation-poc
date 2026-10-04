@@ -1,0 +1,424 @@
+[
+  {
+    "path": "topics/preferences-diff-appearance-EC.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "reasons": [
+      [
+        "not_well_formed"
+      ],
+      [
+        "not_well_formed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/grid-mode-cc.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "reasons": [
+      [],
+      []
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_layout.dita",
+    "rewards": [
+      1.0,
+      -1.0
+    ],
+    "advs": [
+      0.9999990000010001,
+      -0.9999990000010001
+    ],
+    "updated": true,
+    "loss": -0.8219919204711914,
+    "reasons": [
+      [],
+      [
+        "not_well_formed"
+      ]
+    ]
+  },
+  {
+    "path": "topics/webdav-over-https.dita",
+    "rewards": [
+      0.9643,
+      0.9643
+    ],
+    "reasons": [
+      [
+        "child_mismatch"
+      ],
+      [
+        "child_mismatch"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_metadata.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "reasons": [
+      [],
+      []
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_change_the_videos_cover.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "reasons": [
+      [
+        "not_well_formed"
+      ],
+      [
+        "not_well_formed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "glossary/foldable-element.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "reasons": [
+      [
+        "not_well_formed"
+      ],
+      [
+        "not_well_formed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_cover_page.dita",
+    "rewards": [
+      0.9146,
+      0.9146
+    ],
+    "reasons": [
+      [
+        "attr_changed"
+      ],
+      [
+        "attr_changed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_how_to_remove_entries_from_the_toc.dita",
+    "rewards": [
+      0.7618,
+      -1.0
+    ],
+    "advs": [
+      0.999998864798655,
+      -0.999998864798655
+    ],
+    "updated": true,
+    "loss": -1.7315998077392578,
+    "reasons": [
+      [
+        "child_mismatch",
+        "dtd_invalid"
+      ],
+      [
+        "not_well_formed"
+      ]
+    ]
+  },
+  {
+    "path": "topics/drag-and-drop-selected-text.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "reasons": [
+      [
+        "not_well_formed"
+      ],
+      [
+        "not_well_formed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/preferences-xml-refactoring.dita",
+    "rewards": [
+      0.9476,
+      0.9476
+    ],
+    "reasons": [
+      [
+        "child_mismatch"
+      ],
+      [
+        "child_mismatch"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ant-preferences.dita",
+    "rewards": [
+      0.98,
+      -0.7
+    ],
+    "advs": [
+      0.9999988095252267,
+      -0.9999988095252267
+    ],
+    "updated": true,
+    "loss": -0.3324775695800781,
+    "reasons": [
+      [
+        "child_mismatch"
+      ],
+      [
+        "truncated",
+        "not_well_formed"
+      ]
+    ]
+  },
+  {
+    "path": "reusables/topics/reusable-website-links.dita",
+    "rewards": [
+      0.9778,
+      0.9778
+    ],
+    "reasons": [
+      [
+        "attr_changed"
+      ],
+      [
+        "attr_changed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_draft_watermark.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "reasons": [
+      [],
+      []
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/document-type-author-tab.dita",
+    "rewards": [
+      1.0,
+      0.9194
+    ],
+    "advs": [
+      0.9999751867199325,
+      -0.9999751867199325
+    ],
+    "updated": true,
+    "loss": -4.440279006958008,
+    "reasons": [
+      [],
+      [
+        "child_mismatch"
+      ]
+    ]
+  },
+  {
+    "path": "topics/dcpp_how_to_refer_a_video_using_a_key.dita",
+    "rewards": [
+      -1.0,
+      1.0
+    ],
+    "advs": [
+      -0.9999990000010001,
+      0.9999990000010001
+    ],
+    "updated": true,
+    "loss": -0.4495735168457031,
+    "reasons": [
+      [
+        "not_well_formed"
+      ],
+      []
+    ]
+  },
+  {
+    "path": "topics/address-family-not-supported.dita",
+    "rewards": [
+      0.9849,
+      1.0
+    ],
+    "advs": [
+      -0.9998675672096484,
+      0.9998675672096338
+    ],
+    "updated": true,
+    "loss": 8.905776977539062,
+    "reasons": [
+      [
+        "child_mismatch"
+      ],
+      []
+    ]
+  },
+  {
+    "path": "topics/dita-map-run-Ant-transform.dita",
+    "rewards": [
+      1.0,
+      0.9722
+    ],
+    "advs": [
+      0.9999280627293001,
+      -0.9999280627293001
+    ],
+    "updated": true,
+    "loss": -4.098787307739258,
+    "reasons": [
+      [],
+      [
+        "child_mismatch"
+      ]
+    ]
+  },
+  {
+    "path": "topics/dcpp_how_to_style_the_indexterms.dita",
+    "rewards": [
+      0.9552,
+      0.9552
+    ],
+    "reasons": [
+      [
+        "attr_changed"
+      ],
+      [
+        "attr_changed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/ch_header_footer_text_on_multiple_lines.dita",
+    "rewards": [
+      1.0,
+      0.9412
+    ],
+    "advs": [
+      0.9999659875514438,
+      -0.9999659875514438
+    ],
+    "updated": true,
+    "loss": -9.831901550292969,
+    "reasons": [
+      [],
+      [
+        "child_mismatch"
+      ]
+    ]
+  },
+  {
+    "path": "topics/webapp-repository.dita",
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "reasons": [
+      [],
+      []
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/wa-csrf.dita",
+    "rewards": [
+      -1.0,
+      -1.0
+    ],
+    "reasons": [
+      [
+        "not_well_formed"
+      ],
+      [
+        "not_well_formed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/dcpp_videos.dita",
+    "rewards": [
+      0.9465,
+      -1.0
+    ],
+    "advs": [
+      0.9999989725158258,
+      -0.9999989725158258
+    ],
+    "updated": true,
+    "loss": -0.11120891571044922,
+    "reasons": [
+      [
+        "attr_changed"
+      ],
+      [
+        "not_well_formed"
+      ]
+    ]
+  },
+  {
+    "path": "topics/schematron-quick-assist-support.dita",
+    "rewards": [
+      0.9361,
+      0.9361
+    ],
+    "reasons": [
+      [
+        "attr_changed"
+      ],
+      [
+        "attr_changed"
+      ]
+    ],
+    "updated": false
+  },
+  {
+    "path": "topics/xml-editor-specific-actions.dita",
+    "rewards": [
+      1.0,
+      0.9773
+    ],
+    "advs": [
+      0.9999119020350582,
+      -0.999911902035068
+    ],
+    "updated": true,
+    "loss": -5.23974609375,
+    "reasons": [
+      [],
+      [
+        "child_mismatch"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "judge": "executor agent reading source and hypothesis, no external API",
+  "scale": "1-5, or n/a when the source has nothing to score",
+  "note": "Nine of the ten after-strings are byte-identical to the baseline. Only dcpp_how_to_display_subtopics_in_toc.dita changed, and that is the one topic that became format-valid.",
+  "topics": [
+    {
+      "path": "topics/dcpp_how_to_control_titles_layout.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": "n/a",
+      "quotes": [
+        "Title is right: « Comment contrôler la mise en page des titres ».",
+        "Format break, not a translation miss: `<indexterm>Titres<Mise en page</indexterm>` is missing the `>` after Titres."
+      ]
+    },
+    {
+      "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": "n/a",
+      "quotes": [
+        "CSS sample kept (`size: A4`, margins).",
+        "« Supposons que vous souhaitez publier » should be the subjunctive « souhaitiez ». Minor.",
+        "Tags do not match: nested `<indexterm>` opened around « Page taille » is never closed cleanly."
+      ]
+    },
+    {
+      "path": "topics/ofb-technical-support-page.dita",
+      "faithfulness": 3,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": "n/a",
+      "quotes": [
+        "Prose is complete, including the video sentence: « telles qu'une démonstration vidéo sur l'installation de Oxygen Feedback ».",
+        "« Technical Support » became « Aide technique » / « Page d'aide technique ». Support is closer to « assistance technique ».",
+        "The topic id was translated to `ofb-page-d'aide-technique`. The apostrophe is illegal in an XML name and xmllint rejects the id."
+      ]
+    },
+    {
+      "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": 3,
+      "quotes": [
+        "After training this file is well-formed and the skeleton matches. Before, the indexterm tags were mismatched.",
+        "Title drops « How to »: « Afficher les sous-sujets dans la Table des matières ».",
+        "The automatic check flags a colon in the code sample (`map:`), not in running French prose. No guillemets were required."
+      ]
+    },
+    {
+      "path": "topics/cf-change-admin-password.dita",
+      "faithfulness": 3,
+      "french": 4,
+      "guillemets": 4,
+      "nbsp": 1,
+      "quotes": [
+        "Guillemets are used: « (« fusion ») ».",
+        "Colons have a normal space, not NBSP: « suivez ces étapes : » and « nouveau mot de passe : ».",
+        "The sample secret was translated inside the command: `my-new-password` became `mon-nouveau-mot-de-passe`."
+      ]
+    },
+    {
+      "path": "glossary/canonicalize.dita",
+      "faithfulness": 3,
+      "french": 3,
+      "guillemets": "n/a",
+      "nbsp": "n/a",
+      "quotes": [
+        "The inner `<b><term>canonicalize</term></b>` was flattened away. That is the child_mismatch.",
+        "Clumsy: « en une standardisation qui respecte la spécification ».",
+        "« whether or not » became a plain « si », which is acceptable."
+      ]
+    },
+    {
+      "path": "topics/preferences-database-filters.dita",
+      "faithfulness": 3,
+      "french": 3,
+      "guillemets": "n/a",
+      "nbsp": 5,
+      "quotes": [
+        "Id translated: `preferences-database-filters` -> `preferences-filtres-tables`.",
+        "SQL « tables » became « tableaux », which is the wrong word.",
+        "The list colon is a real NBSP: « tableaux suivants\\u00a0: »."
+      ]
+    },
+    {
+      "path": "glossary/moderator.dita",
+      "faithfulness": 3,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": "n/a",
+      "quotes": [
+        "Id translated to `modérateur` (accented). The glossterm stayed English: « Moderator ».",
+        "Definition is fluent. Adjective order is slightly off: « configuration du site particulière »."
+      ]
+    },
+    {
+      "path": "topics/author-editing-tables-xhtml.dita",
+      "faithfulness": 3,
+      "french": 2,
+      "guillemets": "n/a",
+      "nbsp": 1,
+      "quotes": [
+        "Id shortened to `author-edit-tables-xhtml`.",
+        "« un type HTML de tableau » and « d'un XHTML tableau » and « width attribut » are calques.",
+        "« mode » is outside the uicontrol: « <uicontrol>Auteur</uicontrol> mode ».",
+        "Colon without NBSP: « tableau XHTML incluent : »."
+      ]
+    },
+    {
+      "path": "topics/verifying-signature.dita",
+      "faithfulness": 4,
+      "french": 4,
+      "guillemets": "n/a",
+      "nbsp": 2,
+      "quotes": [
+        "Meaning is kept: « Vous pouvez vérifier la signature d'un fichier ».",
+        "Broken tag, same before and after: `<uicontrol>Outils</uicontrol` is missing `>`.",
+        "« Informations connexes : » uses a normal space before the colon."
+      ]
+    }
+  ]
+}

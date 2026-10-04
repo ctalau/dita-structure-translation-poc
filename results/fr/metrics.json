@@ -1,0 +1,69 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "language_pair": "en-fr",
+  "resume": true,
+  "updates": 10,
+  "skipped_flat_reward": 15,
+  "train_topics_attempted": 25,
+  "train_topics_available": 25,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "baseline": {
+    "n": 10,
+    "format_broken": 10,
+    "schema_invalid_topics": 5,
+    "schema_error_total": 1,
+    "skeleton_mismatch_topics": 10,
+    "sibling_reorder_topics": 0,
+    "truncated_topics": 0,
+    "valid_and_skeleton_ok": 0,
+    "mean_reward": 0.1305,
+    "latency_p50_s": 23.932,
+    "latency_mean_s": 20.824,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy",
+    "reason_histogram_multilabel": {
+      "not_well_formed": 4,
+      "attr_changed": 4,
+      "dtd_invalid": 1,
+      "child_mismatch": 2
+    },
+    "primary_reason_histogram": {
+      "not_well_formed": 4,
+      "attr_changed": 4,
+      "child_mismatch": 2
+    }
+  },
+  "after": {
+    "n": 10,
+    "format_broken": 9,
+    "schema_invalid_topics": 4,
+    "schema_error_total": 1,
+    "skeleton_mismatch_topics": 9,
+    "sibling_reorder_topics": 0,
+    "truncated_topics": 0,
+    "valid_and_skeleton_ok": 1,
+    "mean_reward": 0.3305,
+    "latency_p50_s": 23.654,
+    "latency_mean_s": 20.521,
+    "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+    "decoding": "greedy",
+    "reason_histogram_multilabel": {
+      "not_well_formed": 3,
+      "attr_changed": 4,
+      "dtd_invalid": 1,
+      "child_mismatch": 2
+    },
+    "primary_reason_histogram": {
+      "not_well_formed": 3,
+      "attr_changed": 4,
+      "child_mismatch": 2
+    }
+  },
+  "surprises": [],
+  "system_prompt": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations."
+}
