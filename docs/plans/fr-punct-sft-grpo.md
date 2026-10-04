@@ -97,7 +97,20 @@ These are the published files. A rescore is a new measurement. It is not a repla
 
 `results/fr_punct/metrics.json` and `results/fr_punct/baseline_test.json` summary, and the same figures in `after`: n 10, topics with violations 10, schema violation occurrences 5, punctuation violation occurrences 34, violation occurrences 39, mean reward -3.9.
 
-`results/fr_nbsp_sft2/metrics.json`: punctuation occurrences 39, then 33, then 28. Schema occurrences 2, then 0, then 2. Topics still violated 10, then 9, then 9. `trainable_params` 1572864. The reward string in that file says English quotes are counted but not added to the reward, and `skip_tags` are `codeblock` and `codeph`. Recomputing `count_violations` on those outputs can disagree with 39, 33, and 28. When it does, the file wins. The disagreement is recorded in `results/fr_typography_oracle_rescore.json` and is not a corrected baseline.
+`results/fr_nbsp_sft2/metrics.json`: punctuation occurrences 39, then 33, then 28. Schema occurrences 2, then 0, then 2. Topics still violated 10, then 9, then 9. `trainable_params` 1572864. The reward string in that file says English quotes are counted but not added to the reward, and `skip_tags` are `codeblock` and `codeph`.
+
+## CPU measurements
+
+These numbers are in the files named here. They are not a training result and they do not replace the published summaries.
+
+`results/fr_typography_postprocess_baseline.json`: on 213 gated fixtures (positives, negatives, guillemets, protected literals), mean reward 0.6901 before the postprocessor and 0.9953 after. Improved 65, regressed 0, unchanged 148. The one case that stays at 0 is `guill-english`: the postprocessor inserts U+00A0 and does not convert English quotes. This score is not a model score.
+
+`results/fr_typography_oracle_rescore.json`, evaluator `fr-typography-oracle-1`:
+
+- `results/fr_punct/baseline_test.json` and `results/fr_punct/after_test.json`. Recomputed `count_violations`: punct 34, schema 5, violations 39, mean reward -3.9. That matches the published summaries. New oracle mean reward -0.403, gate passed 3 of 10. The oracle mean is a new measurement.
+- `results/fr_nbsp_sft2/start_test.json`, `after_sft_test.json`, `after_grpo_test.json`. Those files have no summary object. Recomputed `count_violations` punct is 39, then 33, then 28, and schema is 2, then 0, then 2. Those occurrence counts match `metrics.json` and the sums of the published row fields `prose_punct` and `schema`. Recomputed mean reward is -4.1, then -3.3, then -3.0. The published row rewards sum to -41, -33, and -30. `metrics.json` does not store that mean. New oracle mean reward is 0.551, then 0.6983, then 0.5478. Gate passed 7, then 8, then 7. None of the oracle means is a corrected baseline.
+- `results/baseline_test.json` and `results/after_test.json` publish mean reward 0.635 (Romanian pass/fail reward). The French counter on those files reports punct 14, schema 3, violations 17, mean reward -1.7. The published file wins. That French number is not a Romanian metric.
+- `results/fr/baseline_test.json` publishes format-broken 10 and mean reward 0.1305. `results/fr/after_test.json` publishes format-broken 9 and mean reward 0.3305. The French counter and the French oracle on those files are new measurements of those XML strings. They are not format-break metrics.
 
 ## What this preparation does not do
 

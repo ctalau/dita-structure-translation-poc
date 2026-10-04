@@ -1,0 +1,20 @@
+{
+  "role": "regression",
+  "not_the_fresh_test": true,
+  "do_not_train": true,
+  "source": "split/manifest_fr_punct.json test",
+  "paths": [
+    "topics/dcpp_how_to_change_the_page_dimension.dita",
+    "topics/author-editing-tables-xhtml.dita",
+    "topics/ant-preferences.dita",
+    "rules/styleguide/uicontrol.dita",
+    "topics/dcpp_how_to_control_titles_layout.dita",
+    "topics/ch_xml_support.dita",
+    "glossary/project-options.dita",
+    "topics/ch_avoiding_page_breaks.dita",
+    "topics/ch_external-links.dita",
+    "topics/dcpp_how_to_center_videos.dita"
+  ],
+  "gold_translations": null,
+  "note": "These 10 paths are the previous violation-count test. No French gold was invented for them."
+}

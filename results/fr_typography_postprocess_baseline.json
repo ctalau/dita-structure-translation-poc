@@ -1,0 +1,11 @@
+{
+  "separate_from_any_model": true,
+  "method": "deterministic typography postprocessor",
+  "evaluator_version": "fr-typography-oracle-1",
+  "n": 213,
+  "mean_reward_before": 0.6901,
+  "mean_reward_after": 0.9953,
+  "n_improved": 65,
+  "n_regressed": 0,
+  "n_unchanged": 148
+}

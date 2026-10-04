@@ -1,0 +1,105 @@
+{
+  "seed": 1337,
+  "plan_targets": {
+    "verified_real_pairs": 100,
+    "deterministic_synthetic": 500,
+    "mixed_literal_counterexamples": 300,
+    "repair_or_noop": 100
+  },
+  "shipped": {
+    "verified_real_pairs": 0,
+    "deterministic_synthetic": 500,
+    "mixed_literal_counterexamples": 300,
+    "repair": 50,
+    "noop": 50,
+    "sealed_test": 40
+  },
+  "real_pair_shortfall": {
+    "shipped": 0,
+    "target": 100,
+    "reason": "The Oxygen user guide at db722d7 is English. This repo has no verified French reference translations. Model outputs under results/ were not promoted to gold. No French reviewer signed off."
+  },
+  "sealed_test_is_synthetic": true,
+  "sealed_test_note": "40 deterministic synthetic topics with the token SEALEDTOKEN. Not 100 real pairs. Disjoint from train. Not the historical 10.",
+  "do_not_train_on_sealed_test": true,
+  "historical_10_are_regressions_not_the_fresh_test": true,
+  "human_french_review_signed_off": false,
+  "families": {
+    "corpus_present": true,
+    "corpus": "/tmp/ug/DITA",
+    "partition": {
+      "xml-schema-diagram": {
+        "partition": "regression_not_fresh_test",
+        "n": 32,
+        "held_out_members": [
+          "topics/xml-schema-diagram-include-properties.dita",
+          "topics/xml-schema-diagram-override-properties.dita",
+          "topics/xml-schema-diagram-redefine-properties.dita"
+        ],
+        "members": [
+          "topics/xml-schema-diagram-alternative-properties.dita",
+          "topics/xml-schema-diagram-any-properties.dita",
+          "topics/xml-schema-diagram-anyAttribute-properties.dita",
+          "topics/xml-schema-diagram-assert-properties.dita",
+          "topics/xml-schema-diagram-attribute-properties.dita",
+          "topics/xml-schema-diagram-attributeGroup-properties.dita",
+          "topics/xml-schema-diagram-attributes-view.dita",
+          "topics/xml-schema-diagram-complexType-properties.dita",
+          "topics/xml-schema-diagram-compositors-properties.dita",
+          "topics/xml-schema-diagram-editing-actions.dita",
+          "topics/xml-schema-diagram-element-properties.dita",
+          "topics/xml-schema-diagram-facets-view.dita",
+          "topics/xml-schema-diagram-field-properties.dita",
+          "topics/xml-schema-diagram-group-properties.dita",
+          "topics/xml-schema-diagram-import-properties.dita",
+          "topics/xml-schema-diagram-include-properties.dita",
+          "topics/xml-schema-diagram-introduction.dita",
+          "topics/xml-schema-diagram-key-properties.dita",
+          "topics/xml-schema-diagram-keyRef-properties.dita",
+          "topics/xml-schema-diagram-navigation.dita",
+          "topics/xml-schema-diagram-notation-properties.dita",
+          "topics/xml-schema-diagram-opencontent-properties.dita",
+          "topics/xml-schema-diagram-outline-view.dita",
+          "topics/xml-schema-diagram-override-properties.dita",
+          "topics/xml-schema-diagram-palette-view.dita",
+          "topics/xml-schema-diagram-redefine-properties.dita",
+          "topics/xml-schema-diagram-schema-namespaces.dita",
+          "topics/xml-schema-diagram-schema-properties.dita",
+          "topics/xml-schema-diagram-selector-properties.dita",
+          "topics/xml-schema-diagram-simpleType-properties.dita",
+          "topics/xml-schema-diagram-unique-properties.dita",
+          "topics/xml-schema-diagram-validation.dita"
+        ]
+      },
+      "oxy": {
+        "partition": "regression_not_fresh_test",
+        "n": 12,
+        "held_out_members": [
+          "topics/oxy-current-selected-element.dita",
+          "topics/oxy-is-editable-element.dita",
+          "topics/oxy-platform.dita",
+          "topics/oxy-selected-elements.dita"
+        ],
+        "members": [
+          "topics/oxy-allows-child-element.dita",
+          "topics/oxy-allows-global-element.dita",
+          "topics/oxy-audio-form-control.dita",
+          "topics/oxy-browser-form-control.dita",
+          "topics/oxy-current-selected-element.dita",
+          "topics/oxy-is-editable-element.dita",
+          "topics/oxy-is-required-element.dita",
+          "topics/oxy-link-activation-trigger.dita",
+          "topics/oxy-platform.dita",
+          "topics/oxy-selected-elements.dita",
+          "topics/oxy-url.dita",
+          "topics/oxy-video-form-control.dita"
+        ]
+      }
+    }
+  },
+  "hashes": {
+    "train.jsonl": "df0542f6396cadd3951e1b3311070d39041f7defa3f2a35ed801ed81f050bc26",
+    "sealed_test.jsonl": "cf44ee8a7afd4ec0304971c47801b9c55872f3c035acce153f098818682f7206",
+    "historical_regression_10.json": "1a6b97e4eaca747719af5c85c938cbf82a43ba75310b6bb56b195e33ebe0f3c5"
+  }
+}
