@@ -113,4 +113,4 @@ Result files: `results/fr_style_sft/sft_metrics.json`, `results/fr_style_sft/fr_
 
 The adapter weights and the optimizer checkpoints are not in git.
 
-Commit that added them: pending.
+Commit that added them: `afa272625986fb1eb75c1d179ecd13e5e20014f8` (`Document the French typography SFT run.`).
