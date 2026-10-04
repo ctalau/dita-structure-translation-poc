@@ -7,6 +7,10 @@ frozen copy of the SFT adapter loaded under the PEFT name "ref". TRL 1.14.1
 uses that adapter when it is present. With no "ref" adapter, disabling PEFT
 would score the KL against the base model, which this script refuses.
 
+Warmup is warmup_steps from sft.warmup_ratio in configs/fr_style.yaml. This
+script does not pass warmup_ratio. A 5-step pilot (--max-steps 5) uses
+warmup_steps 0.
+
 Budget: conditional GRPO $1.30 of the $5 community RTX 3090 contract.
 The watchdog can terminate the pod. CPU preparation does not call RunPod
 and does not start training.
@@ -25,6 +29,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from budget_watchdog import BudgetWatchdog, credentials_from_env  # noqa: E402
 from dita_reward import gated_scalar  # noqa: E402
 from fr_lora_targets import selection  # noqa: E402
+from train_fr_sft import grpo_optimizer_steps, positive_flag, warmup_steps_for  # noqa: E402
 
 CONFIG_PATH = ROOT / "configs" / "fr_style.yaml"
 TRL_PIN = "1.14.1"
@@ -75,15 +80,45 @@ def assert_trl_pin():
     return version
 
 
+def _translate_count(config: dict) -> int:
+    train_path = ROOT / config["data"]["train_jsonl"]
+    count = 0
+    for line in train_path.read_text().splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if row["task"] == "translate":
+            count += 1
+    return count
+
+
 def main() -> int:
     config = load_config()
+    grpo = config["grpo"]
+    max_steps = positive_flag("--max-steps")
+    n_prompts = _translate_count(config)
+    if max_steps is None:
+        num_training_steps = grpo_optimizer_steps(
+            n_prompts,
+            per_device_batch_size=4,
+            num_generations=grpo["num_generations"],
+            gradient_accumulation_steps=1,
+            epochs=1,
+        )
+    else:
+        num_training_steps = max_steps
+    warm = warmup_steps_for(num_training_steps, config["sft"]["warmup_ratio"])
     print(json.dumps({
         "started": False,
         "reason": "CPU preparation does not start training. Pass --run on the GPU pod.",
         "trl_pin": TRL_PIN,
         "trl_imported": False,
-        "grpo": config["grpo"],
-        "kl_reference": config["grpo"]["kl_reference"],
+        "grpo": grpo,
+        "kl_reference": grpo["kl_reference"],
+        "n_prompts": n_prompts,
+        "num_training_steps": num_training_steps,
+        "warmup_steps": warm,
+        "warmup_argument": "warmup_steps",
         "budget_grpo_usd": config["budget"]["allocations_usd"]["grpo"],
         "targets": selection()["selected_targets"],
     }, indent=2))
@@ -161,26 +196,30 @@ def main() -> int:
         rows.append({"prompt": prompt, "source_xml": row["source_xml"]})
 
     dataset = Dataset.from_list(rows)
-    grpo_config = GRPOConfig(
-        output_dir=str(ROOT / "results" / "fr_style_grpo"),
-        loss_type="dr_grpo",
-        scale_rewards=False,
-        epsilon=0.2,
-        beta=0.02,
-        num_generations=4,
-        learning_rate=5e-6,
-        per_device_train_batch_size=4,
-        gradient_accumulation_steps=1,
-        max_completion_length=config["grpo"]["max_completion_length"],
-        max_prompt_length=config["grpo"]["max_prompt_length"],
-        num_train_epochs=1,
-        bf16=True,
-        gradient_checkpointing=True,
-        logging_steps=1,
-        save_strategy="no",
-        report_to=[],
-        remove_unused_columns=False,
-    )
+    grpo_values = {
+        "output_dir": str(ROOT / "results" / "fr_style_grpo"),
+        "loss_type": "dr_grpo",
+        "scale_rewards": False,
+        "epsilon": 0.2,
+        "beta": 0.02,
+        "num_generations": 4,
+        "learning_rate": 5e-6,
+        "per_device_train_batch_size": 4,
+        "gradient_accumulation_steps": 1,
+        "warmup_steps": warm,
+        "max_completion_length": grpo["max_completion_length"],
+        "max_prompt_length": grpo["max_prompt_length"],
+        "num_train_epochs": 1,
+        "bf16": True,
+        "gradient_checkpointing": True,
+        "logging_steps": 1,
+        "save_strategy": "no",
+        "report_to": [],
+        "remove_unused_columns": False,
+    }
+    if max_steps is not None:
+        grpo_values["max_steps"] = max_steps
+    grpo_config = GRPOConfig(**grpo_values)
     pod_id, api_key = credentials_from_env()
     watchdog = BudgetWatchdog(stage="grpo", pod_id=pod_id, api_key=api_key)
     trainer = GRPOTrainer(

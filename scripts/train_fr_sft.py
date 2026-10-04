@@ -6,6 +6,10 @@ Rank 8, alpha 16, dropout 0, NF4, AdamW, cosine with 5% warmup,
 effective batch 16, sequence cap 1536, at most 1 epoch, completion-token loss,
 thinking off.
 
+The 5% warmup is configs/fr_style.yaml sft.warmup_ratio. This script passes
+warmup_steps, never warmup_ratio. TrainingArguments on the RunPod pytorch 2.4
+image has no warmup_ratio. A 5-step pilot (--max-steps 5) uses warmup_steps 0.
+
 Budget contract, not executed by CPU preparation: one community RTX 3090, $5
 total. SFT allocation $1.80. The watchdog can terminate the pod. This file
 does not call RunPod unless training is actually running and the stage cap is hit.
@@ -15,6 +19,7 @@ CPU preparation refuses to start. Pass --run on the pod.
 from __future__ import annotations
 
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -27,6 +32,95 @@ from budget_watchdog import BudgetWatchdog, credentials_from_env  # noqa: E402
 from fr_lora_targets import selection  # noqa: E402
 
 CONFIG_PATH = ROOT / "configs" / "fr_style.yaml"
+PILOT_STEPS = 5
+
+
+def positive_flag(name: str) -> int | None:
+    if name not in sys.argv:
+        return None
+    index = sys.argv.index(name)
+    if index + 1 >= len(sys.argv):
+        raise SystemExit(f"{name} needs a value")
+    try:
+        value = int(sys.argv[index + 1])
+    except ValueError as exc:
+        raise SystemExit(f"{name} needs an integer") from exc
+    if value < 1:
+        raise SystemExit(f"{name} must be positive")
+    return value
+
+
+def sft_optimizer_steps(
+    n_examples: int,
+    per_device_batch_size: int,
+    gradient_accumulation_steps: int,
+    epochs: int,
+) -> int:
+    """Optimizer updates for one process when max_steps is unset.
+
+    The dataloader length is ceil(n / per_device_batch_size). Updates per epoch
+    are that length floor-divided by gradient_accumulation_steps, at least 1.
+    """
+    if min(n_examples, per_device_batch_size, gradient_accumulation_steps, epochs) < 1:
+        raise ValueError("n_examples, batch, accumulation, and epochs must be positive")
+    batches = math.ceil(n_examples / per_device_batch_size)
+    updates = max(batches // gradient_accumulation_steps, 1)
+    return updates * epochs
+
+
+def grpo_optimizer_steps(
+    n_prompts: int,
+    per_device_batch_size: int,
+    num_generations: int,
+    gradient_accumulation_steps: int,
+    epochs: int,
+    num_iterations: int = 1,
+    num_processes: int = 1,
+) -> int:
+    """Optimizer updates for TRL 1.14.1 GRPOTrainer.
+
+    Unset steps_per_generation becomes gradient_accumulation_steps. The sampler
+    drops a trailing prompt chunk smaller than its batch. num_processes is 1
+    for the single GPU in the budget contract.
+    """
+    if min(
+        n_prompts,
+        per_device_batch_size,
+        num_generations,
+        gradient_accumulation_steps,
+        epochs,
+        num_iterations,
+        num_processes,
+    ) < 1:
+        raise ValueError("GRPO step inputs must be positive")
+    if per_device_batch_size % num_generations != 0:
+        raise ValueError("per_device_train_batch_size must be divisible by num_generations")
+    steps_per_generation = gradient_accumulation_steps
+    generation_batch_size = per_device_batch_size * num_processes * steps_per_generation
+    sampler_batch = generation_batch_size // num_generations
+    repeat_count = num_iterations * steps_per_generation
+    kept_prompts = (n_prompts // sampler_batch) * sampler_batch
+    if kept_prompts < 1:
+        raise ValueError("not enough prompts for one GRPO generation batch")
+    sampler_len = kept_prompts * num_generations * repeat_count
+    dataloader_batch = per_device_batch_size * num_processes * steps_per_generation
+    n_batches = sampler_len // dataloader_batch
+    updates = max(n_batches // gradient_accumulation_steps, 1)
+    return updates * epochs
+
+
+def warmup_steps_for(num_training_steps: int, warmup_ratio: float) -> int:
+    """Linear warmup covering warmup_ratio of the optimizer steps.
+
+    Callers pass the result as warmup_steps. A 5-step pilot returns 0.
+    """
+    if num_training_steps < 1:
+        raise ValueError("num_training_steps must be positive")
+    if warmup_ratio < 0:
+        raise ValueError("warmup_ratio must be non-negative")
+    if num_training_steps == PILOT_STEPS:
+        return 0
+    return math.ceil(num_training_steps * warmup_ratio)
 
 
 def load_config() -> dict:
@@ -78,6 +172,18 @@ def main() -> int:
     config = load_config()
     rows = load_train_rows(config)
     chosen = selection()
+    sft = config["sft"]
+    max_steps = positive_flag("--max-steps")
+    if max_steps is None:
+        num_training_steps = sft_optimizer_steps(
+            len(rows),
+            sft["per_device_batch_size"],
+            sft["gradient_accumulation_steps"],
+            sft["max_epochs"],
+        )
+    else:
+        num_training_steps = max_steps
+    warm = warmup_steps_for(num_training_steps, sft["warmup_ratio"])
     print(json.dumps({
         "started": False,
         "reason": "CPU preparation does not start training. Pass --run on the GPU pod.",
@@ -87,7 +193,10 @@ def main() -> int:
         "continue_from_old_lora": config["continue_from_old_lora"],
         "selected_targets": chosen["selected_targets"],
         "full_set_fits_24gib_static_estimate": chosen["full_set_fits_24gib_static_estimate"],
-        "sft": config["sft"],
+        "sft": sft,
+        "num_training_steps": num_training_steps,
+        "warmup_steps": warm,
+        "warmup_argument": "warmup_steps",
         "budget_sft_usd": config["budget"]["allocations_usd"]["sft"],
     }, indent=2))
     if "--run" not in sys.argv:
@@ -185,22 +294,25 @@ def main() -> int:
     )
     model = get_peft_model(model, lora)
     out_dir = ROOT / "results" / "fr_style_sft_adapter"
-    args = TrainingArguments(
-        output_dir=str(out_dir),
-        num_train_epochs=config["sft"]["max_epochs"],
-        per_device_train_batch_size=config["sft"]["per_device_batch_size"],
-        gradient_accumulation_steps=config["sft"]["gradient_accumulation_steps"],
-        learning_rate=config["sft"]["learning_rate"],
-        lr_scheduler_type=config["sft"]["scheduler"],
-        warmup_ratio=config["sft"]["warmup_ratio"],
-        optim="adamw_torch",
-        bf16=True,
-        gradient_checkpointing=True,
-        logging_steps=1,
-        save_strategy="no",
-        report_to=[],
-        remove_unused_columns=False,
-    )
+    argument_values = {
+        "output_dir": str(out_dir),
+        "num_train_epochs": sft["max_epochs"],
+        "per_device_train_batch_size": sft["per_device_batch_size"],
+        "gradient_accumulation_steps": sft["gradient_accumulation_steps"],
+        "learning_rate": sft["learning_rate"],
+        "lr_scheduler_type": sft["scheduler"],
+        "warmup_steps": warm,
+        "optim": "adamw_torch",
+        "bf16": True,
+        "gradient_checkpointing": True,
+        "logging_steps": 1,
+        "save_strategy": "no",
+        "report_to": [],
+        "remove_unused_columns": False,
+    }
+    if max_steps is not None:
+        argument_values["max_steps"] = max_steps
+    args = TrainingArguments(**argument_values)
     pod_id, api_key = credentials_from_env()
     watchdog = BudgetWatchdog(stage="sft", pod_id=pod_id, api_key=api_key)
 

@@ -18,6 +18,7 @@ from budget_watchdog import (  # noqa: E402
     terminate_runpod_pod,
 )
 from fr_lora_targets import selection  # noqa: E402
+from train_fr_sft import grpo_optimizer_steps, sft_optimizer_steps, warmup_steps_for  # noqa: E402
 
 CONFIG = yaml.safe_load((ROOT / "configs" / "fr_style.yaml").read_text())
 
@@ -118,6 +119,22 @@ def test_sft_and_grpo_contract():
     assert grpo["learning_rate"] == 5.0e-6
     assert grpo["kl_reference"] == "frozen_sft_adapter"
     assert grpo["kl_reference_is_base_model"] is False
+
+
+def test_warmup_steps_replace_warmup_ratio():
+    ratio = CONFIG["sft"]["warmup_ratio"]
+    assert ratio == 0.05
+    sft_steps = sft_optimizer_steps(900, 1, 16, 1)
+    assert sft_steps == 56
+    assert warmup_steps_for(sft_steps, ratio) == 3
+    grpo_steps = grpo_optimizer_steps(800, per_device_batch_size=4, num_generations=4, gradient_accumulation_steps=1, epochs=1)
+    assert grpo_steps == 800
+    assert warmup_steps_for(grpo_steps, ratio) == 40
+    assert warmup_steps_for(5, ratio) == 0
+    for name in ("train_fr_sft.py", "train_fr_grpo.py"):
+        source = (ROOT / "scripts" / name).read_text()
+        assert "warmup_ratio=" not in source
+        assert '"warmup_steps": warm' in source
 
 
 def test_frozen_split_shortfall_and_disjoint_sets():

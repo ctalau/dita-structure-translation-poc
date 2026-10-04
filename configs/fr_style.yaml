@@ -17,6 +17,9 @@ sft:
   learning_rate: 1.0e-4
   optimizer: adamw
   scheduler: cosine
+  # Fraction of optimizer steps. Scripts pass warmup_steps, never warmup_ratio.
+  # The RunPod pytorch 2.4 TrainingArguments has no warmup_ratio.
+  # --max-steps 5 is the pilot and uses warmup_steps 0.
   warmup_ratio: 0.05
   effective_batch_size: 16
   per_device_batch_size: 1
