@@ -1,0 +1,10 @@
+{
+  "n_candidates_with_prose_punct": 1324,
+  "n_fresh": 431,
+  "scan_fail": 0,
+  "skip_tags": [
+    "codeblock",
+    "codeph"
+  ],
+  "attributes_skipped": true
+}

@@ -1,0 +1,726 @@
+{
+  "rows": [
+    {
+      "path": "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+      "tag": "after_grpo",
+      "latency_s": 47.512,
+      "new_tokens": 704,
+      "max_new": 773,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 4,
+      "missing_nbsp": 4,
+      "english_quotes_not_in_reward": 0,
+      "violations": 4,
+      "reward": -4.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "ments pseudo- CSS :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "CSS :before(n) et :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "ments pseudo- CSS :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "CSS :before(n) et :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  élément pseudo- :",
+          "mark": ":",
+          "prev": " ",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 4,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"ch_advanced_styling_multiple_before_and_after_pseudo_elements\">\n  <title>Utilisation des éléments pseudo- CSS :before(n) et :after(n)</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>élément pseudo- :before</indexterm>\n        <indexterm>élément pseudo- :after</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_r12_dgk_54b\">Bien que non standard, cette extension peut être utile si vous souhaitez styliser des sections en ajoutant\n      plusieurs niveaux de contenu statique. Pour ajouter du contenu statique à un élément, vous utiliseriez normalement\n      un élément pseudo- <codeph>:before</codeph> ou <codeph>:after</codeph>. </p>\n    <p id=\"p_s12_dgk_54b\">Cet exemple ajoute du texte statique avant le titre (« Chapitre 1 », « Chapitre 2 », etc.) :</p>\n    <codeblock outputclass=\"language-css\" id=\"codeblock_t12_dgk_54b\">h1:before {\n  content: \"Chapter \" counter(chapter) \".\";\n  color: blue;\n}</codeblock>\n    <p id=\"p_u12_dgk_54b\">Tout cela est stylisé avec la même couleur (bleu dans cet exemple). En utilisant du CSS standard, il est\n      impossible de styliser des aspects spécifiques (par exemple, uniquement le numéro de chapitre avec une police plus\n      grande et en rouge). Cependant, vous pouvez le faire en utilisant plusieurs éléments pseudo- <codeph>before(n)</codeph> ou\n        <codeph>after(n)</codeph> :</p>\n    <codeblock outputclass=\"language-css\" id=\"codeblock_v12_dgk_54b\">h1:before(3) {\n  content: \"Chapter \";\n  color: blue;\n}\nh1:before(2) {\n  content: counter(chapter);\n  color: red;\n  font-size: large;\n}\nh1:before(1) {\n  content: \".\";\n  color: blue;\n}</codeblock>\n    <note type=\"other\" othertype=\"Notes\" id=\"note_w12_dgk_54b\">\n      <ul id=\"ul_ybj_c5b_ckb\">\n        <li id=\"li_x12_dgk_54b\">Plus le niveau est élevé, plus l'élément pseudo- est éloigné.</li>\n        <li id=\"li_y12_dgk_54b\">Le niveau 1 correspond aux éléments pseudo- normaux <codeph>:before</codeph> ou <codeph>:after</codeph>.</li>\n      </ul>\n    </note>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"ch_advanced_styling_multiple_before_and_after_pseudo_elements\">\n  <title>Utilisation des éléments pseudo- CSS :before(n) et :after(n)</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>élément pseudo- :before</indexterm>\n        <indexterm>élément pseudo- :after</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_r12_dgk_54b\">Bien que non standard, cette extension peut être utile si vous souhaitez styliser des sections en ajoutant\n      plusieurs niveaux de contenu statique. Pour ajouter du contenu statique à un élément, vous utiliseriez normalement\n      un élément pseudo- <codeph>:before</codeph> ou <codeph>:after</codeph>. </p>\n    <p id=\"p_s12_dgk_54b\">Cet exemple ajoute du texte statique avant le titre (« Chapitre 1 », « Chapitre 2 », etc.) :</p>\n    <codeblock outputclass=\"language-css\" id=\"codeblock_t12_dgk_54b\">h1:before {\n  content: \"Chapter \" counter(chapter) \".\";\n  color: blue;\n}</codeblock>\n    <p id=\"p_u12_dgk_54b\">Tout cela est stylisé avec la même couleur (bleu dans cet exemple). En utilisant du CSS standard, il est\n      impossible de styliser des aspects spécifiques (par exemple, uniquement le numéro de chapitre avec une police plus\n      grande et en rouge). Cependant, vous pouvez le faire en utilisant plusieurs éléments pseudo- <codeph>before(n)</codeph> ou\n        <codeph>after(n)</codeph> :</p>\n    <codeblock outputclass=\"language-css\" id=\"codeblock_v12_dgk_54b\">h1:before(3) {\n  content: \"Chapter \";\n  color: blue;\n}\nh1:before(2) {\n  content: counter(chapter);\n  color: red;\n  font-size: large;\n}\nh1:before(1) {\n  content: \".\";\n  color: blue;\n}</codeblock>\n    <note type=\"other\" othertype=\"Notes\" id=\"note_w12_dgk_54b\">\n      <ul id=\"ul_ybj_c5b_ckb\">\n        <li id=\"li_x12_dgk_54b\">Plus le niveau est élevé, plus l'élément pseudo- est éloigné.</li>\n        <li id=\"li_y12_dgk_54b\">Le niveau 1 correspond aux éléments pseudo- normaux <codeph>:before</codeph> ou <codeph>:after</codeph>.</li>\n      </ul>\n    </note>\n  </body>\n</topic>"
+    },
+    {
+      "path": "topics/oxy-platform.dita",
+      "tag": "after_grpo",
+      "latency_s": 24.32,
+      "new_tokens": 362,
+      "max_new": 440,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 3,
+      "missing_nbsp": 3,
+      "english_quotes_not_in_reward": 0,
+      "violations": 3,
+      "reward": -3.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 3,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-platform\">\n  <title>Fonction oxy:platform()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:platform</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_kf4_bgk_54b\">Cette fonction retourne la plateforme actuelle. Vous pouvez l'utiliser si vous souhaitez\n      activer ou désactiver une action selon la plateforme. Les valeurs possibles sont :\n        <uicontrol>standalone</uicontrol>, <uicontrol>eclipse</uicontrol>, ou\n        <uicontrol>webapp</uicontrol>.</p>\n    <p id=\"p_lf4_bgk_54b\"><b><u>Exemple : <term>oxy:platform</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_mf4_bgk_54b\">oxy:platform()=\"standalone\"</codeblock></p>\n    <p id=\"p_nf4_bgk_54b\">Cet exemple maintient l'action activée pour la\n        distribution <term>standalone</term> de <ph keyref=\"product\"/>, mais la désactive pour les\n        distributions <term>Eclipse</term> et <term>Web Author</term>.</p>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-platform\">\n  <title>Fonction oxy:platform()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:platform</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_kf4_bgk_54b\">Cette fonction retourne la plateforme actuelle. Vous pouvez l'utiliser si vous souhaitez\n      activer ou désactiver une action selon la plateforme. Les valeurs possibles sont :\n        <uicontrol>standalone</uicontrol>, <uicontrol>eclipse</uicontrol>, ou\n        <uicontrol>webapp</uicontrol>.</p>\n    <p id=\"p_lf4_bgk_54b\"><b><u>Exemple : <term>oxy:platform</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_mf4_bgk_54b\">oxy:platform()=\"standalone\"</codeblock></p>\n    <p id=\"p_nf4_bgk_54b\">Cet exemple maintient l'action activée pour la\n        distribution <term>standalone</term> de <ph keyref=\"product\"/>, mais la désactive pour les\n        distributions <term>Eclipse</term> et <term>Web Author</term>.</p>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/oxy-is-editable-element.dita",
+      "tag": "after_grpo",
+      "latency_s": 29.648,
+      "new_tokens": 441,
+      "max_new": 528,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 4,
+      "missing_nbsp": 4,
+      "english_quotes_not_in_reward": 0,
+      "violations": 4,
+      "reward": -4.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "ns une section  xi:",
+          "mark": ":",
+          "prev": "i",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "ns une section  xi:",
+          "mark": ":",
+          "prev": "i",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 4,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-is-editable-element\">\n  <title>Fonction oxy:is-editable-element()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:is-required-element</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_ff4_bgk_54b\">Cette fonction vérifie si l'élément retourné par l'expression XPath donnée\n      est éditable (le contenu peut y être inséré), ce qui signifie à la fois que le fichier XML entier est éditable\n      et que le contexte actuel où l'élément est placé est éditable. Par exemple, si l'élément se trouve dans une section <term>xi:included</term>, il n'est pas éditable.</p>\n    <p id=\"p_gf4_bgk_54b\">Elle ne possède qu'un argument, une expression XPath, et l'expression XPath doit être rédigée\n      de manière à retourner un seul élément.</p>\n    <p id=\"p_hf4_bgk_54b\"><b><u>Exemple : <term>oxy:is-editable-element</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_if4_bgk_54b\">oxy:is-editable-element(ancestor-or-self::table)</codeblock></p>\n    <p id=\"p_jf4_bgk_54b\">Cet exemple retournerait <term>true</term> si le curseur est placé à l'intérieur\n      d'un tableau et qu'il est éditable, ou <term>false</term> s'il ne l'est pas.</p>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-is-editable-element\">\n  <title>Fonction oxy:is-editable-element()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:is-required-element</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_ff4_bgk_54b\">Cette fonction vérifie si l'élément retourné par l'expression XPath donnée\n      est éditable (le contenu peut y être inséré), ce qui signifie à la fois que le fichier XML entier est éditable\n      et que le contexte actuel où l'élément est placé est éditable. Par exemple, si l'élément se trouve dans une section <term>xi:included</term>, il n'est pas éditable.</p>\n    <p id=\"p_gf4_bgk_54b\">Elle ne possède qu'un argument, une expression XPath, et l'expression XPath doit être rédigée\n      de manière à retourner un seul élément.</p>\n    <p id=\"p_hf4_bgk_54b\"><b><u>Exemple : <term>oxy:is-editable-element</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_if4_bgk_54b\">oxy:is-editable-element(ancestor-or-self::table)</codeblock></p>\n    <p id=\"p_jf4_bgk_54b\">Cet exemple retournerait <term>true</term> si le curseur est placé à l'intérieur\n      d'un tableau et qu'il est éditable, ou <term>false</term> s'il ne l'est pas.</p>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/editing-JSON.dita",
+      "tag": "after_grpo",
+      "latency_s": 37.667,
+      "new_tokens": 560,
+      "max_new": 660,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 0,
+      "missing_nbsp": 0,
+      "english_quotes_not_in_reward": 0,
+      "violations": 0,
+      "reward": 0.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [],
+      "spans": [],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 0,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"editing-JSON\">\n  <title>Modification des documents JSON</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>documents JSON</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_ajf_cgk_54b\">Cette section explique les fonctionnalités du <ph keyref=\"product\"/> et comment\n      les utiliser.</p>\n    <section id=\"section_v54_rr5_ypb\">\n      <title>Ressources</title>\n      <p id=\"p_w54_rr5_ypb\">Pour plus d'informations sur le support JSON dans <ph keyref=\"product\"/>,\n        consultez les ressources suivantes :<ul id=\"ul_bzc_455_ypb\">\n          <li id=\"li_ljr_r55_ypb\"><xref href=\"https://www.youtube.com/watch?v=wgIkagwSDrU\"\n              format=\"html\" scope=\"external\"><b>Vidéo : Modification JSON</b></xref></li>\n          <li id=\"li_if5_gv5_ypb\"><xref href=\"https://www.youtube.com/watch?v=k3LHBU01GFI\"\n              format=\"html\" scope=\"external\"><b>Vidéo : Outils JSON dans Oxygen</b></xref></li>\n          <li id=\"li_czc_455_ypb\"><xref\n              href=\"https://www.oxygenxml.com/events/2020/webinar_json_and_json_schema_support_in_oxygen_xml_editor.html\"\n              format=\"html\" scope=\"external\"><b>Webinaire : Support JSON et JSON Schema dans\n              Oxygen</b></xref></li>\n          <li id=\"li_g3h_jpn_nzb\"><xref format=\"html\" scope=\"external\"\n              href=\"https://www.oxygenxml.com/events/2023/webinar_introducing_oxygen_json_editor_the_ultimate_solution_for_json_editing.html\"\n                ><b>Webinaire : Présentation de l'éditeur JSON d'Oxygen - La solution ultime pour la modification JSON</b></xref></li>\n        </ul></p>\n    </section>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"editing-JSON\">\n  <title>Modification des documents JSON</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>documents JSON</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_ajf_cgk_54b\">Cette section explique les fonctionnalités du <ph keyref=\"product\"/> et comment\n      les utiliser.</p>\n    <section id=\"section_v54_rr5_ypb\">\n      <title>Ressources</title>\n      <p id=\"p_w54_rr5_ypb\">Pour plus d'informations sur le support JSON dans <ph keyref=\"product\"/>,\n        consultez les ressources suivantes :<ul id=\"ul_bzc_455_ypb\">\n          <li id=\"li_ljr_r55_ypb\"><xref href=\"https://www.youtube.com/watch?v=wgIkagwSDrU\"\n              format=\"html\" scope=\"external\"><b>Vidéo : Modification JSON</b></xref></li>\n          <li id=\"li_if5_gv5_ypb\"><xref href=\"https://www.youtube.com/watch?v=k3LHBU01GFI\"\n              format=\"html\" scope=\"external\"><b>Vidéo : Outils JSON dans Oxygen</b></xref></li>\n          <li id=\"li_czc_455_ypb\"><xref\n              href=\"https://www.oxygenxml.com/events/2020/webinar_json_and_json_schema_support_in_oxygen_xml_editor.html\"\n              format=\"html\" scope=\"external\"><b>Webinaire : Support JSON et JSON Schema dans\n              Oxygen</b></xref></li>\n          <li id=\"li_g3h_jpn_nzb\"><xref format=\"html\" scope=\"external\"\n              href=\"https://www.oxygenxml.com/events/2023/webinar_introducing_oxygen_json_editor_the_ultimate_solution_for_json_editing.html\"\n                ><b>Webinaire : Présentation de l'éditeur JSON d'Oxygen - La solution ultime pour la modification JSON</b></xref></li>\n        </ul></p>\n    </section>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/xml-schema-diagram-override-properties.dita",
+      "tag": "after_grpo",
+      "latency_s": 40.462,
+      "new_tokens": 599,
+      "max_new": 699,
+      "hit_token_cap": false,
+      "schema": 2,
+      "prose_punct": 0,
+      "missing_nbsp": 0,
+      "english_quotes_not_in_reward": 0,
+      "violations": 2,
+      "reward": -2.0,
+      "well_formed": true,
+      "skeleton_match": false,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 2,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [],
+      "spans": [],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 0,
+      "old_counter_schema": 2,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"xml-schema-diagram-override-properties\">\n  <title>xs :override</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Édition de la conception\n            mode<indexterm>Composants<indexterm>xs :override</indexterm></indexterm></indexterm>\n        <indexterm>XML Schemas<indexterm>Mode de conception\n                édition<indexterm>Composants<indexterm>xs :override</indexterm></indexterm></indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_h1c_cgk_54b\">\n      <fig id=\"fig_i1c_cgk_54b\">\n        <title>Le composant xs :override</title>\n        <image href=\"../img/schema_diagram_override.png\"/>\n      </fig>\n    </p>\n    <p id=\"p_j1c_cgk_54b\">La construction d'override permet de remplacer les anciens composants par de nouveaux sans aucune contrainte. Voir plus d'informations à <xref href=\"http://www.w3.org/TR/xmlschema11-1/#element-override\"\n        scope=\"external\" format=\"html\"/>.</p>\n    <table colsep=\"1\" rowsep=\"1\" frame=\"all\" id=\"table_k1c_cgk_54b\">\n      <title>Propriétés xs :override</title>\n      <tgroup cols=\"3\">\n        <thead>\n          <row>\n            <entry>Nom de la propriété</entry>\n            <entry>Description</entry>\n            <entry>Valeurs possibles</entry>\n          </row>\n        </thead>\n        <tbody>\n          <row>\n            <entry>\n              <b>Emplacement du schéma</b>\n            </entry>\n            <entry>Redéfinir l'emplacement du schéma</entry>\n            <entry>Toute URI</entry>\n          </row>\n          <row>\n            <entry>\n              <b>ID</b>\n            </entry>\n            <entry>Redéfinir l'ID</entry>\n            <entry>Tout ID</entry>\n          </row>\n        </tbody>\n      </tgroup>\n    </table>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"xml-schema-diagram-override-properties\">\n  <title>xs :override</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Édition de la conception\n            mode<indexterm>Composants<indexterm>xs :override</indexterm></indexterm></indexterm>\n        <indexterm>XML Schemas<indexterm>Mode de conception\n                édition<indexterm>Composants<indexterm>xs :override</indexterm></indexterm></indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_h1c_cgk_54b\">\n      <fig id=\"fig_i1c_cgk_54b\">\n        <title>Le composant xs :override</title>\n        <image href=\"../img/schema_diagram_override.png\"/>\n      </fig>\n    </p>\n    <p id=\"p_j1c_cgk_54b\">La construction d'override permet de remplacer les anciens composants par de nouveaux sans aucune contrainte. Voir plus d'informations à <xref href=\"http://www.w3.org/TR/xmlschema11-1/#element-override\"\n        scope=\"external\" format=\"html\"/>.</p>\n    <table colsep=\"1\" rowsep=\"1\" frame=\"all\" id=\"table_k1c_cgk_54b\">\n      <title>Propriétés xs :override</title>\n      <tgroup cols=\"3\">\n        <thead>\n          <row>\n            <entry>Nom de la propriété</entry>\n            <entry>Description</entry>\n            <entry>Valeurs possibles</entry>\n          </row>\n        </thead>\n        <tbody>\n          <row>\n            <entry>\n              <b>Emplacement du schéma</b>\n            </entry>\n            <entry>Redéfinir l'emplacement du schéma</entry>\n            <entry>Toute URI</entry>\n          </row>\n          <row>\n            <entry>\n              <b>ID</b>\n            </entry>\n            <entry>Redéfinir l'ID</entry>\n            <entry>Tout ID</entry>\n          </row>\n        </tbody>\n      </tgroup>\n    </table>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/xml-schema-diagram-include-properties.dita",
+      "tag": "after_grpo",
+      "latency_s": 44.437,
+      "new_tokens": 656,
+      "max_new": 757,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 5,
+      "missing_nbsp": 5,
+      "english_quotes_not_in_reward": 0,
+      "violations": 5,
+      "reward": -5.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Propriétés  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Propriétés  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": false,
+      "error_tail": "",
+      "old_counter_punct": 5,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"xml-schema-diagram-include-properties\">\n  <title>xs:inclure</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Édition de conception\n            mode<indexterm>Composants<indexterm>xs:inclure</indexterm></indexterm></indexterm>\n        <indexterm>Schémas XML<indexterm>Mode de conception\n                édition<indexterm>Composants<indexterm>xs:inclure</indexterm></indexterm></indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_byb_cgk_54b\">\n      <fig id=\"fig_cyb_cgk_54b\">\n        <title>Le composant <i>xs:inclure</i></title>\n        <image href=\"../img/schema_diagram_include.png\"/>\n      </fig>\n    </p>\n    <p id=\"p_dyb_cgk_54b\">Ajoute plusieurs schémas avec la même cible dans un document. Voir plus d'informations à <xref\n        href=\"http://www.w3.org/TR/xmlschema11-1/#element-include\" scope=\"external\" format=\"html\"\n      />.</p>\n    <table colsep=\"1\" rowsep=\"1\" frame=\"all\" id=\"table_eyb_cgk_54b\">\n      <title>Propriétés <i>xs:inclure</i></title>\n      <tgroup cols=\"3\">\n        <thead>\n          <row>\n            <entry>Nom de la propriété</entry>\n            <entry>Description</entry>\n            <entry>Valeurs possibles</entry>\n          </row>\n        </thead>\n        <tbody>\n          <row>\n            <entry>\n              <b>Emplacement du schéma</b>\n            </entry>\n            <entry>Emplacement du schéma inclus</entry>\n            <entry>Toute URI</entry>\n          </row>\n          <row>\n            <entry>\n              <b>ID</b>\n            </entry>\n            <entry>ID d'inclusion</entry>\n            <entry>Tout ID</entry>\n          </row>\n          <row>\n            <entry>\n              <b>Composant</b>\n            </entry>\n            <entry>Le nom du composant</entry>\n            <entry>Propriété non modifiable</entry>\n          </row>\n        </tbody>\n      </tgroup>\n    </table>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"xml-schema-diagram-include-properties\">\n  <title>xs:inclure</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Édition de conception\n            mode<indexterm>Composants<indexterm>xs:inclure</indexterm></indexterm></indexterm>\n        <indexterm>Schémas XML<indexterm>Mode de conception\n                édition<indexterm>Composants<indexterm>xs:inclure</indexterm></indexterm></indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_byb_cgk_54b\">\n      <fig id=\"fig_cyb_cgk_54b\">\n        <title>Le composant <i>xs:inclure</i></title>\n        <image href=\"../img/schema_diagram_include.png\"/>\n      </fig>\n    </p>\n    <p id=\"p_dyb_cgk_54b\">Ajoute plusieurs schémas avec la même cible dans un document. Voir plus d'informations à <xref\n        href=\"http://www.w3.org/TR/xmlschema11-1/#element-include\" scope=\"external\" format=\"html\"\n      />.</p>\n    <table colsep=\"1\" rowsep=\"1\" frame=\"all\" id=\"table_eyb_cgk_54b\">\n      <title>Propriétés <i>xs:inclure</i></title>\n      <tgroup cols=\"3\">\n        <thead>\n          <row>\n            <entry>Nom de la propriété</entry>\n            <entry>Description</entry>\n            <entry>Valeurs possibles</entry>\n          </row>\n        </thead>\n        <tbody>\n          <row>\n            <entry>\n              <b>Emplacement du schéma</b>\n            </entry>\n            <entry>Emplacement du schéma inclus</entry>\n            <entry>Toute URI</entry>\n          </row>\n          <row>\n            <entry>\n              <b>ID</b>\n            </entry>\n            <entry>ID d'inclusion</entry>\n            <entry>Tout ID</entry>\n          </row>\n          <row>\n            <entry>\n              <b>Composant</b>\n            </entry>\n            <entry>Le nom du composant</entry>\n            <entry>Propriété non modifiable</entry>\n          </row>\n        </tbody>\n      </tgroup>\n    </table>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/xml-schema-diagram-redefine-properties.dita",
+      "tag": "after_grpo",
+      "latency_s": 46.26,
+      "new_tokens": 677,
+      "max_new": 768,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 5,
+      "missing_nbsp": 5,
+      "english_quotes_not_in_reward": 0,
+      "violations": 5,
+      "reward": -5.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": " Propriétés de  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "    xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "mode Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "tion Composants xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "  Le composant  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": " Propriétés de  xs:",
+          "mark": ":",
+          "prev": "s",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": false,
+      "error_tail": "",
+      "old_counter_punct": 5,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"xml-schema-diagram-redefine-properties\">\n  <title>xs:redéfinir</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Édition de la conception\n            mode<indexterm>Composants<indexterm>xs:redéfinir</indexterm></indexterm></indexterm>\n        <indexterm>XML Schemas<indexterm>Mode de conception\n                édition<indexterm>Composants<indexterm>xs:redéfinir</indexterm></indexterm></indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_pzb_cgk_54b\">\n      <fig id=\"fig_qzb_cgk_54b\">\n        <title>Le composant <i>xs:redéfinir</i></title>\n        <image href=\"../img/schema_diagram_redefine.png\"/>\n      </fig>\n    </p>\n    <p id=\"p_rzb_cgk_54b\">Redéfinit les types simples et complexes, les groupes et les groupes d'attributs à partir d'un schéma externe. Voir\n      plus d'informations à <xref href=\"http://www.w3.org/TR/xmlschema11-1/#element-redefine\"\n        scope=\"external\" format=\"html\"/>.</p>\n    <table colsep=\"1\" rowsep=\"1\" frame=\"all\" id=\"table_szb_cgk_54b\">\n      <title>Propriétés de <i>xs:redéfinir</i></title>\n      <tgroup cols=\"3\">\n        <thead>\n          <row>\n            <entry>Nom de la propriété</entry>\n            <entry>Description</entry>\n            <entry>Valeurs possibles</entry>\n          </row>\n        </thead>\n        <tbody>\n          <row>\n            <entry>\n              <b>Emplacement du schéma</b>\n            </entry>\n            <entry>Emplacement du schéma redéfini</entry>\n            <entry>Toute URI</entry>\n          </row>\n          <row>\n            <entry>\n              <b>ID</b>\n            </entry>\n            <entry>ID de redéfinition</entry>\n            <entry>Tout ID</entry>\n          </row>\n          <row>\n            <entry>\n              <b>Composant</b>\n            </entry>\n            <entry>Le nom du composant</entry>\n            <entry>Propriété non modifiable</entry>\n          </row>\n        </tbody>\n      </tgroup>\n    </table>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic\n  PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"xml-schema-diagram-redefine-properties\">\n  <title>xs:redéfinir</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>Édition de la conception\n            mode<indexterm>Composants<indexterm>xs:redéfinir</indexterm></indexterm></indexterm>\n        <indexterm>XML Schemas<indexterm>Mode de conception\n                édition<indexterm>Composants<indexterm>xs:redéfinir</indexterm></indexterm></indexterm></indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_pzb_cgk_54b\">\n      <fig id=\"fig_qzb_cgk_54b\">\n        <title>Le composant <i>xs:redéfinir</i></title>\n        <image href=\"../img/schema_diagram_redefine.png\"/>\n      </fig>\n    </p>\n    <p id=\"p_rzb_cgk_54b\">Redéfinit les types simples et complexes, les groupes et les groupes d'attributs à partir d'un schéma externe. Voir\n      plus d'informations à <xref href=\"http://www.w3.org/TR/xmlschema11-1/#element-redefine\"\n        scope=\"external\" format=\"html\"/>.</p>\n    <table colsep=\"1\" rowsep=\"1\" frame=\"all\" id=\"table_szb_cgk_54b\">\n      <title>Propriétés de <i>xs:redéfinir</i></title>\n      <tgroup cols=\"3\">\n        <thead>\n          <row>\n            <entry>Nom de la propriété</entry>\n            <entry>Description</entry>\n            <entry>Valeurs possibles</entry>\n          </row>\n        </thead>\n        <tbody>\n          <row>\n            <entry>\n              <b>Emplacement du schéma</b>\n            </entry>\n            <entry>Emplacement du schéma redéfini</entry>\n            <entry>Toute URI</entry>\n          </row>\n          <row>\n            <entry>\n              <b>ID</b>\n            </entry>\n            <entry>ID de redéfinition</entry>\n            <entry>Tout ID</entry>\n          </row>\n          <row>\n            <entry>\n              <b>Composant</b>\n            </entry>\n            <entry>Le nom du composant</entry>\n            <entry>Propriété non modifiable</entry>\n          </row>\n        </tbody>\n      </tgroup>\n    </table>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/dita-pdf-output.dita",
+      "tag": "after_grpo",
+      "latency_s": 41.841,
+      "new_tokens": 618,
+      "max_new": 778,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 1,
+      "missing_nbsp": 1,
+      "english_quotes_not_in_reward": 0,
+      "violations": 1,
+      "reward": -1.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "un processeur  xsl:",
+          "mark": ":",
+          "prev": "l",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "un processeur  xsl:",
+          "mark": ":",
+          "prev": "l",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 1,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"dita-pdf-output\">\n  <title>Personnalisation de la conversion DITA en PDF basée sur XSL FO</title>\n  <body>\n    <p id=\"p_cnv_cgk_54b\"><ph keyref=\"product\"/> est livré avec le DITA Open Toolkit, qui fournit un mécanisme pour convertir les <xref keyref=\"glossentry_ditamap\"><term>cartes DITA</term></xref> en sortie PDF. <ph keyref=\"product\"/> inclut un scénario de transformation intégré <xref keyref=\"dita-pdf-transformation\"><b>Carte DITA basée sur XSL-FO</b></xref> qui convertit les cartes DITA en PDF en utilisant un processeur <i>xsl:fo</i>.</p>\n    <p id=\"p_dnv_cgk_54b\">Il existe plusieurs méthodes qui peuvent être utilisées pour personnaliser la conversion DITA en PDF : <ul id=\"ul_env_cgk_54b\">\n        <li id=\"li_fnv_cgk_54b\">Créer un répertoire de personnalisation contenant vos fichiers personnalisés et faire référence à ce répertoire dans le scénario de transformation PDF (en utilisant le paramètre <codeph>customization.dir</codeph>).</li>\n        <li id=\"li_gnv_cgk_54b\">Créer un plugin DITA Open Toolkit qui ajoute des extensions à la sortie PDF. Plus de détails peuvent être trouvés dans le <xref keyref=\"dot-pdf-customization\" format=\"html\" scope=\"external\">Documentation du DITA Open Toolkit</xref>.<note type=\"tip\" id=\"note_hnv_cgk_54b\">Certains plugins d'exemple sont disponibles sur GitHub et pourraient vous aider à commencer à créer un plugin :<ul id=\"ul_inv_cgk_54b\">\n              <li id=\"li_jnv_cgk_54b\"><xref href=\"https://github.com/oxygenxml/com.oxygenxml.pdf2.ug\" format=\"html\" scope=\"external\">Plugin d'exemple : Plugin de personnalisation PDF DITA-OT pour le manuel utilisateur Oxygen</xref></li>\n              <li id=\"li_knv_cgk_54b\"><xref href=\"https://github.com/oxygenxml/dita-ot-numbering\" format=\"html\" scope=\"external\">Plugin d'exemple : DITA-OT PDF2 - Générer des numéros avant le titre du sujet</xref></li>\n            </ul></note></li>\n      </ul></p>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"dita-pdf-output\">\n  <title>Personnalisation de la conversion DITA en PDF basée sur XSL FO</title>\n  <body>\n    <p id=\"p_cnv_cgk_54b\"><ph keyref=\"product\"/> est livré avec le DITA Open Toolkit, qui fournit un mécanisme pour convertir les <xref keyref=\"glossentry_ditamap\"><term>cartes DITA</term></xref> en sortie PDF. <ph keyref=\"product\"/> inclut un scénario de transformation intégré <xref keyref=\"dita-pdf-transformation\"><b>Carte DITA basée sur XSL-FO</b></xref> qui convertit les cartes DITA en PDF en utilisant un processeur <i>xsl:fo</i>.</p>\n    <p id=\"p_dnv_cgk_54b\">Il existe plusieurs méthodes qui peuvent être utilisées pour personnaliser la conversion DITA en PDF : <ul id=\"ul_env_cgk_54b\">\n        <li id=\"li_fnv_cgk_54b\">Créer un répertoire de personnalisation contenant vos fichiers personnalisés et faire référence à ce répertoire dans le scénario de transformation PDF (en utilisant le paramètre <codeph>customization.dir</codeph>).</li>\n        <li id=\"li_gnv_cgk_54b\">Créer un plugin DITA Open Toolkit qui ajoute des extensions à la sortie PDF. Plus de détails peuvent être trouvés dans le <xref keyref=\"dot-pdf-customization\" format=\"html\" scope=\"external\">Documentation du DITA Open Toolkit</xref>.<note type=\"tip\" id=\"note_hnv_cgk_54b\">Certains plugins d'exemple sont disponibles sur GitHub et pourraient vous aider à commencer à créer un plugin :<ul id=\"ul_inv_cgk_54b\">\n              <li id=\"li_jnv_cgk_54b\"><xref href=\"https://github.com/oxygenxml/com.oxygenxml.pdf2.ug\" format=\"html\" scope=\"external\">Plugin d'exemple : Plugin de personnalisation PDF DITA-OT pour le manuel utilisateur Oxygen</xref></li>\n              <li id=\"li_knv_cgk_54b\"><xref href=\"https://github.com/oxygenxml/dita-ot-numbering\" format=\"html\" scope=\"external\">Plugin d'exemple : DITA-OT PDF2 - Générer des numéros avant le titre du sujet</xref></li>\n            </ul></note></li>\n      </ul></p>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/oxy-selected-elements.dita",
+      "tag": "after_grpo",
+      "latency_s": 21.572,
+      "new_tokens": 313,
+      "max_new": 383,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 3,
+      "missing_nbsp": 3,
+      "english_quotes_not_in_reward": 0,
+      "violations": 3,
+      "reward": -3.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 3,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-selected-elements\">\n  <title>Fonction oxy:selected-elements()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:selected-elements</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_x24_bgk_54b\">Cette fonction retourne les éléments sélectionnés en mode <uicontrol>Author</uicontrol>.</p>\n    <p id=\"p_y24_bgk_54b\"><b><u>Exemple : <term>oxy:selected-elements</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_z24_bgk_54b\">oxy:selected-elements()[self::para][@audience=\"novice\"]</codeblock></p>\n    <p id=\"p_af4_bgk_54b\">Cet exemple activerait une action lorsqu'au moins un des éléments sélectionnés est un élément <xmlelement>para</xmlelement> avec l'attribut <xmlatt>novice</xmlatt> défini.</p>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-selected-elements\">\n  <title>Fonction oxy:selected-elements()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:selected-elements</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_x24_bgk_54b\">Cette fonction retourne les éléments sélectionnés en mode <uicontrol>Author</uicontrol>.</p>\n    <p id=\"p_y24_bgk_54b\"><b><u>Exemple : <term>oxy:selected-elements</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_z24_bgk_54b\">oxy:selected-elements()[self::para][@audience=\"novice\"]</codeblock></p>\n    <p id=\"p_af4_bgk_54b\">Cet exemple activerait une action lorsqu'au moins un des éléments sélectionnés est un élément <xmlelement>para</xmlelement> avec l'attribut <xmlatt>novice</xmlatt> défini.</p>\n  </body>\n</topic>\n"
+    },
+    {
+      "path": "topics/oxy-current-selected-element.dita",
+      "tag": "after_grpo",
+      "latency_s": 21.795,
+      "new_tokens": 320,
+      "max_new": 386,
+      "hit_token_cap": false,
+      "schema": 0,
+      "prose_punct": 3,
+      "missing_nbsp": 3,
+      "english_quotes_not_in_reward": 0,
+      "violations": 3,
+      "reward": -3.0,
+      "well_formed": true,
+      "skeleton_match": true,
+      "dtd_valid": true,
+      "truncated": false,
+      "parts_schema": {
+        "tag_mismatch": 0,
+        "attr_value": 0,
+        "child_order": 0,
+        "dtd_errors": 0,
+        "not_well_formed": 0,
+        "truncation": 0
+      },
+      "punct_mode": "elementtree",
+      "punct_best_effort": false,
+      "source_prose_mode": "elementtree",
+      "colon_spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "spans": [
+        {
+          "frag": "    Fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "      fonction oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        },
+        {
+          "frag": "    Exemple<NBSP>:  oxy:",
+          "mark": ":",
+          "prev": "y",
+          "prev_is_nbsp": false
+        }
+      ],
+      "has_nbsp": true,
+      "error_tail": "",
+      "old_counter_punct": 3,
+      "old_counter_schema": 0,
+      "hyp_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-current-selected-element\">\n  <title>Fonction oxy:current-selected-element()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:current-selected-element</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_t24_bgk_54b\">Cette fonction retourne l'élément entièrement sélectionné. Si aucun élément n'est sélectionné, la fonction\n      retourne une séquence vide.</p>\n    <p id=\"p_u24_bgk_54b\"><b><u>Exemple : <term>oxy:current-selected-element</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_v24_bgk_54b\">oxy:current-selected-element()[self::p]/b</codeblock></p>\n    <p id=\"p_w24_bgk_54b\">Cet exemple retourne les éléments <xmlelement>b</xmlelement> qui sont enfants de l'élément actuellement\n      sélectionné <xmlelement>p</xmlelement>.</p>\n  </body>\n</topic>",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE topic PUBLIC \"-//OASIS//DTD DITA Topic//EN\" \"topic.dtd\">\n<topic id=\"oxy-current-selected-element\">\n  <title>Fonction oxy:current-selected-element()</title>\n  <prolog>\n    <metadata>\n      <keywords>\n        <indexterm>fonction oxy:current-selected-element</indexterm>\n      </keywords>\n    </metadata>\n  </prolog>\n  <body>\n    <p id=\"p_t24_bgk_54b\">Cette fonction retourne l'élément entièrement sélectionné. Si aucun élément n'est sélectionné, la fonction\n      retourne une séquence vide.</p>\n    <p id=\"p_u24_bgk_54b\"><b><u>Exemple : <term>oxy:current-selected-element</term>\n      Fonction</u></b><codeblock outputclass=\"language-css\" id=\"codeblock_v24_bgk_54b\">oxy:current-selected-element()[self::p]/b</codeblock></p>\n    <p id=\"p_w24_bgk_54b\">Cet exemple retourne les éléments <xmlelement>b</xmlelement> qui sont enfants de l'élément actuellement\n      sélectionné <xmlelement>p</xmlelement>.</p>\n  </body>\n</topic>\n"
+    }
+  ]
+}

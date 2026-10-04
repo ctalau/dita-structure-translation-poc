@@ -1,0 +1,14 @@
+[
+  {
+    "t": "2026-10-04T11:30:58",
+    "msg": "old 10 not used as held-out: all_initial_punct_errors=False all_source_prose_punct=False n_scored=10"
+  },
+  {
+    "t": "2026-10-04T11:30:58",
+    "msg": "search is fittable files only (source bytes/2.8+48<=820), highest source prose-punct first. An earlier size-ascending pass was clean, and files over the token cap truncated."
+  },
+  {
+    "t": "2026-10-04T11:59:00",
+    "msg": "search hit 28 min"
+  }
+]
