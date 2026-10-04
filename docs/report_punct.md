@@ -128,8 +128,8 @@ The non-breaking space was in the reward on every training topic that had a colo
 | Start | 2026-10-04 05:45:57 UTC (08:45 Europe/Bucharest) |
 | Train done | 2026-10-04 07:01:55 UTC (10:01 Europe/Bucharest) |
 | Process exit | 2026-10-04 07:05:05 UTC (10:05 Europe/Bucharest) |
-
-The dollar figure and the delete time are filled in after the pod is confirmed gone.
+| Deleted | 2026-10-04 07:09 UTC (10:09 Europe/Bucharest). `delete-pod` returned 204. A follow-up `get-pod` returned 404. |
+| Estimated spend | about $0.30 at $0.22/hr for 1 hour 23 minutes. Disk is extra and small. Cap for the run was $4. |
 
 ## Surprises
 
