@@ -1,0 +1,6 @@
+[
+  {
+    "t": "2026-10-04T10:18:45",
+    "msg": "target still has bad_high_punct=10 on topics/dcpp_how_to_display_subtopics_in_toc.dita spans=['\\n      map\\\\u00a0: &lt;', ': &lt;map>\\n  &lt;', '&lt;title>Map&lt;', 'lt;/title>\\n  &lt;', 'c.dita\">\\n    &lt;', 'ted1\">\\n      &lt;', 'ted11\"/>\\n    &lt;', 'opicref>\\n    &lt;', 'nested2\"/>\\n  &lt;', 't;/topicref>\\n&lt;']"
+  }
+]
