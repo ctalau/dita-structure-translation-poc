@@ -71,7 +71,11 @@ def score_file(path: str, split: str) -> dict:
 
 
 def paired(a: dict, b: dict, key: str, n_boot=10000, seed=0) -> dict:
-    """Paired bootstrap of mean(b - a) over topics present in both."""
+    """Paired bootstrap of mean(b - a) over topics present in both.
+
+    n_increased counts topics where b's value is higher than a's. For reward
+    and chrF higher is better; for error counts higher is worse.
+    """
     A = {r["id"]: r[key] for r in a["topics"]}
     B = {r["id"]: r[key] for r in b["topics"]}
     ids = sorted(set(A) & set(B))
@@ -80,7 +84,7 @@ def paired(a: dict, b: dict, key: str, n_boot=10000, seed=0) -> dict:
     boots = sorted(sum(rng.choice(d) for _ in d) / len(d) for _ in range(n_boot))
     return {"key": key, "n": len(d), "mean_delta": round(sum(d) / len(d), 4),
             "ci95": [round(boots[int(0.025 * n_boot)], 4), round(boots[int(0.975 * n_boot)], 4)],
-            "b_better": sum(x > 0 for x in d), "a_better": sum(x < 0 for x in d), "ties": sum(x == 0 for x in d)}
+            "n_increased": sum(x > 0 for x in d), "n_decreased": sum(x < 0 for x in d), "n_equal": sum(x == 0 for x in d)}
 
 
 def main():

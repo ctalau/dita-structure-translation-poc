@@ -1,0 +1,701 @@
+{
+ "note": "paired bootstrap of mean(b-a) over topics, 10000 resamples, seed 0. n_increased = topics where b is higher; for error counts higher is worse.",
+ "summaries": {
+  "test:base": {
+   "n": 40,
+   "structure_ok": 27,
+   "xml_ok": 39,
+   "skeleton_ok": 36,
+   "header_ok": 40,
+   "protected_changed": 12,
+   "typo_total": 53,
+   "typo_nbsp_missing": 44,
+   "typo_guillemet_space": 8,
+   "typo_en_quotes": 1,
+   "topics_with_typo": 22,
+   "calque_total": 8,
+   "topics_with_calque": 7,
+   "titlecase_total": 7,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 80.01,
+   "mean_reward": 0.4135,
+   "clean_topics": 8,
+   "calques_by_type": {
+    "initier=initiate": 1,
+    "éditer=edit": 7
+   }
+  },
+  "test:base_nbspfix": {
+   "n": 40,
+   "structure_ok": 27,
+   "xml_ok": 39,
+   "skeleton_ok": 36,
+   "header_ok": 40,
+   "protected_changed": 12,
+   "typo_total": 1,
+   "typo_nbsp_missing": 0,
+   "typo_guillemet_space": 0,
+   "typo_en_quotes": 1,
+   "topics_with_typo": 1,
+   "calque_total": 8,
+   "topics_with_calque": 7,
+   "titlecase_total": 7,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 80.01,
+   "mean_reward": 0.5075,
+   "clean_topics": 20,
+   "calques_by_type": {
+    "initier=initiate": 1,
+    "éditer=edit": 7
+   }
+  },
+  "test:rl_step100": {
+   "n": 40,
+   "structure_ok": 26,
+   "xml_ok": 37,
+   "skeleton_ok": 36,
+   "header_ok": 40,
+   "protected_changed": 13,
+   "typo_total": 3,
+   "typo_nbsp_missing": 1,
+   "typo_guillemet_space": 2,
+   "typo_en_quotes": 0,
+   "topics_with_typo": 2,
+   "calque_total": 0,
+   "topics_with_calque": 0,
+   "titlecase_total": 7,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 83.04,
+   "mean_reward": 0.551,
+   "clean_topics": 19,
+   "calques_by_type": {}
+  },
+  "test:rl_step100_nbspfix": {
+   "n": 40,
+   "structure_ok": 26,
+   "xml_ok": 37,
+   "skeleton_ok": 36,
+   "header_ok": 40,
+   "protected_changed": 13,
+   "typo_total": 0,
+   "typo_nbsp_missing": 0,
+   "typo_guillemet_space": 0,
+   "typo_en_quotes": 0,
+   "topics_with_typo": 0,
+   "calque_total": 0,
+   "topics_with_calque": 0,
+   "titlecase_total": 7,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 83.04,
+   "mean_reward": 0.557,
+   "clean_topics": 20,
+   "calques_by_type": {}
+  },
+  "dev:base": {
+   "n": 16,
+   "structure_ok": 11,
+   "xml_ok": 16,
+   "skeleton_ok": 15,
+   "header_ok": 16,
+   "protected_changed": 7,
+   "typo_total": 29,
+   "typo_nbsp_missing": 23,
+   "typo_guillemet_space": 6,
+   "typo_en_quotes": 0,
+   "topics_with_typo": 8,
+   "calque_total": 3,
+   "topics_with_calque": 3,
+   "titlecase_total": 2,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 76.02,
+   "mean_reward": 0.3937,
+   "clean_topics": 3,
+   "calques_by_type": {
+    "cliquer X=click X": 1,
+    "éditer=edit": 1,
+    "supporter=support": 1
+   }
+  },
+  "dev:base_nbspfix": {
+   "n": 16,
+   "structure_ok": 11,
+   "xml_ok": 16,
+   "skeleton_ok": 15,
+   "header_ok": 16,
+   "protected_changed": 7,
+   "typo_total": 0,
+   "typo_nbsp_missing": 0,
+   "typo_guillemet_space": 0,
+   "typo_en_quotes": 0,
+   "topics_with_typo": 0,
+   "calque_total": 3,
+   "topics_with_calque": 3,
+   "titlecase_total": 2,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 76.05,
+   "mean_reward": 0.504,
+   "clean_topics": 8,
+   "calques_by_type": {
+    "cliquer X=click X": 1,
+    "éditer=edit": 1,
+    "supporter=support": 1
+   }
+  },
+  "dev:rl_step100": {
+   "n": 16,
+   "structure_ok": 11,
+   "xml_ok": 16,
+   "skeleton_ok": 15,
+   "header_ok": 16,
+   "protected_changed": 7,
+   "typo_total": 3,
+   "typo_nbsp_missing": 1,
+   "typo_guillemet_space": 2,
+   "typo_en_quotes": 0,
+   "topics_with_typo": 2,
+   "calque_total": 0,
+   "topics_with_calque": 0,
+   "titlecase_total": 1,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 80.41,
+   "mean_reward": 0.5659,
+   "clean_topics": 10,
+   "calques_by_type": {}
+  },
+  "dev:rl_step100_nbspfix": {
+   "n": 16,
+   "structure_ok": 11,
+   "xml_ok": 16,
+   "skeleton_ok": 15,
+   "header_ok": 16,
+   "protected_changed": 7,
+   "typo_total": 0,
+   "typo_nbsp_missing": 0,
+   "typo_guillemet_space": 0,
+   "typo_en_quotes": 0,
+   "topics_with_typo": 0,
+   "calque_total": 0,
+   "topics_with_calque": 0,
+   "titlecase_total": 1,
+   "untranslated": 0,
+   "hit_cap": 0,
+   "mean_chrf": 80.41,
+   "mean_reward": 0.5809,
+   "clean_topics": 11,
+   "calques_by_type": {}
+  }
+ },
+ "paired_bootstrap": {
+  "test:base->rl_step100:reward": {
+   "key": "reward",
+   "n": 40,
+   "mean_delta": 0.1375,
+   "ci95": [
+    0.012,
+    0.267
+   ],
+   "n_increased": 31,
+   "n_decreased": 6,
+   "n_equal": 3
+  },
+  "test:base->rl_step100:chrf": {
+   "key": "chrf",
+   "n": 40,
+   "mean_delta": 3.038,
+   "ci95": [
+    1.7305,
+    4.4397
+   ],
+   "n_increased": 32,
+   "n_decreased": 8,
+   "n_equal": 0
+  },
+  "test:base->rl_step100:n_typo": {
+   "key": "n_typo",
+   "n": 40,
+   "mean_delta": -1.25,
+   "ci95": [
+    -1.725,
+    -0.8
+   ],
+   "n_increased": 0,
+   "n_decreased": 22,
+   "n_equal": 18
+  },
+  "test:base->rl_step100:n_calque": {
+   "key": "n_calque",
+   "n": 40,
+   "mean_delta": -0.2,
+   "ci95": [
+    -0.35,
+    -0.075
+   ],
+   "n_increased": 0,
+   "n_decreased": 7,
+   "n_equal": 33
+  },
+  "test:base->rl_step100:titlecase": {
+   "key": "titlecase",
+   "n": 40,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 40
+  },
+  "test:base->rl_step100:protected_changed": {
+   "key": "protected_changed",
+   "n": 40,
+   "mean_delta": 0.025,
+   "ci95": [
+    -0.075,
+    0.15
+   ],
+   "n_increased": 1,
+   "n_decreased": 1,
+   "n_equal": 38
+  },
+  "test:base->rl_step100:structure_ok": {
+   "key": "structure_ok",
+   "n": 40,
+   "mean_delta": -0.025,
+   "ci95": [
+    -0.125,
+    0.05
+   ],
+   "n_increased": 1,
+   "n_decreased": 2,
+   "n_equal": 37
+  },
+  "test:base_nbspfix->rl_step100_nbspfix:reward": {
+   "key": "reward",
+   "n": 40,
+   "mean_delta": 0.0495,
+   "ci95": [
+    -0.0842,
+    0.1842
+   ],
+   "n_increased": 30,
+   "n_decreased": 7,
+   "n_equal": 3
+  },
+  "test:base_nbspfix->rl_step100_nbspfix:chrf": {
+   "key": "chrf",
+   "n": 40,
+   "mean_delta": 3.038,
+   "ci95": [
+    1.7305,
+    4.4397
+   ],
+   "n_increased": 32,
+   "n_decreased": 8,
+   "n_equal": 0
+  },
+  "test:base_nbspfix->rl_step100_nbspfix:n_typo": {
+   "key": "n_typo",
+   "n": 40,
+   "mean_delta": -0.025,
+   "ci95": [
+    -0.075,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 1,
+   "n_equal": 39
+  },
+  "test:base_nbspfix->rl_step100_nbspfix:n_calque": {
+   "key": "n_calque",
+   "n": 40,
+   "mean_delta": -0.2,
+   "ci95": [
+    -0.35,
+    -0.075
+   ],
+   "n_increased": 0,
+   "n_decreased": 7,
+   "n_equal": 33
+  },
+  "test:base_nbspfix->rl_step100_nbspfix:titlecase": {
+   "key": "titlecase",
+   "n": 40,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 40
+  },
+  "test:base_nbspfix->rl_step100_nbspfix:protected_changed": {
+   "key": "protected_changed",
+   "n": 40,
+   "mean_delta": 0.025,
+   "ci95": [
+    -0.075,
+    0.15
+   ],
+   "n_increased": 1,
+   "n_decreased": 1,
+   "n_equal": 38
+  },
+  "test:base_nbspfix->rl_step100_nbspfix:structure_ok": {
+   "key": "structure_ok",
+   "n": 40,
+   "mean_delta": -0.025,
+   "ci95": [
+    -0.125,
+    0.05
+   ],
+   "n_increased": 1,
+   "n_decreased": 2,
+   "n_equal": 37
+  },
+  "test:base_nbspfix->rl_step100:reward": {
+   "key": "reward",
+   "n": 40,
+   "mean_delta": 0.0435,
+   "ci95": [
+    -0.0894,
+    0.1795
+   ],
+   "n_increased": 29,
+   "n_decreased": 8,
+   "n_equal": 3
+  },
+  "test:base_nbspfix->rl_step100:chrf": {
+   "key": "chrf",
+   "n": 40,
+   "mean_delta": 3.038,
+   "ci95": [
+    1.7305,
+    4.4397
+   ],
+   "n_increased": 32,
+   "n_decreased": 8,
+   "n_equal": 0
+  },
+  "test:base_nbspfix->rl_step100:n_typo": {
+   "key": "n_typo",
+   "n": 40,
+   "mean_delta": 0.05,
+   "ci95": [
+    -0.05,
+    0.175
+   ],
+   "n_increased": 2,
+   "n_decreased": 1,
+   "n_equal": 37
+  },
+  "test:base_nbspfix->rl_step100:n_calque": {
+   "key": "n_calque",
+   "n": 40,
+   "mean_delta": -0.2,
+   "ci95": [
+    -0.35,
+    -0.075
+   ],
+   "n_increased": 0,
+   "n_decreased": 7,
+   "n_equal": 33
+  },
+  "test:base_nbspfix->rl_step100:titlecase": {
+   "key": "titlecase",
+   "n": 40,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 40
+  },
+  "test:base_nbspfix->rl_step100:protected_changed": {
+   "key": "protected_changed",
+   "n": 40,
+   "mean_delta": 0.025,
+   "ci95": [
+    -0.075,
+    0.15
+   ],
+   "n_increased": 1,
+   "n_decreased": 1,
+   "n_equal": 38
+  },
+  "test:base_nbspfix->rl_step100:structure_ok": {
+   "key": "structure_ok",
+   "n": 40,
+   "mean_delta": -0.025,
+   "ci95": [
+    -0.125,
+    0.05
+   ],
+   "n_increased": 1,
+   "n_decreased": 2,
+   "n_equal": 37
+  },
+  "dev:base->rl_step100:reward": {
+   "key": "reward",
+   "n": 16,
+   "mean_delta": 0.1722,
+   "ci95": [
+    0.1134,
+    0.2332
+   ],
+   "n_increased": 15,
+   "n_decreased": 0,
+   "n_equal": 1
+  },
+  "dev:base->rl_step100:chrf": {
+   "key": "chrf",
+   "n": 16,
+   "mean_delta": 4.3825,
+   "ci95": [
+    2.5,
+    6.3294
+   ],
+   "n_increased": 14,
+   "n_decreased": 2,
+   "n_equal": 0
+  },
+  "dev:base->rl_step100:n_typo": {
+   "key": "n_typo",
+   "n": 16,
+   "mean_delta": -1.625,
+   "ci95": [
+    -2.9375,
+    -0.5625
+   ],
+   "n_increased": 0,
+   "n_decreased": 7,
+   "n_equal": 9
+  },
+  "dev:base->rl_step100:n_calque": {
+   "key": "n_calque",
+   "n": 16,
+   "mean_delta": -0.1875,
+   "ci95": [
+    -0.375,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 3,
+   "n_equal": 13
+  },
+  "dev:base->rl_step100:titlecase": {
+   "key": "titlecase",
+   "n": 16,
+   "mean_delta": -0.0625,
+   "ci95": [
+    -0.1875,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 1,
+   "n_equal": 15
+  },
+  "dev:base->rl_step100:protected_changed": {
+   "key": "protected_changed",
+   "n": 16,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 16
+  },
+  "dev:base->rl_step100:structure_ok": {
+   "key": "structure_ok",
+   "n": 16,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 16
+  },
+  "dev:base_nbspfix->rl_step100_nbspfix:reward": {
+   "key": "reward",
+   "n": 16,
+   "mean_delta": 0.0769,
+   "ci95": [
+    0.0405,
+    0.1174
+   ],
+   "n_increased": 13,
+   "n_decreased": 2,
+   "n_equal": 1
+  },
+  "dev:base_nbspfix->rl_step100_nbspfix:chrf": {
+   "key": "chrf",
+   "n": 16,
+   "mean_delta": 4.3544,
+   "ci95": [
+    2.4744,
+    6.3063
+   ],
+   "n_increased": 14,
+   "n_decreased": 2,
+   "n_equal": 0
+  },
+  "dev:base_nbspfix->rl_step100_nbspfix:n_typo": {
+   "key": "n_typo",
+   "n": 16,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 16
+  },
+  "dev:base_nbspfix->rl_step100_nbspfix:n_calque": {
+   "key": "n_calque",
+   "n": 16,
+   "mean_delta": -0.1875,
+   "ci95": [
+    -0.375,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 3,
+   "n_equal": 13
+  },
+  "dev:base_nbspfix->rl_step100_nbspfix:titlecase": {
+   "key": "titlecase",
+   "n": 16,
+   "mean_delta": -0.0625,
+   "ci95": [
+    -0.1875,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 1,
+   "n_equal": 15
+  },
+  "dev:base_nbspfix->rl_step100_nbspfix:protected_changed": {
+   "key": "protected_changed",
+   "n": 16,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 16
+  },
+  "dev:base_nbspfix->rl_step100_nbspfix:structure_ok": {
+   "key": "structure_ok",
+   "n": 16,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 16
+  },
+  "dev:base_nbspfix->rl_step100:reward": {
+   "key": "reward",
+   "n": 16,
+   "mean_delta": 0.0619,
+   "ci95": [
+    0.0256,
+    0.1039
+   ],
+   "n_increased": 12,
+   "n_decreased": 3,
+   "n_equal": 1
+  },
+  "dev:base_nbspfix->rl_step100:chrf": {
+   "key": "chrf",
+   "n": 16,
+   "mean_delta": 4.3544,
+   "ci95": [
+    2.4744,
+    6.3063
+   ],
+   "n_increased": 14,
+   "n_decreased": 2,
+   "n_equal": 0
+  },
+  "dev:base_nbspfix->rl_step100:n_typo": {
+   "key": "n_typo",
+   "n": 16,
+   "mean_delta": 0.1875,
+   "ci95": [
+    0.0,
+    0.5
+   ],
+   "n_increased": 2,
+   "n_decreased": 0,
+   "n_equal": 14
+  },
+  "dev:base_nbspfix->rl_step100:n_calque": {
+   "key": "n_calque",
+   "n": 16,
+   "mean_delta": -0.1875,
+   "ci95": [
+    -0.375,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 3,
+   "n_equal": 13
+  },
+  "dev:base_nbspfix->rl_step100:titlecase": {
+   "key": "titlecase",
+   "n": 16,
+   "mean_delta": -0.0625,
+   "ci95": [
+    -0.1875,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 1,
+   "n_equal": 15
+  },
+  "dev:base_nbspfix->rl_step100:protected_changed": {
+   "key": "protected_changed",
+   "n": 16,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 16
+  },
+  "dev:base_nbspfix->rl_step100:structure_ok": {
+   "key": "structure_ok",
+   "n": 16,
+   "mean_delta": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "n_increased": 0,
+   "n_decreased": 0,
+   "n_equal": 16
+  }
+ }
+}

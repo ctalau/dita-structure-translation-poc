@@ -65,3 +65,5 @@
 {"t": "2026-10-05T07:28:42Z", "event": "terminate", "pod": "tl23c5kqzaqvzg"}
 {"t": "2026-10-05T07:28:43Z", "event": "create", "pod": "ur2t2zx6a6gpza", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
 {"t": "2026-10-05T07:29:30Z", "event": "speedgate", "pod": "ur2t2zx6a6gpza", "boot_wait_s": 21, "mb_per_s": 47.2, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T09:51:50Z", "event": "terminate", "pod": "ur2t2zx6a6gpza"}
+{"t": "2026-10-05T09:51:56Z", "event": "balance", "client_balance": 3.5116, "spend_per_hr": 0}

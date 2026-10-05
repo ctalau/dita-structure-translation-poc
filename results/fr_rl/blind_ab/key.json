@@ -1,0 +1,166 @@
+{
+ "sys1": "results/fr_rl/base_outputs.jsonl",
+ "sys2": "results/fr_rl/rl_step100_outputs.jsonl",
+ "pairs": {
+  "p000": {
+   "id": "topics/api_faq_highlight_content.dita",
+   "A": "sys2"
+  },
+  "p001": {
+   "id": "topics/cf-admin-page-git.dita",
+   "A": "sys2"
+  },
+  "p002": {
+   "id": "topics/cf-admin-page-maintenance.dita",
+   "A": "sys1"
+  },
+  "p003": {
+   "id": "topics/cf-change-admin-password.dita",
+   "A": "sys2"
+  },
+  "p004": {
+   "id": "topics/cf-task-activity.dita",
+   "A": "sys2"
+  },
+  "p005": {
+   "id": "topics/ch_annotations.dita",
+   "A": "sys2"
+  },
+  "p006": {
+   "id": "topics/ch_external-links.dita",
+   "A": "sys1"
+  },
+  "p007": {
+   "id": "topics/ch_headers-and-footers.dita",
+   "A": "sys2"
+  },
+  "p008": {
+   "id": "topics/ch_layout_aligning_blocks_horizontally.dita",
+   "A": "sys2"
+  },
+  "p009": {
+   "id": "topics/concurrent-editing-two-servers-setup.dita",
+   "A": "sys2"
+  },
+  "p010": {
+   "id": "topics/content-fusion-addon.dita",
+   "A": "sys1"
+  },
+  "p011": {
+   "id": "topics/creating-branch-tag.dita",
+   "A": "sys2"
+  },
+  "p012": {
+   "id": "topics/dcpp-contribute-css-from-plugin.dita",
+   "A": "sys1"
+  },
+  "p013": {
+   "id": "topics/dcpp_how_to_display_whitespaces_in_code_blocks.dita",
+   "A": "sys2"
+  },
+  "p014": {
+   "id": "topics/dcpp_overview.dita",
+   "A": "sys1"
+  },
+  "p015": {
+   "id": "topics/dg-capitalize-function.dita",
+   "A": "sys2"
+  },
+  "p016": {
+   "id": "topics/dg-config-context-menu.dita",
+   "A": "sys1"
+  },
+  "p017": {
+   "id": "topics/dg-unparsed-entity-uri-function.dita",
+   "A": "sys2"
+  },
+  "p018": {
+   "id": "topics/failed-dita-chm-transformation.dita",
+   "A": "sys1"
+  },
+  "p019": {
+   "id": "topics/fluenta-dita-translation-addon-work-with-remote-resources-topic.dita",
+   "A": "sys2"
+  },
+  "p020": {
+   "id": "topics/formatting-and-indenting-css-stylesheets.dita",
+   "A": "sys1"
+  },
+  "p021": {
+   "id": "topics/ignore-resources-working-copy.dita",
+   "A": "sys2"
+  },
+  "p022": {
+   "id": "topics/installing-license-server-windows.dita",
+   "A": "sys2"
+  },
+  "p023": {
+   "id": "topics/ofb-automatic-re-indexing.dita",
+   "A": "sys2"
+  },
+  "p024": {
+   "id": "topics/ofb-localization.dita",
+   "A": "sys2"
+  },
+  "p025": {
+   "id": "topics/open-local-file-from-cmd.dita",
+   "A": "sys1"
+  },
+  "p026": {
+   "id": "topics/review-tasks-intro.dita",
+   "A": "sys1"
+  },
+  "p027": {
+   "id": "topics/svn-externals-property.dita",
+   "A": "sys1"
+  },
+  "p028": {
+   "id": "topics/synchronize-with-repos.dita",
+   "A": "sys2"
+  },
+  "p029": {
+   "id": "topics/testing-remote-wsdl-files.dita",
+   "A": "sys1"
+  },
+  "p030": {
+   "id": "topics/wa-implement-client-side-save-action.dita",
+   "A": "sys1"
+  },
+  "p031": {
+   "id": "topics/webhelp-responsive-description.dita",
+   "A": "sys1"
+  },
+  "p032": {
+   "id": "topics/whr-responsive-override-xslt-processing.dita",
+   "A": "sys2"
+  },
+  "p033": {
+   "id": "topics/whr-share-tempates.dita",
+   "A": "sys2"
+  },
+  "p034": {
+   "id": "topics/whr_edit-publishing-template.dita",
+   "A": "sys2"
+  },
+  "p035": {
+   "id": "topics/xml-schema-diagram-anyAttribute-properties.dita",
+   "A": "sys1"
+  },
+  "p036": {
+   "id": "topics/xml-schema-diagram-attributeGroup-properties.dita",
+   "A": "sys1"
+  },
+  "p037": {
+   "id": "topics/xml-schema-diagram-notation-properties.dita",
+   "A": "sys1"
+  },
+  "p038": {
+   "id": "topics/xml-schema-diagram-schema-namespaces.dita",
+   "A": "sys2"
+  },
+  "p039": {
+   "id": "topics/xml-schema-diagram-selector-properties.dita",
+   "A": "sys1"
+  }
+ }
+}
