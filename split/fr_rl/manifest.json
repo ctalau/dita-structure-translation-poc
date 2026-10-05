@@ -1,0 +1,72 @@
+{
+ "source_repo": "https://github.com/oxygenxml/userguide",
+ "source_commit": "db722d7af0c705cc3d6969f52bd1299a20ba1770",
+ "seed": 20261005,
+ "n_dita_files": 2757,
+ "n_eligible_topics": 376,
+ "n_test_topics": 40,
+ "n_dev_topics": 16,
+ "n_train_segments": 1000,
+ "segment_pool": 25038,
+ "train_segments_dropped_as_heldout_duplicates": 141,
+ "train_tag_counts": [
+  [
+   "p",
+   288
+  ],
+  [
+   "li",
+   277
+  ],
+  [
+   "title",
+   133
+  ],
+  [
+   "dd",
+   123
+  ],
+  [
+   "dt",
+   56
+  ],
+  [
+   "note",
+   45
+  ],
+  [
+   "entry",
+   43
+  ],
+  [
+   "cmd",
+   20
+  ],
+  [
+   "shortdesc",
+   7
+  ],
+  [
+   "linktext",
+   5
+  ],
+  [
+   "stepresult",
+   2
+  ],
+  [
+   "info",
+   1
+  ]
+ ],
+ "topic_rule": "standard DITA, 700..3500 bytes, >=250 prose chars, no conref/conkeyref, >=2 segments",
+ "segment_rule": "block element without nested blocks or reuse, 25..500 prose chars, >=4 words, max 3 per file",
+ "references": {
+  "author": "Claude Sonnet subagents, one per shard, following fr_rl/TRANSLATION_BRIEF.md",
+  "verified_by": "fr_rl/verify_refs.py on every row (0 problems on all 17 shards) + manual read of a random sample",
+  "excluded": {
+   "seg-4515c98b33": "English-grammar examples; translator localised the quoted English words, reference ambiguous"
+  },
+  "note": "The verifier's checks shaped some references: translators reworded titles to clear the title-case check and added a no-break space inside one CSS declaration in <b>."
+ }
+}

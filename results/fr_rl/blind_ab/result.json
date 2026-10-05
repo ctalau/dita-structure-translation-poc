@@ -1,0 +1,213 @@
+{
+ "sys1": "results/fr_rl/base_outputs.jsonl",
+ "sys2": "results/fr_rl/rl_step100_outputs.jsonl",
+ "n_judged": 40,
+ "n_pairs": 40,
+ "tally": {
+  "sys1": 17,
+  "sys2": 22,
+  "tie": 1
+ },
+ "per_topic": [
+  {
+   "id": "topics/api_faq_highlight_content.dita",
+   "winner": "sys1",
+   "reason": "A is not well-formed XML: two <p id=\"p_p2g_dgk_54b> / <p id=\"p_v2g_dgk_54b> have a missing closing quote. B is well-formed; its weaknesses (padded titles, uicontrol 'Author' untranslated) are minor by comparison."
+  },
+  {
+   "id": "topics/cf-admin-page-git.dita",
+   "winner": "sys1",
+   "reason": "B keeps UI labels capitalised as in the source (Nom du compte, Mot de passe du compte, Modifier) and uses the more natural 'Cet onglet comporte'; A lowercases the uicontrol labels."
+  },
+  {
+   "id": "topics/cf-admin-page-maintenance.dita",
+   "winner": "sys2",
+   "reason": "A uses \"Appuyez sur\" for mouse clicks, loses \"hourly\" (\"quotidiennement, quotidiennement\"), and has \"Bases de données\" and \"particulièrement listée\"; B keeps \"Cliquez\", \"horairement\" and \"Base de données\"."
+  },
+  {
+   "id": "topics/cf-change-admin-password.dita",
+   "winner": "sys1",
+   "reason": "Nearly identical; B's 'la sortie obtenue' is slightly more natural than A's 'sortie résultante'. Markup equivalent."
+  },
+  {
+   "id": "topics/cf-task-activity.dita",
+   "winner": "sys2",
+   "reason": "A keeps uicontrol labels consistent and capitalised like the source and translates 'ellipsis' and 'far right'. B lowercases uicontrols ('ajouter un message'), drops the uicontrol on 'Task activity' and omits 'à l'extrême droite'."
+  },
+  {
+   "id": "topics/ch_annotations.dita",
+   "winner": "sys1",
+   "reason": "A translates 'highlighted' as 'souligné' (mistranslation); B correctly uses 'mis en évidence'. Otherwise equivalent."
+  },
+  {
+   "id": "topics/ch_external-links.dita",
+   "winner": "tie",
+   "reason": "A is natural but has \"Lorsqu'imprimé\" and \"l'URL ... le voir\"; B has the calque \"lier vers\" and \"les cliquer\". Markup and meaning are equivalent."
+  },
+  {
+   "id": "topics/ch_headers-and-footers.dita",
+   "winner": "sys2",
+   "reason": "B mistranslates 'rule' as 'règne parent'; A correctly says 'règle @page parent'. A also reads naturally ('Vous devriez')."
+  },
+  {
+   "id": "topics/ch_layout_aligning_blocks_horizontally.dita",
+   "winner": "sys2",
+   "reason": "Both are accurate with identical markup; A uses the idiomatic 'définir ... sur auto' where B has 'à auto', and its titles are fine nominal forms. A very small edge."
+  },
+  {
+   "id": "topics/concurrent-editing-two-servers-setup.dita",
+   "winner": "sys2",
+   "reason": "A uses consistent 'session' and correctly renders toolbar as 'barre d'outils'; B mixes séance/session and mistranslates toolbar as 'panneau d'outils', and drops the space before the codeph after 'est :'."
+  },
+  {
+   "id": "topics/content-fusion-addon.dita",
+   "winner": "sys1",
+   "reason": "A is fluent French (\"module de connexion\", correct elisions), though \"cadres\" for frameworks is weak and it drops \"Oxygen\" in the link text. B has the grammatical error \"de héberger\" and keeps the anglicism \"Add-on\"."
+  },
+  {
+   "id": "topics/creating-branch-tag.dita",
+   "winner": "sys2",
+   "reason": "A translates tag/tagging consistently as balise/balisage and keeps the title in sentence case, though it has 'une snapshot' and 'liens dur'. B leaves 'tagging' and 'Tags' untranslated and mixes étiquette/tagging; both share the same stray closing indexterm."
+  },
+  {
+   "id": "topics/dcpp-contribute-css-from-plugin.dita",
+   "winner": "sys2",
+   "reason": "B uses 'point d'extension' where A leaves the anglicism 'extension point' and has the typo 'developpeurs'. B also renders 'file references' faithfully."
+  },
+  {
+   "id": "topics/dcpp_how_to_display_whitespaces_in_code_blocks.dita",
+   "winner": "sys2",
+   "reason": "Nearly identical; A keeps 'type de transformation' faithful to the source, whereas B drops 'type' and its wording on the attribute sentence is slightly heavier."
+  },
+  {
+   "id": "topics/dcpp_overview.dita",
+   "winner": "sys2",
+   "reason": "B correctly renders \"cover page\" as \"page de couverture\" where A has the wrong \"page d'accueil\". B inserts a stray space before the period after each xref, a minor defect."
+  },
+  {
+   "id": "topics/dg-capitalize-function.dita",
+   "winner": "sys1",
+   "reason": "B uses idiomatic 'met ... en majuscule' and 'Capitalisation'; A's 'majuscule' used as a verb/adjective ('majuscule la première lettre', 'nom qualifié majuscule') is incorrect French."
+  },
+  {
+   "id": "topics/dg-config-context-menu.dita",
+   "winner": "sys2",
+   "reason": "A has an uppercase 'OUVREZ', the broken phrase 'correspondant au particulier cadre', and turns uicontrol 'Author' into 'zone de saisie de l'auteur'. B is fluent and keeps the uicontrol and framework term."
+  },
+  {
+   "id": "topics/dg-unparsed-entity-uri-function.dita",
+   "winner": "sys1",
+   "reason": "B has clean shortdesc without stray padding spaces and a tidy dt; A adds leading/trailing spaces in shortdesc and has a plural mismatch ('entité non analysées')."
+  },
+  {
+   "id": "topics/failed-dita-chm-transformation.dita",
+   "winner": "sys2",
+   "reason": "A mistranslates \"scenario\" as \"scène de transformation\" and writes \"Cet erreur\"; B uses \"scénario\", \"Cette erreur\" and « » quotes with the correct space before the colon."
+  },
+  {
+   "id": "topics/fluenta-dita-translation-addon-work-with-remote-resources-topic.dita",
+   "winner": "sys1",
+   "reason": "B is idiomatic ('Si Fluenta est conçu', 'sont présents') and keeps the period directly after menucascade; A inserts a stray space before the period."
+  },
+  {
+   "id": "topics/formatting-and-indenting-css-stylesheets.dita",
+   "winner": "sys2",
+   "reason": "B is more complete: it keeps 'edited' (modifiée) and 'même commande de menu', and translates 'pretty print'. A drops 'edited' and leaves 'Pretty Print' in English. B has the typo 'mauvaise alignment', so the margin is small."
+  },
+  {
+   "id": "topics/ignore-resources-working-copy.dita",
+   "winner": "sys1",
+   "reason": "A has a grammatical error ('seules les fichiers'), 'caractères de jumelage' and uses 'committés'; B is more accurate ('commis', 'ressources non versionnées'), though it adds stray spaces inside uicontrol."
+  },
+  {
+   "id": "topics/installing-license-server-windows.dita",
+   "winner": "sys1",
+   "reason": "A has malformed XML (missing closing quote in id=\"li_o2n_bgk_54b>\") and \"multi-platfomme\" typos; B is well-formed and uses \"Identifiants\". B misplaces the <uicontrol> in \"du Oxygen serveur de licence\", a minor flaw."
+  },
+  {
+   "id": "topics/ofb-automatic-re-indexing.dita",
+   "winner": "sys1",
+   "reason": "A mistranslates 'indexing process' as 'processus de tri'; B correctly uses 'indexation', despite small slips ('lorsque une', 'demander à serveur')."
+  },
+  {
+   "id": "topics/ofb-localization.dita",
+   "winner": "sys2",
+   "reason": "A uses 'prend en charge' for 'comes with support', the standard term. B has the calque 'inclut un support pour'. A's 'interface UI' in the index term is redundant, a minor flaw."
+  },
+  {
+   "id": "topics/open-local-file-from-cmd.dita",
+   "winner": "sys2",
+   "reason": "A's 'type de document auquel est défini le schéma' is wrong/awkward; B's 'qui contient le schéma défini' and 'afficher plus d'informations' are more accurate and idiomatic."
+  },
+  {
+   "id": "topics/review-tasks-intro.dita",
+   "winner": "sys2",
+   "reason": "A leaves the title, indexterm and uicontrol (\"Review Tasks\", \"Projects\") untranslated; B translates them consistently and keeps the markup intact."
+  },
+  {
+   "id": "topics/svn-externals-property.dita",
+   "winner": "sys2",
+   "reason": "B renders 'switched status' as 'état de basculement' and keeps the source parenthesis; A's 'état de synchronisation' is wrong. Both have the 'dans le copie' slip, but B fixes it in places."
+  },
+  {
+   "id": "topics/synchronize-with-repos.dita",
+   "winner": "sys1",
+   "reason": "B reads more naturally ('intégrer les modifications apportées par les autres utilisateurs', 'éditions, de suppressions ou d'ajouts') and translates the uicontrol 'Working Copy'. A leaves 'Working Copy' in English and has 'en raison de modifications, suppression ou ajout'. B uses a curly apostrophe once, a minor inconsistency."
+  },
+  {
+   "id": "topics/testing-remote-wsdl-files.dita",
+   "winner": "sys2",
+   "reason": "B correctly translates the Eclipse menu 'Window' as 'Fenêtre' (A wrongly gives 'Vue') and uses 'Cliquez' for the button; A's 'Appuyez sur le bouton' is less standard."
+  },
+  {
+   "id": "topics/wa-implement-client-side-save-action.dita",
+   "winner": "sys2",
+   "reason": "B uses imperatives consistent with the source and guillemets around the ID; A keeps straight quotes. B's \"inscrivez-la\" and \"Vous pouvez devoir\" are slightly awkward but meaning and markup are equal."
+  },
+  {
+   "id": "topics/webhelp-responsive-description.dita",
+   "winner": "sys1",
+   "reason": "A keeps the meaning (WebHelp Responsive has a flexible layout); B changes the subject to 'Les fonctionnalités de ...' and then shifts to 'Elle', which is inconsistent."
+  },
+  {
+   "id": "topics/whr-responsive-override-xslt-processing.dita",
+   "winner": "sys2",
+   "reason": "A translates the title, index terms, keywords and list items ('points d'extension', 'modèle de publication'). B leaves the title, keywords and terms in English and mixes infinitive 'Utiliser' with imperative notes."
+  },
+  {
+   "id": "topics/whr-share-tempates.dita",
+   "winner": "sys1",
+   "reason": "B renders the 'switch the option' step clearly ('Activez l'option située en bas de cette page de préférences : Options du projet'); A's 'Activez l'option ... sous Options du projet' garbles the meaning."
+  },
+  {
+   "id": "topics/whr_edit-publishing-template.dita",
+   "winner": "sys2",
+   "reason": "B drops the word \"vue\" (\"dans la Projet\" with the uicontrol outside any noun) and capitalizes \"Modèle de publication Oxygen\"; A keeps \"vue\", uses \"Modifier\" and is complete."
+  },
+  {
+   "id": "topics/xml-schema-diagram-anyAttribute-properties.dita",
+   "winner": "sys1",
+   "reason": "B garbles the indexterms ('Mode de modification de conception', 'modification de conception de modification'), translates 'Process Contents' as 'Processus des contenus' and 'Any ID' as 'Quelque ID'; A is accurate and uses guillemets for the quoted values."
+  },
+  {
+   "id": "topics/xml-schema-diagram-attributeGroup-properties.dita",
+   "winner": "sys1",
+   "reason": "A has natural index terms ('Mode de conception d'édition') and 'Occurrences' for 'Mentions'. B has garbled index terms ('Mode de modification de conception', 'Modification de conception de modification') and an indexterm mistranslation."
+  },
+  {
+   "id": "topics/xml-schema-diagram-notation-properties.dita",
+   "winner": "sys2",
+   "reason": "B uses idiomatic 'quelconque' and 'modifiable' consistently, while A has the calque 'Quelque NCName/URI' and 'éditable'; both have flawed indexterms, but B's table is better overall."
+  },
+  {
+   "id": "topics/xml-schema-diagram-schema-namespaces.dita",
+   "winner": "sys2",
+   "reason": "B misspells \"Éspaces\" twice in the uicontrol (A has \"Espaces\"), and \"éditer\" is a calque; A uses \"modifier\" consistently and the markup is equivalent."
+  },
+  {
+   "id": "topics/xml-schema-diagram-selector-properties.dita",
+   "winner": "sys1",
+   "reason": "B garbles the index terms ('modification de conception de modification') and writes 'Quelque ID'; A's index terms and 'Un ID quelconque' are correct."
+  }
+ ]
+}
