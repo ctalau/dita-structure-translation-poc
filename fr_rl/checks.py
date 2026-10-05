@@ -206,12 +206,21 @@ TITLE_OK = {"Oxygen", "XML", "Auteur", "Author", "Texte", "Grille", "Web",
 _WORD = re.compile(r"[^\W\d_][\w'’\-]*", re.U)
 
 
+# French UI convention capitalises the name of a dialog, view, tab... right
+# after the generic noun: "boîte de dialogue Historique", "vue Projet".
+UI_NOUNS = {"dialogue", "vue", "onglet", "panneau", "menu", "mode", "outils",
+            "assistant", "fenêtre", "section", "page", "champ", "bouton", "option",
+            "perspective", "éditeur", "barre"}
+
+
 def titlecase(src_title: str, hyp_title: str) -> int:
     src_words = set(_WORD.findall(src_title))
     words = _WORD.findall(hyp_title)
     bad = 0
     for i, w in enumerate(words):
         if i == 0 or len(w) < 2 or not w[0].isupper() or w.isupper():
+            continue
+        if words[i - 1].lower() in UI_NOUNS:
             continue
         base = re.split(r"['’]", w)[-1] or w
         if w in src_words or base in src_words or w in TITLE_OK or base in TITLE_OK:

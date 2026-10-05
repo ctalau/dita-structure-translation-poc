@@ -5,3 +5,63 @@
 {"t": "2026-10-05T05:51:41Z", "event": "create", "pod": "f77tfiactzjwxw", "cost_per_hr": 0.5, "gpu": "RTX 3090", "cloud": "SECURE", "image": "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04"}
 {"t": "2026-10-05T05:51:49Z", "event": "terminate", "pod": "f77tfiactzjwxw"}
 {"t": "2026-10-05T05:54:50Z", "event": "create", "pod": "e6c2xug5uzg3ho", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:28:04Z", "event": "terminate", "pod": "e6c2xug5uzg3ho"}
+{"t": "2026-10-05T06:28:05Z", "event": "create", "pod": "6pwjv469e0e1ih", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:38:25Z", "event": "create", "pod": "w1em84jzzp4ref", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:38:55Z", "event": "terminate", "pod": "6pwjv469e0e1ih", "note": "never started (uptime 0 after 10 min); orphaned by a speedgate crash"}
+{"t": "2026-10-05T06:44:12Z", "event": "speedgate_fail", "pod": "w1em84jzzp4ref", "reason": "no boot within 300.0s"}
+{"t": "2026-10-05T06:44:13Z", "event": "terminate", "pod": "w1em84jzzp4ref"}
+{"t": "2026-10-05T06:44:22Z", "event": "create", "pod": "t8brbrfkj78yzc", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:45:09Z", "event": "speedgate", "pod": "t8brbrfkj78yzc", "boot_wait_s": 22, "mb_per_s": 3.0, "min_mb_per_s": 20.0}
+{"t": "2026-10-05T06:45:09Z", "event": "speedgate_fail", "pod": "t8brbrfkj78yzc", "reason": "slow download"}
+{"t": "2026-10-05T06:45:09Z", "event": "terminate", "pod": "t8brbrfkj78yzc"}
+{"t": "2026-10-05T06:45:10Z", "event": "create", "pod": "t972hrcgw1f6ar", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:46:08Z", "event": "speedgate", "pod": "t972hrcgw1f6ar", "boot_wait_s": 33, "mb_per_s": 9.8, "min_mb_per_s": 20.0}
+{"t": "2026-10-05T06:46:08Z", "event": "speedgate_fail", "pod": "t972hrcgw1f6ar", "reason": "slow download"}
+{"t": "2026-10-05T06:46:08Z", "event": "terminate", "pod": "t972hrcgw1f6ar"}
+{"t": "2026-10-05T06:46:09Z", "event": "create", "pod": "eo1g37doyrlkef", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:46:31Z", "event": "speedgate_fail", "pod": "eo1g37doyrlkef", "reason": "HTTP Error 404: Not Found"}
+{"t": "2026-10-05T06:46:31Z", "event": "terminate", "pod": "eo1g37doyrlkef"}
+{"t": "2026-10-05T06:46:32Z", "event": "create", "pod": "2v7c294e14k34e", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:47:30Z", "event": "speedgate", "pod": "2v7c294e14k34e", "boot_wait_s": 32, "mb_per_s": 13.9, "min_mb_per_s": 20.0}
+{"t": "2026-10-05T06:47:30Z", "event": "speedgate_fail", "pod": "2v7c294e14k34e", "reason": "slow download"}
+{"t": "2026-10-05T06:47:30Z", "event": "terminate", "pod": "2v7c294e14k34e"}
+{"t": "2026-10-05T06:47:38Z", "event": "create", "pod": "3jg2d2eg26zdn0", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T06:48:35Z", "event": "speedgate", "pod": "3jg2d2eg26zdn0", "boot_wait_s": 32, "mb_per_s": 10.2, "min_mb_per_s": 10.0}
+{"t": "2026-10-05T07:00:07Z", "event": "terminate", "pod": "3jg2d2eg26zdn0"}
+{"t": "2026-10-05T07:00:12Z", "event": "create", "pod": "huoqrian9a4vkq", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:01:10Z", "event": "speedgate", "pod": "huoqrian9a4vkq", "boot_wait_s": 32, "mb_per_s": 0.3, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:01:10Z", "event": "speedgate_fail", "pod": "huoqrian9a4vkq", "reason": "slow download"}
+{"t": "2026-10-05T07:01:10Z", "event": "terminate", "pod": "huoqrian9a4vkq"}
+{"t": "2026-10-05T07:01:11Z", "event": "create", "pod": "u6vqx5jijv1vtz", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:02:08Z", "event": "speedgate", "pod": "u6vqx5jijv1vtz", "boot_wait_s": 32, "mb_per_s": 0.1, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:02:08Z", "event": "speedgate_fail", "pod": "u6vqx5jijv1vtz", "reason": "slow download"}
+{"t": "2026-10-05T07:02:09Z", "event": "terminate", "pod": "u6vqx5jijv1vtz"}
+{"t": "2026-10-05T07:02:09Z", "event": "create", "pod": "a99v8hem2qhejy", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:03:17Z", "event": "speedgate", "pod": "a99v8hem2qhejy", "boot_wait_s": 43, "mb_per_s": 1.0, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:03:17Z", "event": "speedgate_fail", "pod": "a99v8hem2qhejy", "reason": "slow download"}
+{"t": "2026-10-05T07:03:18Z", "event": "terminate", "pod": "a99v8hem2qhejy"}
+{"t": "2026-10-05T07:03:18Z", "event": "create", "pod": "sz9wk4iodse16t", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:03:40Z", "event": "speedgate_fail", "pod": "sz9wk4iodse16t", "reason": "HTTP Error 404: Not Found"}
+{"t": "2026-10-05T07:03:41Z", "event": "terminate", "pod": "sz9wk4iodse16t"}
+{"t": "2026-10-05T07:03:42Z", "event": "create", "pod": "9qixush8n4vnsa", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:05:01Z", "event": "speedgate", "pod": "9qixush8n4vnsa", "boot_wait_s": 47, "mb_per_s": 0.3, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:05:01Z", "event": "speedgate_fail", "pod": "9qixush8n4vnsa", "reason": "slow download"}
+{"t": "2026-10-05T07:05:01Z", "event": "terminate", "pod": "9qixush8n4vnsa"}
+{"t": "2026-10-05T07:05:02Z", "event": "create", "pod": "i929b104xfbuy8", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:06:02Z", "event": "speedgate", "pod": "i929b104xfbuy8", "boot_wait_s": 34, "mb_per_s": 0.1, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:06:02Z", "event": "speedgate_fail", "pod": "i929b104xfbuy8", "reason": "slow download"}
+{"t": "2026-10-05T07:06:02Z", "event": "terminate", "pod": "i929b104xfbuy8"}
+{"t": "2026-10-05T07:06:19Z", "event": "create", "pod": "fb541e6ex8hp6p", "cost_per_hr": 0.34, "gpu": "RTX 4090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:07:08Z", "event": "speedgate", "pod": "fb541e6ex8hp6p", "boot_wait_s": 23, "mb_per_s": 17.1, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:15:32Z", "event": "terminate", "pod": "fb541e6ex8hp6p"}
+{"t": "2026-10-05T07:26:42Z", "event": "create", "pod": "zu8ymi9r5pv4n2", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:27:30Z", "event": "speedgate", "pod": "zu8ymi9r5pv4n2", "boot_wait_s": 22, "mb_per_s": 0.0, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:27:30Z", "event": "speedgate_fail", "pod": "zu8ymi9r5pv4n2", "reason": "slow download"}
+{"t": "2026-10-05T07:27:30Z", "event": "terminate", "pod": "zu8ymi9r5pv4n2"}
+{"t": "2026-10-05T07:27:31Z", "event": "create", "pod": "tl23c5kqzaqvzg", "cost_per_hr": 0.34, "gpu": "RTX 4090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:28:42Z", "event": "speedgate", "pod": "tl23c5kqzaqvzg", "boot_wait_s": 44, "mb_per_s": 0.0, "min_mb_per_s": 8.0}
+{"t": "2026-10-05T07:28:42Z", "event": "speedgate_fail", "pod": "tl23c5kqzaqvzg", "reason": "slow download"}
+{"t": "2026-10-05T07:28:42Z", "event": "terminate", "pod": "tl23c5kqzaqvzg"}
+{"t": "2026-10-05T07:28:43Z", "event": "create", "pod": "ur2t2zx6a6gpza", "cost_per_hr": 0.22, "gpu": "RTX 3090", "cloud": "COMMUNITY", "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"}
+{"t": "2026-10-05T07:29:30Z", "event": "speedgate", "pod": "ur2t2zx6a6gpza", "boot_wait_s": 21, "mb_per_s": 47.2, "min_mb_per_s": 8.0}

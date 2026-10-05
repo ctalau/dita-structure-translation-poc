@@ -28,7 +28,9 @@ ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "refs_work" / "pod.json"
 LEDGER = ROOT / "results" / "fr_rl" / "pod_ledger.jsonl"
 API = "https://api.runpod.io/graphql"
-IMAGE = "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04"
+# A widely cached image boots in seconds; pip wheels bring their own CUDA
+# runtime, so only the host driver matters (allowedCudaVersions below).
+IMAGE = "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"
 
 
 def gql(query: str) -> dict:
@@ -127,6 +129,35 @@ def main(a):
         Path(a[3]).parent.mkdir(parents=True, exist_ok=True)
         Path(a[3]).write_bytes(call("GET", "/file?path=" + a[2], timeout=600))
         print("ok", a[3])
+    elif cmd == "speedgate":
+        # Any failure (no boot within the wait, slow download) terminates the pod.
+        min_mbps = float(a[2]) if len(a) > 2 else 20.0
+        wait_s = float(a[3]) if len(a) > 3 else 420
+        try:
+            t0 = time.time()
+            while True:
+                try:
+                    call("GET", "/ping", timeout=15)
+                    break
+                except Exception:
+                    if time.time() - t0 > wait_s:
+                        raise RuntimeError(f"no boot within {wait_s}s")
+                    time.sleep(10)
+            boot_s = round(time.time() - t0)
+            call("POST", "/put?path=/workspace/pod_gate.sh", (ROOT / "fr_rl" / "pod_gate.sh").read_bytes())
+            call("POST", "/exec?name=speedgate", b"bash /workspace/pod_gate.sh")
+            time.sleep(24)
+            tail = json.loads(call("GET", "/status?name=speedgate"))["tail"].strip().splitlines()
+            print(tail[-1])
+            tail = tail[0]
+            mbps = float(tail or 0) / 1e6
+            ledger("speedgate", pod=state()["id"], boot_wait_s=boot_s, mb_per_s=round(mbps, 1), min_mb_per_s=min_mbps)
+            if mbps < min_mbps:
+                raise RuntimeError("slow download")
+        except BaseException as e:
+            ledger("speedgate_fail", pod=state()["id"], reason=str(e)[:200])
+            terminate()
+            raise SystemExit(1)
     elif cmd == "terminate":
         terminate()
     else:
