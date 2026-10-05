@@ -13,3 +13,4 @@ results/fr/adapter/tokenizer_config.json
 results/fr/adapter/vocab.json
 results/fr/adapter/merges.txt
 results/**/tokenizer.json
+refs_work/
