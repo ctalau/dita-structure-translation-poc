@@ -77,6 +77,10 @@ def main():
     ap.add_argument("--vllm-mem", type=float, default=0.40, help="vLLM gpu_memory_utilization")
     ap.add_argument("--sleep", action="store_true",
                     help="offload vLLM weights to CPU during each update (24 GB cards)")
+    ap.add_argument("--tok-budget", type=int, default=3072,
+                    help="max rows x longest completion per micro-batch")
+    ap.add_argument("--init-lora", help="resume: adapter to start from")
+    ap.add_argument("--start-step", type=int, default=0, help="resume: steps already done")
     ap.add_argument("--wall-s", type=float, default=1e9, help="stop after this many seconds")
     args = ap.parse_args()
 
@@ -106,7 +110,11 @@ def main():
     lcfg = LoraConfig(r=args.rank, lora_alpha=2 * args.rank, lora_dropout=0.0, bias="none",
                       target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
                       task_type="CAUSAL_LM")
-    model = get_peft_model(model, lcfg)
+    if args.init_lora:  # resume; Adam moments are not restored
+        from peft import PeftModel
+        model = PeftModel.from_pretrained(model, args.init_lora, is_trainable=True)
+    else:
+        model = get_peft_model(model, lcfg)
     params = [p for p in model.parameters() if p.requires_grad]
     opt = torch.optim.AdamW(params, lr=args.lr, betas=(0.9, 0.99), weight_decay=0.0)
     log(fh, event="setup", args=vars(args), trainable=sum(p.numel() for p in params),
@@ -115,6 +123,13 @@ def main():
 
     lora = None
     dev_hist = []
+    if args.init_lora:
+        lora = LoRARequest(f"s{args.start_step}", args.start_step, args.init_lora)
+        for line in open(out / "train_log.jsonl"):
+            d = json.loads(line)
+            if d.get("event") == "dev" and d["step"] <= args.start_step:
+                dev_hist = [h for h in dev_hist if h["step"] != d["step"]]
+                dev_hist.append({k: v for k, v in d.items() if k not in ("event", "t", "seconds")})
 
     def do_eval(step):
         te = time.time()
@@ -124,10 +139,18 @@ def main():
         dev_hist.append({"step": step, **s})
         log(fh, event="dev", step=step, seconds=round(time.time() - te, 1), **s)
 
-    do_eval(0)
     order = []
-    done = 0
-    for step in range(1, args.steps + 1):
+    done = args.start_step
+    if args.start_step == 0:
+        do_eval(0)
+    for _ in range(args.start_step):  # replay the data order of the steps already done
+        if len(order) < args.prompts:
+            perm = list(range(len(train)))
+            rng.shuffle(perm)
+            order += perm
+        order = order[args.prompts:]
+    log(fh, event="resume" if args.start_step else "start", start_step=args.start_step, init_lora=args.init_lora)
+    for step in range(args.start_step + 1, args.steps + 1):
         if time.time() - t0 > args.wall_s:
             log(fh, event="wall_stop", step=step)
             break
@@ -185,8 +208,19 @@ def main():
             model.train()
             n_tok = sum(len(c) for _, c, _ in samples)
             samples.sort(key=lambda s: len(s[0]) + len(s[1]))
-            for i in range(0, len(samples), args.micro):
-                mb = samples[i:i + args.micro]
+            # Micro-batches capped by count and by (rows x longest completion),
+            # because the fp32 log-softmax is rows x C x vocab. Step 51 of the
+            # first run hit OOM with a fixed count of 16.
+            mbs, cur = [], []
+            for smp in samples:
+                c_max = max([len(x[1]) for x in cur] + [len(smp[1])])
+                if cur and (len(cur) + 1 > args.micro or (len(cur) + 1) * c_max > args.tok_budget):
+                    mbs.append(cur)
+                    cur = []
+                cur.append(smp)
+            if cur:
+                mbs.append(cur)
+            for mb in mbs:
                 L = max(len(p) + len(c) for p, c, _ in mb)
                 C = max(len(c) for _, c, _ in mb)
                 ids = torch.full((len(mb), L), tok.pad_token_id, dtype=torch.long)
@@ -213,7 +247,7 @@ def main():
             opt.zero_grad(set_to_none=True)
             path = out / "lora_cur" / f"s{step}"
             model.save_pretrained(path)
-            if lora is not None and "lora_cur" in lora.lora_path:
+            if lora is not None and "lora_cur" in lora.lora_path and lora.lora_path != str(path):
                 shutil.rmtree(lora.lora_path, ignore_errors=True)
             lora = LoRARequest(f"s{step}", step, str(path))
             if args.sleep:
