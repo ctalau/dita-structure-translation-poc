@@ -1,0 +1,1877 @@
+{
+  "adapter": "results/fr_style_sft_adapter",
+  "max_new_tokens": 768,
+  "historical_10": {
+    "n": 10,
+    "old_counter": {
+      "punct": 5,
+      "schema": 1,
+      "violations": 6,
+      "topics_with_any_violation": 4
+    },
+    "new_oracle": {
+      "evaluator_version": "fr-typography-oracle-1",
+      "mean_reward": 0.465,
+      "gate_passed": 7,
+      "bad_spacing": 1,
+      "penalty": 5
+    }
+  },
+  "sealed_synthetic": {
+    "n": 40,
+    "old_counter": {
+      "punct": 0,
+      "schema": 0,
+      "violations": 0,
+      "topics_with_any_violation": 0
+    },
+    "new_oracle": {
+      "evaluator_version": "fr-typography-oracle-1",
+      "mean_reward": 1.0,
+      "gate_passed": 40,
+      "bad_spacing": 0,
+      "penalty": 0
+    }
+  },
+  "historical_rows": [
+    {
+      "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 2,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 2,
+          "hyp_linguistic": 2,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 2,
+          "nbsp_count": 2,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "topics/author-editing-tables-xhtml.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "topics/ant-preferences.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "rules/styleguide/uicontrol.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 1,
+        "schema": 0,
+        "violations": 1,
+        "reward": -1.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 0.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 0,
+        "typography": {
+          "score": 0.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 1,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 1,
+          "base": 1,
+          "nbsp_count": 0,
+          "ambiguous_spans": [],
+          "bad_excerpts": [
+            "Rule: uicontrol E"
+          ]
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "topics/dcpp_how_to_control_titles_layout.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 1,
+        "violations": 1,
+        "reward": -1.0,
+        "well_formed": false,
+        "dtd_valid": false
+      },
+      "new_oracle": {
+        "reward": -1.0,
+        "gate_passed": false,
+        "gate_failures": [
+          "xml_only",
+          "well_formed",
+          "dtd_valid",
+          "structure",
+          "protected_attributes",
+          "protected_literals"
+        ],
+        "nbsp_count": 0,
+        "typography": null,
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "topics/ch_xml_support.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 2,
+        "schema": 0,
+        "violations": 2,
+        "reward": -2.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": -0.175,
+        "gate_passed": false,
+        "gate_failures": [
+          "protected_literals"
+        ],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "glossary/project-options.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 0,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 0,
+          "hyp_linguistic": 0,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 0,
+          "nbsp_count": 0,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "topics/ch_avoiding_page_breaks.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 2,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 2,
+          "hyp_linguistic": 2,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 2,
+          "nbsp_count": 2,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "topics/ch_external-links.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 2,
+        "schema": 0,
+        "violations": 2,
+        "reward": -2.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": -0.175,
+        "gate_passed": false,
+        "gate_failures": [
+          "protected_literals"
+        ],
+        "nbsp_count": 3,
+        "typography": {
+          "score": 0.2,
+          "source_linguistic": 3,
+          "hyp_linguistic": 3,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 2,
+          "english_quotes_penalized": 2,
+          "source_quote_marks": 2,
+          "hyp_guillemets": 0,
+          "penalty": 4,
+          "base": 5,
+          "nbsp_count": 3,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "path": "topics/dcpp_how_to_center_videos.dita",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    }
+  ],
+  "sealed_rows": [
+    {
+      "id": "sealed-00000",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00001",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00002",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00003",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00004",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00005",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00006",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00007",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00008",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00009",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00010",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00011",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00012",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00013",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00014",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00015",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00016",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00017",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00018",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00019",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00020",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00021",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00022",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00023",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00024",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00025",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00026",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00027",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00028",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00029",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00030",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00031",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00032",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00033",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00034",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00035",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00036",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00037",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00038",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    },
+    {
+      "id": "sealed-00039",
+      "task": "translate",
+      "hit_token_cap": false,
+      "old_counter": {
+        "punct": 0,
+        "schema": 0,
+        "violations": 0,
+        "reward": 0.0,
+        "well_formed": true,
+        "dtd_valid": true
+      },
+      "new_oracle": {
+        "reward": 1.0,
+        "gate_passed": true,
+        "gate_failures": [],
+        "nbsp_count": 1,
+        "typography": {
+          "score": 1.0,
+          "source_linguistic": 1,
+          "hyp_linguistic": 1,
+          "omitted_marks": 0,
+          "bad_spacing": 0,
+          "guillemet_bad": 0,
+          "omitted_quotes": 0,
+          "english_quotes_penalized": 0,
+          "source_quote_marks": 0,
+          "hyp_guillemets": 0,
+          "penalty": 0,
+          "base": 1,
+          "nbsp_count": 1,
+          "ambiguous_spans": [],
+          "bad_excerpts": []
+        },
+        "evaluator_version": "fr-typography-oracle-1"
+      }
+    }
+  ]
+}

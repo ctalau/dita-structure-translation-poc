@@ -1,0 +1,113 @@
+{
+  "n_prompts": 6,
+  "group_size": 4,
+  "n_groups_with_reward_spread": 0,
+  "n_groups_all_tie": 6,
+  "punctuation_errors_remain": true,
+  "decision": "skip",
+  "reason": "all sampled groups tied",
+  "groups": [
+    {
+      "id": "syn00054",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "old_punct": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reward_spread": 0.0,
+      "tie": true
+    },
+    {
+      "id": "mix-00108",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "old_punct": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "reward_spread": 0.0,
+      "tie": true
+    },
+    {
+      "id": "syn00205",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "old_punct": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reward_spread": 0.0,
+      "tie": true
+    },
+    {
+      "id": "syn00313",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "old_punct": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reward_spread": 0.0,
+      "tie": true
+    },
+    {
+      "id": "syn00141",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "old_punct": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reward_spread": 0.0,
+      "tie": true
+    },
+    {
+      "id": "mix-00206",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "old_punct": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reward_spread": 0.0,
+      "tie": true
+    }
+  ]
+}

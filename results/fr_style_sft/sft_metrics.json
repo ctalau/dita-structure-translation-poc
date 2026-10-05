@@ -1,0 +1,30 @@
+{
+  "stage": "sft",
+  "global_step": 57,
+  "max_steps": null,
+  "seen_tokens": 300717,
+  "step_seconds": 887.955,
+  "tokens_per_sec": 338.662,
+  "peak_allocated_mib": 6954.1,
+  "peak_reserved_mib": 7456.0,
+  "lora_A_modules": 248,
+  "selected_targets": [
+    "in_proj_qkv",
+    "in_proj_z",
+    "in_proj_a",
+    "in_proj_b",
+    "out_proj",
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "selected_target_count": 12,
+  "full_trainable_params_estimate": 16232448,
+  "rollout": null,
+  "hourly_usd": 0.27,
+  "gpu": "NVIDIA GeForce RTX 3090 Ti"
+}

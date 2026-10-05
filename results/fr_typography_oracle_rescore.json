@@ -1,0 +1,4469 @@
+{
+  "evaluator_version": "fr-typography-oracle-1",
+  "note": "published_summary_verbatim and published row fields are copied from the result files. old_counter_rescore and new_oracle_rescore are new measurements. A difference is not a corrected baseline.",
+  "language_note": "results/baseline_test.json and results/after_test.json are the Romanian run. results/fr/ is the format-break run. French-oracle numbers on those files measure those XML strings. They are not Romanian metrics and they are not format-break metrics.",
+  "published_metrics_verbatim": {
+    "results/fr_punct/metrics.json": {
+      "model": "Qwen/Qwen3.5-4B",
+      "quant": "bitsandbytes NF4 QLoRA (4-bit base)",
+      "language_pair": "en-fr",
+      "method": "Scan greedy until a topic has at least one violation, or the pool ends, or the GPU budget cap hits. GRPO-style group size 2 on violated train topics only. Advantage (r-mean)/std. Reward = minus the violation count (schema occurrences + French punctuation occurrences). 0 is perfect. A group updates only when the two counts differ.",
+      "reward_order_sensitive": true,
+      "system_prompt": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations.",
+      "lr": 5e-06,
+      "lora_r": 8,
+      "lora_targets": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ],
+      "updates": 17,
+      "skipped_flat_reward": 63,
+      "train_topics_attempted": 80,
+      "train_topics_available": 80,
+      "scan": {
+        "scanned": 184,
+        "passed": 84,
+        "broken": 100,
+        "stop_reason": "found_target",
+        "skipped_over_cap": 0,
+        "not_reached": 783,
+        "too_big_for_max_cap": 763,
+        "elapsed_s": 2390.7
+      },
+      "baseline": {
+        "n": 10,
+        "topics_with_violations": 10,
+        "schema_topics": 5,
+        "punct_topics": 9,
+        "schema_only_topics": 1,
+        "punct_only_topics": 5,
+        "both_schema_and_punct_topics": 4,
+        "schema_violation_occurrences": 5,
+        "punct_violation_occurrences": 34,
+        "violation_occurrences": 39,
+        "mean_violations": 3.9,
+        "mean_reward": -3.9,
+        "skeleton_mismatch_topics": 5,
+        "truncated_topics": 0,
+        "zero_violation_topics": 0,
+        "latency_p50_s": 26.988,
+        "latency_mean_s": 26.692,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit, greedy, violation-count reward",
+        "decoding": "greedy",
+        "part_occurrence_histogram": {
+          "not_well_formed": 3,
+          "bad_high_punct": 34,
+          "attr_value": 1,
+          "child_order": 1
+        }
+      },
+      "after": {
+        "n": 10,
+        "topics_with_violations": 10,
+        "schema_topics": 5,
+        "punct_topics": 9,
+        "schema_only_topics": 1,
+        "punct_only_topics": 5,
+        "both_schema_and_punct_topics": 4,
+        "schema_violation_occurrences": 5,
+        "punct_violation_occurrences": 34,
+        "violation_occurrences": 39,
+        "mean_violations": 3.9,
+        "mean_reward": -3.9,
+        "skeleton_mismatch_topics": 5,
+        "truncated_topics": 0,
+        "zero_violation_topics": 0,
+        "latency_p50_s": 21.967,
+        "latency_mean_s": 18.885,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit, greedy, violation-count reward",
+        "decoding": "greedy",
+        "part_occurrence_histogram": {
+          "not_well_formed": 3,
+          "bad_high_punct": 34,
+          "attr_value": 1,
+          "child_order": 1
+        }
+      },
+      "surprises": [],
+      "kernels": {
+        "causal_conv1d": true,
+        "flash_linear_attention": true,
+        "fla": true
+      }
+    },
+    "results/fr/metrics.json": {
+      "model": "Qwen/Qwen3.5-4B",
+      "language_pair": "en-fr",
+      "resume": true,
+      "updates": 10,
+      "skipped_flat_reward": 15,
+      "train_topics_attempted": 25,
+      "train_topics_available": 25,
+      "lora_targets": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ],
+      "baseline": {
+        "n": 10,
+        "format_broken": 10,
+        "schema_invalid_topics": 5,
+        "schema_error_total": 1,
+        "skeleton_mismatch_topics": 10,
+        "sibling_reorder_topics": 0,
+        "truncated_topics": 0,
+        "valid_and_skeleton_ok": 0,
+        "mean_reward": 0.1305,
+        "latency_p50_s": 23.932,
+        "latency_mean_s": 20.824,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy",
+        "reason_histogram_multilabel": {
+          "not_well_formed": 4,
+          "attr_changed": 4,
+          "dtd_invalid": 1,
+          "child_mismatch": 2
+        },
+        "primary_reason_histogram": {
+          "not_well_formed": 4,
+          "attr_changed": 4,
+          "child_mismatch": 2
+        }
+      },
+      "after": {
+        "n": 10,
+        "format_broken": 9,
+        "schema_invalid_topics": 4,
+        "schema_error_total": 1,
+        "skeleton_mismatch_topics": 9,
+        "sibling_reorder_topics": 0,
+        "truncated_topics": 0,
+        "valid_and_skeleton_ok": 1,
+        "mean_reward": 0.3305,
+        "latency_p50_s": 23.654,
+        "latency_mean_s": 20.521,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy",
+        "reason_histogram_multilabel": {
+          "not_well_formed": 3,
+          "attr_changed": 4,
+          "dtd_invalid": 1,
+          "child_mismatch": 2
+        },
+        "primary_reason_histogram": {
+          "not_well_formed": 3,
+          "attr_changed": 4,
+          "child_mismatch": 2
+        }
+      },
+      "surprises": [],
+      "system_prompt": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations."
+    },
+    "results/fr_nbsp_sft2/metrics.json": {
+      "experiment": "fr_nbsp_sft2",
+      "gpu": "NVIDIA GeForce RTX 3090 Ti",
+      "model": "Qwen/Qwen3.5-4B",
+      "quant": "bitsandbytes NF4 QLoRA",
+      "lora_r": 8,
+      "continued_from": "/workspace/fr_nbsp_sft2/start_adapter",
+      "trainable_params": 1572864,
+      "lr_sft": 2e-05,
+      "system_prompt": "You translate DITA XML from English to French. Output one XML document and nothing else. Keep every element, attribute, attribute value, and child order identical. Translate only human-readable text. Do not translate tag names, attribute values, ids, or hrefs. Use French guillemets (« ») for quotations, not English quotation marks. Insert a non-breaking space (U+00A0 or the entity &nbsp;) before ? ! : and ;. Keep the DOCTYPE. Do not add markdown fences or explanations.",
+      "thinking": "off",
+      "skip_tags": [
+        "codeblock",
+        "codeph"
+      ],
+      "attributes_skipped": true,
+      "codeblock_codeph_colons_excluded": true,
+      "reward": "minus (schema occurrences + missing U+00A0 before ?!:; in prose). English quotes are counted but not added to the reward.",
+      "n_candidates_with_prose_punct": 1324,
+      "n_fresh_pool": 431,
+      "search_scanned": 48,
+      "search_clean": 30,
+      "search_train_queue": 8,
+      "old10_all_initial_punct_errors": false,
+      "old10_all_source_candidates": false,
+      "used_old10_as_heldout": false,
+      "held_out_paths": [
+        "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+        "topics/oxy-platform.dita",
+        "topics/oxy-is-editable-element.dita",
+        "topics/editing-JSON.dita",
+        "topics/xml-schema-diagram-override-properties.dita",
+        "topics/xml-schema-diagram-include-properties.dita",
+        "topics/xml-schema-diagram-redefine-properties.dita",
+        "topics/dita-pdf-output.dita",
+        "topics/oxy-selected-elements.dita",
+        "topics/oxy-current-selected-element.dita"
+      ],
+      "sft_steps": 8,
+      "sft_skipped_no_edit": 0,
+      "sft_skipped_rewrite_still_bad": 0,
+      "sft_skipped_long": 0,
+      "sft_oom": 0,
+      "sft_insertions": 15,
+      "sft_space_replacements": 0,
+      "sft_elapsed_s": 1048.6,
+      "sft_eval_missing": false,
+      "grpo_groups": 8,
+      "grpo_updates": 2,
+      "grpo_ties": 6,
+      "grpo_ties_both_missing_nbsp": 5,
+      "grpo_ties_identical_missing_spans": 4,
+      "grpo_ties_both_zero": 1,
+      "grpo_oom": 0,
+      "grpo_elapsed_s": 676.1,
+      "grpo_eval_missing": false,
+      "start": {
+        "n": 10,
+        "schema_violation_occurrences": 2,
+        "prose_punct_occurrences": 39,
+        "missing_nbsp_hits": 39,
+        "topics_still_violated": 10,
+        "topics_with_any_nbsp": 7,
+        "topics_best_effort_punct": 0,
+        "english_quotes_not_in_reward": 0
+      },
+      "after_sft": {
+        "n": 10,
+        "schema_violation_occurrences": 0,
+        "prose_punct_occurrences": 33,
+        "missing_nbsp_hits": 33,
+        "topics_still_violated": 9,
+        "topics_with_any_nbsp": 7,
+        "topics_best_effort_punct": 0,
+        "english_quotes_not_in_reward": 0
+      },
+      "after_grpo": {
+        "n": 10,
+        "schema_violation_occurrences": 2,
+        "prose_punct_occurrences": 28,
+        "missing_nbsp_hits": 28,
+        "topics_still_violated": 9,
+        "topics_with_any_nbsp": 8,
+        "topics_best_effort_punct": 0,
+        "english_quotes_not_in_reward": 0
+      },
+      "colon_examples_start_vs_last_eval": [
+        {
+          "path": "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+          "before_colons": [
+            {
+              "frag": "ments pseudo- CSS :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "CSS :before(n) et :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  élément pseudo- :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  élément pseudo- :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": " éléments pseudo- :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "seudo- :before ou :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "ments pseudo- CSS :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "CSS :before(n) et :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  élément pseudo- :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  élément pseudo- :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 6,
+          "after_missing": 4,
+          "before_schema": 2,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/oxy-platform.dita",
+          "before_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 3,
+          "after_missing": 3,
+          "before_schema": 0,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/oxy-is-editable-element.dita",
+          "before_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "ns une section  xi:",
+              "mark": ":",
+              "prev": "i",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "ns une section  xi:",
+              "mark": ":",
+              "prev": "i",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 4,
+          "after_missing": 4,
+          "before_schema": 0,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/editing-JSON.dita",
+          "before_colons": [
+            {
+              "frag": "            Vidéo :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "            Vidéo :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "        Webinaire :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "        Webinaire :",
+              "mark": ":",
+              "prev": " ",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [],
+          "before_missing": 4,
+          "after_missing": 0,
+          "before_schema": 0,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/xml-schema-diagram-override-properties.dita",
+          "before_colons": [
+            {
+              "frag": "    xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "mode Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "tion Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  Le composant  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": " Propriétés du  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [],
+          "before_missing": 5,
+          "after_missing": 0,
+          "before_schema": 0,
+          "after_schema": 2
+        },
+        {
+          "path": "topics/xml-schema-diagram-include-properties.dita",
+          "before_colons": [
+            {
+              "frag": "    xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "mode Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "tion Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  Le composant  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Propriétés  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "    xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "mode Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "tion Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  Le composant  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Propriétés  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 5,
+          "after_missing": 5,
+          "before_schema": 0,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/xml-schema-diagram-redefine-properties.dita",
+          "before_colons": [
+            {
+              "frag": "    xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "mode Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "tion Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  Le composant  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": " Propriétés de  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "    xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "mode Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "tion Composants xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "  Le composant  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": " Propriétés de  xs:",
+              "mark": ":",
+              "prev": "s",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 5,
+          "after_missing": 5,
+          "before_schema": 0,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/dita-pdf-output.dita",
+          "before_colons": [
+            {
+              "frag": "un processeur  xsl:",
+              "mark": ":",
+              "prev": "l",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "un processeur  xsl:",
+              "mark": ":",
+              "prev": "l",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 1,
+          "after_missing": 1,
+          "before_schema": 0,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/oxy-selected-elements.dita",
+          "before_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 3,
+          "after_missing": 3,
+          "before_schema": 0,
+          "after_schema": 0
+        },
+        {
+          "path": "topics/oxy-current-selected-element.dita",
+          "before_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "after_colons": [
+            {
+              "frag": "    Fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "      fonction oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            },
+            {
+              "frag": "    Exemple<NBSP>:  oxy:",
+              "mark": ":",
+              "prev": "y",
+              "prev_is_nbsp": false
+            }
+          ],
+          "before_missing": 3,
+          "after_missing": 3,
+          "before_schema": 0,
+          "after_schema": 0
+        }
+      ],
+      "pod_elapsed_s": 3753.2,
+      "surprises": [
+        {
+          "t": "2026-10-04T11:30:58",
+          "msg": "old 10 not used as held-out: all_initial_punct_errors=False all_source_prose_punct=False n_scored=10"
+        },
+        {
+          "t": "2026-10-04T11:30:58",
+          "msg": "search is fittable files only (source bytes/2.8+48<=820), highest source prose-punct first. An earlier size-ascending pass was clean, and files over the token cap truncated."
+        },
+        {
+          "t": "2026-10-04T11:59:00",
+          "msg": "search hit 28 min"
+        }
+      ]
+    },
+    "results/metrics.json": {
+      "model": "Qwen/Qwen3.5-4B",
+      "quant": "bitsandbytes NF4 QLoRA (4-bit base)",
+      "method": "GRPO-style group size 2, advantage = (r - mean) / std, one QLoRA step per topic",
+      "lr": 5e-06,
+      "lora_r": 8,
+      "lora_targets": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ],
+      "updates": 4,
+      "skipped_flat_reward": 20,
+      "train_wall_s_budget": 2400,
+      "baseline": {
+        "n": 10,
+        "schema_invalid_topics": 1,
+        "schema_error_total": 0,
+        "skeleton_mismatch_topics": 2,
+        "valid_and_skeleton_ok": 8,
+        "mean_reward": 0.635,
+        "latency_p50_s": 23.553,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy"
+      },
+      "after": {
+        "n": 10,
+        "schema_invalid_topics": 1,
+        "schema_error_total": 0,
+        "skeleton_mismatch_topics": 2,
+        "valid_and_skeleton_ok": 8,
+        "mean_reward": 0.635,
+        "latency_p50_s": 23.448,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy"
+      },
+      "val_after": {
+        "n": 10,
+        "schema_invalid_topics": 5,
+        "schema_error_total": 0,
+        "skeleton_mismatch_topics": 6,
+        "valid_and_skeleton_ok": 4,
+        "mean_reward": -0.167,
+        "latency_p50_s": 28.528,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy"
+      },
+      "surprises": [],
+      "language_pair": "en-ro"
+    }
+  },
+  "source_tree": "/tmp/ug/DITA",
+  "files": [
+    {
+      "file": "results/after_test.json",
+      "published_summary_verbatim": {
+        "n": 10,
+        "schema_invalid_topics": 1,
+        "schema_error_total": 0,
+        "skeleton_mismatch_topics": 2,
+        "valid_and_skeleton_ok": 8,
+        "mean_reward": 0.635,
+        "latency_p50_s": 23.448,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy"
+      },
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 14,
+        "schema": 3,
+        "violations": 17,
+        "mean_reward": -1.7
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": 0.031,
+        "gate_passed": 6,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "glossary/canonicalize.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/cf-change-admin-password.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xslt-hierarchy-view.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dcpp_how_to_remove_the_figure_nn_label.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/content-fusion-addon.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/download-database-drivers.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -0.65,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/author-editing-tables-xhtml.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 2,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dcpp_archiving.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/how_to_postgresql.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_graphics_images.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/baseline_test.json",
+      "published_summary_verbatim": {
+        "n": 10,
+        "schema_invalid_topics": 1,
+        "schema_error_total": 0,
+        "skeleton_mismatch_topics": 2,
+        "valid_and_skeleton_ok": 8,
+        "mean_reward": 0.635,
+        "latency_p50_s": 23.553,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy"
+      },
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 14,
+        "schema": 3,
+        "violations": 17,
+        "mean_reward": -1.7
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": 0.031,
+        "gate_passed": 6,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "glossary/canonicalize.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/cf-change-admin-password.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xslt-hierarchy-view.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dcpp_how_to_remove_the_figure_nn_label.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/content-fusion-addon.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/download-database-drivers.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -0.65,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/author-editing-tables-xhtml.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 2,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dcpp_archiving.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/how_to_postgresql.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_graphics_images.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/fr/after_test.json",
+      "published_summary_verbatim": {
+        "n": 10,
+        "format_broken": 9,
+        "schema_invalid_topics": 4,
+        "schema_error_total": 1,
+        "skeleton_mismatch_topics": 9,
+        "sibling_reorder_topics": 0,
+        "truncated_topics": 0,
+        "valid_and_skeleton_ok": 1,
+        "mean_reward": 0.3305,
+        "latency_p50_s": 23.654,
+        "latency_mean_s": 20.521,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy",
+        "reason_histogram_multilabel": {
+          "not_well_formed": 3,
+          "attr_changed": 4,
+          "dtd_invalid": 1,
+          "child_mismatch": 2
+        },
+        "primary_reason_histogram": {
+          "not_well_formed": 3,
+          "attr_changed": 4,
+          "child_mismatch": 2
+        }
+      },
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 22,
+        "schema": 10,
+        "violations": 32,
+        "mean_reward": -3.2
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": -0.5545,
+        "gate_passed": 0,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": -1.0,
+            "punct": {
+              "text_available": false
+            },
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_control_titles_layout.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "punct": {
+              "text_available": false
+            },
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -17.0,
+            "violations": 17,
+            "schema": 1,
+            "punct": 16
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.7936,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/ofb-technical-support-page.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 2,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.505,
+            "gate_passed": false,
+            "gate_failures": [
+              "dtd_valid",
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 1.0,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 8,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 1,
+              "bad_spans": [
+                "TA\n      map:"
+              ]
+            },
+            "format_broken": false,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.9722,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 1,
+              "guillemet_close": 1,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 2,
+              "bad_spans": [
+                " ces étapes :",
+                "ot de passe :"
+              ]
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/cf-change-admin-password.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 1,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.505,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.8,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "glossary/canonicalize.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.9661,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 1,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/preferences-database-filters.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.8167,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "glossary/moderator.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.9568,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 1,
+              "bad_spans": [
+                "ML incluent :"
+              ]
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/author-editing-tables-xhtml.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "punct": {
+              "text_available": false
+            },
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/verifying-signature.dita",
+            "tag": "after"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/fr/baseline_test.json",
+      "published_summary_verbatim": {
+        "n": 10,
+        "format_broken": 10,
+        "schema_invalid_topics": 5,
+        "schema_error_total": 1,
+        "skeleton_mismatch_topics": 10,
+        "sibling_reorder_topics": 0,
+        "truncated_topics": 0,
+        "valid_and_skeleton_ok": 0,
+        "mean_reward": 0.1305,
+        "latency_p50_s": 23.932,
+        "latency_mean_s": 20.824,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit (bitsandbytes), greedy",
+        "decoding": "greedy",
+        "reason_histogram_multilabel": {
+          "not_well_formed": 4,
+          "attr_changed": 4,
+          "dtd_invalid": 1,
+          "child_mismatch": 2
+        },
+        "primary_reason_histogram": {
+          "not_well_formed": 4,
+          "attr_changed": 4,
+          "child_mismatch": 2
+        }
+      },
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 32,
+        "schema": 11,
+        "violations": 43,
+        "mean_reward": -4.3
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": -0.637,
+        "gate_passed": 0,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": -1.0,
+            "punct": {
+              "text_available": false
+            },
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_control_titles_layout.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "punct": {
+              "text_available": false
+            },
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -17.0,
+            "violations": 17,
+            "schema": 1,
+            "punct": 16
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.7936,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/ofb-technical-support-page.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 2,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.505,
+            "gate_passed": false,
+            "gate_failures": [
+              "dtd_valid",
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "punct": {
+              "text_available": false
+            },
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_display_subtopics_in_toc.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -12.0,
+            "violations": 12,
+            "schema": 1,
+            "punct": 11
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.9722,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 1,
+              "guillemet_close": 1,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 2,
+              "bad_spans": [
+                " ces étapes :",
+                "ot de passe :"
+              ]
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/cf-change-admin-password.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 1,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.505,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.8,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "glossary/canonicalize.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.9661,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 1,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/preferences-database-filters.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.8167,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 0,
+              "bad_spans": []
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "glossary/moderator.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.9568,
+            "punct": {
+              "text_available": true,
+              "guillemet_open": 0,
+              "guillemet_close": 0,
+              "ascii_double_quote": 0,
+              "curly_double_quote": 0,
+              "nbsp_ok_marks": 0,
+              "bad_high_punct": 1,
+              "bad_spans": [
+                "ML incluent :"
+              ]
+            },
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/author-editing-tables-xhtml.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "punct": {
+              "text_available": false
+            },
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/verifying-signature.dita",
+            "tag": "baseline"
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/fr_nbsp_sft2/after_grpo_test.json",
+      "published_summary_verbatim": null,
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 28,
+        "schema": 2,
+        "violations": 30,
+        "mean_reward": -3.0
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": 0.5478,
+        "gate_passed": 7,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "missing_nbsp": 4,
+            "prose_punct": 4,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.3333,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 2,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-platform.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 2,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "missing_nbsp": 4,
+            "prose_punct": 4,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-is-editable-element.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "missing_nbsp": 0,
+            "prose_punct": 0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/editing-JSON.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 5,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 2,
+            "missing_nbsp": 0,
+            "prose_punct": 0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/xml-schema-diagram-override-properties.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 2,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 2,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.505,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 5,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-include-properties.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-redefine-properties.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "missing_nbsp": 1,
+            "prose_punct": 1,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dita-pdf-output.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 4,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-selected-elements.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-current-selected-element.dita",
+            "tag": "after_grpo",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/fr_nbsp_sft2/after_sft_test.json",
+      "published_summary_verbatim": null,
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 33,
+        "schema": 0,
+        "violations": 33,
+        "mean_reward": -3.3
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": 0.6983,
+        "gate_passed": 8,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "missing_nbsp": 4,
+            "prose_punct": 4,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.3333,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 2,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-platform.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 2,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "missing_nbsp": 4,
+            "prose_punct": 4,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-is-editable-element.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "missing_nbsp": 0,
+            "prose_punct": 0,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/editing-JSON.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": 0.0,
+            "violations": 0,
+            "schema": 0,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 5,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-override-properties.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-include-properties.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-redefine-properties.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "missing_nbsp": 1,
+            "prose_punct": 1,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dita-pdf-output.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 4,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-selected-elements.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-current-selected-element.dita",
+            "tag": "after_sft",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/fr_nbsp_sft2/start_test.json",
+      "published_summary_verbatim": null,
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 39,
+        "schema": 2,
+        "violations": 41,
+        "mean_reward": -4.1
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": 0.551,
+        "gate_passed": 7,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": -8.0,
+            "violations": 8,
+            "schema": 2,
+            "missing_nbsp": 6,
+            "prose_punct": 6,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/ch_advanced_styling_multiple_before_and_after_pseudo_elements.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 2,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -8.0,
+            "violations": 8,
+            "schema": 2,
+            "punct": 6
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 2,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-platform.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 2,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "missing_nbsp": 4,
+            "prose_punct": 4,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-is-editable-element.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "missing_nbsp": 4,
+            "prose_punct": 4,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/editing-JSON.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -4.0,
+            "violations": 4,
+            "schema": 0,
+            "punct": 4
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.2,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-override-properties.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-include-properties.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "missing_nbsp": 5,
+            "prose_punct": 5,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/xml-schema-diagram-redefine-properties.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": false
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -5.0,
+            "violations": 5,
+            "schema": 0,
+            "punct": 5
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "missing_nbsp": 1,
+            "prose_punct": 1,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dita-pdf-output.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 4,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-selected-elements.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "missing_nbsp": 3,
+            "prose_punct": 3,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/oxy-current-selected-element.dita",
+            "tag": "start",
+            "parts_schema": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0
+            },
+            "english_quotes_not_in_reward": 0,
+            "has_nbsp": true
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 1.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 1,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/fr_punct/after_test.json",
+      "published_summary_verbatim": {
+        "n": 10,
+        "topics_with_violations": 10,
+        "schema_topics": 5,
+        "punct_topics": 9,
+        "schema_only_topics": 1,
+        "punct_only_topics": 5,
+        "both_schema_and_punct_topics": 4,
+        "schema_violation_occurrences": 5,
+        "punct_violation_occurrences": 34,
+        "violation_occurrences": 39,
+        "mean_violations": 3.9,
+        "mean_reward": -3.9,
+        "skeleton_mismatch_topics": 5,
+        "truncated_topics": 0,
+        "zero_violation_topics": 0,
+        "latency_p50_s": 21.967,
+        "latency_mean_s": 18.885,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit, greedy, violation-count reward",
+        "decoding": "greedy",
+        "part_occurrence_histogram": {
+          "not_well_formed": 3,
+          "bad_high_punct": 34,
+          "attr_value": 1,
+          "child_order": 1
+        }
+      },
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 34,
+        "schema": 5,
+        "violations": 39,
+        "mean_reward": -3.9
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": -0.403,
+        "gate_passed": 3,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": -17.0,
+            "violations": 17,
+            "schema": 1,
+            "punct": 16,
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 1,
+              "truncation": 0,
+              "bad_high_punct": 16,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -17.0,
+            "violations": 17,
+            "schema": 1,
+            "punct": 16
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/author-editing-tables-xhtml.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 1,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -7.0,
+            "violations": 7,
+            "schema": 1,
+            "punct": 6,
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/ant-preferences.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 1,
+              "truncation": 0,
+              "bad_high_punct": 6,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -7.0,
+            "violations": 7,
+            "schema": 1,
+            "punct": 6
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "rules/styleguide/uicontrol.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_control_titles_layout.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 1,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_xml_support.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 3,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "glossary/project-options.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 1,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 0,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_avoiding_page_breaks.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 2,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_external-links.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 3,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dcpp_how_to_center_videos.dita",
+            "tag": "after",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "results/fr_punct/baseline_test.json",
+      "published_summary_verbatim": {
+        "n": 10,
+        "topics_with_violations": 10,
+        "schema_topics": 5,
+        "punct_topics": 9,
+        "schema_only_topics": 1,
+        "punct_only_topics": 5,
+        "both_schema_and_punct_topics": 4,
+        "schema_violation_occurrences": 5,
+        "punct_violation_occurrences": 34,
+        "violation_occurrences": 39,
+        "mean_violations": 3.9,
+        "mean_reward": -3.9,
+        "skeleton_mismatch_topics": 5,
+        "truncated_topics": 0,
+        "zero_violation_topics": 0,
+        "latency_p50_s": 26.988,
+        "latency_mean_s": 26.692,
+        "latency_device": "RunPod Community RTX 3090, NF4 4-bit, greedy, violation-count reward",
+        "decoding": "greedy",
+        "part_occurrence_histogram": {
+          "not_well_formed": 3,
+          "bad_high_punct": 34,
+          "attr_value": 1,
+          "child_order": 1
+        }
+      },
+      "n": 10,
+      "n_missing_source": 0,
+      "old_counter_rescore": {
+        "punct": 34,
+        "schema": 5,
+        "violations": 39,
+        "mean_reward": -3.9
+      },
+      "new_oracle_rescore": {
+        "evaluator_version": "fr-typography-oracle-1",
+        "mean_reward": -0.403,
+        "gate_passed": 3,
+        "n": 10
+      },
+      "rows": [
+        {
+          "published": {
+            "reward": -17.0,
+            "violations": 17,
+            "schema": 1,
+            "punct": 16,
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_change_the_page_dimension.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 1,
+              "truncation": 0,
+              "bad_high_punct": 16,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -17.0,
+            "violations": 17,
+            "schema": 1,
+            "punct": 16
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "topics/author-editing-tables-xhtml.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 1,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -7.0,
+            "violations": 7,
+            "schema": 1,
+            "punct": 6,
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/ant-preferences.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 1,
+              "truncation": 0,
+              "bad_high_punct": 6,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -7.0,
+            "violations": 7,
+            "schema": 1,
+            "punct": 6
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "rules/styleguide/uicontrol.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": false,
+            "dtd_valid": false,
+            "skeleton_match": false,
+            "path": "topics/dcpp_how_to_control_titles_layout.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 1,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 1,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -1.0,
+            "gate_passed": false,
+            "gate_failures": [
+              "xml_only",
+              "well_formed",
+              "dtd_valid",
+              "structure",
+              "protected_attributes",
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_xml_support.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 3,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": {},
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": false,
+            "path": "glossary/project-options.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 1,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 0,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 1,
+            "punct": 0
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.34,
+            "gate_passed": false,
+            "gate_failures": [
+              "structure",
+              "protected_attributes"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_avoiding_page_breaks.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 2,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -2.0,
+            "violations": 2,
+            "schema": 0,
+            "punct": 2
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/ch_external-links.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 3,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -3.0,
+            "violations": 3,
+            "schema": 0,
+            "punct": 3
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": -0.175,
+            "gate_passed": false,
+            "gate_failures": [
+              "protected_literals"
+            ],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        },
+        {
+          "published": {
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1,
+            "format_broken": true,
+            "well_formed": true,
+            "dtd_valid": true,
+            "skeleton_match": true,
+            "path": "topics/dcpp_how_to_center_videos.dita",
+            "tag": "baseline",
+            "parts": {
+              "tag_mismatch": 0,
+              "attr_value": 0,
+              "child_order": 0,
+              "dtd_errors": 0,
+              "not_well_formed": 0,
+              "truncation": 0,
+              "bad_high_punct": 1,
+              "english_quotes": 0
+            }
+          },
+          "old_counter": {
+            "evaluator": "count_violations",
+            "reward": -1.0,
+            "violations": 1,
+            "schema": 0,
+            "punct": 1
+          },
+          "new_oracle": {
+            "evaluator_version": "fr-typography-oracle-1",
+            "reward": 0.0,
+            "gate_passed": true,
+            "gate_failures": [],
+            "nbsp_count": 0,
+            "reward_uses_nbsp_count": false
+          }
+        }
+      ]
+    }
+  ]
+}

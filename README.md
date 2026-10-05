@@ -1,6 +1,6 @@
 # DITA structure translation PoC
 
-Four finished runs. Each one has its own writeup. The first lines of each writeup say whether the held-out metric moved.
+Five finished runs. Each one has its own writeup. The first lines of each writeup say whether the held-out metric moved.
 
 | Run | Held-out result |
 | --- | --- |
@@ -8,8 +8,11 @@ Four finished runs. Each one has its own writeup. The first lines of each writeu
 | English to French, train on format breaks | Scan stopped at 45 breaks on a time cap. Format-broken went from 10/10 to 9/10. |
 | English to French, violation counts | Did not move. The test set stayed 10/10 violated. Schema occurrences stayed 5. Punctuation occurrences stayed 34. |
 | English to French, continued NBSP on new topics | Punctuation moved down and did not reach zero: 39, then 33, then 28. Schema went 2, then 0, then 2. Topics still violated went 10, then 9, then 9. |
+| English to French, new typography LoRA | Not a before/after. This adapter's greedy historical mean reward is 0.465, gate passed 7/10. Sealed synthetic mean reward is 1.0 on 40/40. GRPO did not train. |
 
 Index: [docs/experiments/README.md](docs/experiments/README.md).
+
+The French typography CPU preparation is a plan, not a finished run: [docs/plans/fr-punct-sft-grpo.md](docs/plans/fr-punct-sft-grpo.md). It does not replace an experiment note. After a real training run, AGENTS.md still requires a separate document under `docs/experiments/`.
 
 Source for all three: [oxygenxml/userguide](https://github.com/oxygenxml/userguide) commit `db722d7`. Base weights are not in this repo. Adapters: `results/adapter/` (Romanian), `results/fr/adapter/`, `results/fr_punct/adapter/`.
 

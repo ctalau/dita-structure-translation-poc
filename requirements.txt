@@ -9,3 +9,6 @@ accelerate>=1.2.0
 sentencepiece
 protobuf
 safetensors
+# Pinned for scripts/train_fr_grpo.py. CPU preparation does not import it.
+trl==1.14.1
+PyYAML>=6.0
